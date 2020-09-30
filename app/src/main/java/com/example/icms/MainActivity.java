@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragment_container, fragment, "Profile");
             transaction.commit();
-        } else if (id == R.id.nav_Service_status) {
+        } else if (id == R.id.nav_track_my_service) {
             ServicestatusFragment fragment = new ServicestatusFragment();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragment_container, fragment, "Servicestatus");

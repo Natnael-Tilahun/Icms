@@ -18,17 +18,11 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Wellcome"
-            android:textSize="30sp"
+            android:paddingVertical="23dp"
+            android:paddingStart="10dp"
+            android:text="Wellcome to ICMS"
+            android:textSize="40sp"
             app:fontFamily="@font/baloo" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_toEndOf="@id/textView2"
-            android:layout_toRightOf="@id/textView2"
-            android:src="@drawable/images" />
     </RelativeLayout>
 
     <GridLayout
@@ -153,14 +147,14 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_margin="10dp"
-                    app:srcCompat="@drawable/passiconi" />
+                    app:srcCompat="@drawable/liconiv" />
 
                 <TextView
                     android:id="@+id/locationtextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="Passport Services"
+                    android:text="Get Information"
                     android:textSize="18sp"
                     android:textStyle="bold|italic"
                     app:fontFamily="@font/aclonica" />
@@ -194,14 +188,14 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_margin="10dp"
-                    app:srcCompat="@drawable/vicon" />
+                    app:srcCompat="@drawable/iiconsi" />
 
                 <TextView
                     android:id="@+id/nformationtextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="Visa Services"
+                    android:text="Get Location"
                     android:textSize="18sp"
                     android:textStyle="bold|italic"
                     app:fontFamily="@font/aclonica" />

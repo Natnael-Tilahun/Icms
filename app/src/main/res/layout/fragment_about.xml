@@ -9,6 +9,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@android:color/background_light"
         android:text="About fragment" />
 
 </RelativeLayout>
