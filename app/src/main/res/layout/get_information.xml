@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primarytheme1"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="Important informations required to Process your services:"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            app:fontFamily="@font/baloo" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:background="@drawable/bg2"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginVertical="10dp"
+            android:backgroundTint="@android:color/white"
+            android:elevation="30dp"
+            android:padding="5dp"
+            android:shadowRadius="@android:integer/config_longAnimTime"
+            android:text="Requirements to Passport"
+            android:textColor="@color/primarytheme1"
+            android:textSize="23sp"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/primarytheme1"
+            app:strokeWidth="3dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginVertical="10dp"
+            android:backgroundTint="@android:color/white"
+            android:elevation="30dp"
+            android:padding="5dp"
+            android:shadowRadius="@android:integer/config_longAnimTime"
+            android:text="Requirements to visa"
+            android:textColor="@color/primarytheme1"
+            android:textSize="23sp"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/primarytheme1"
+            app:strokeWidth="3dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginVertical="10dp"
+            android:backgroundTint="@android:color/white"
+            android:elevation="30dp"
+            android:padding="5dp"
+            android:text="Service fees"
+            android:textColor="@color/primarytheme1"
+            android:textSize="23sp"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/primarytheme1"
+            app:strokeWidth="3dp" />
+
+    </LinearLayout>
+    <!--    <GridLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_weight="8"-->
+    <!--        android:alignmentMode="alignMargins"-->
+    <!--        android:background="@drawable/bg"-->
+    <!--        android:columnCount="1"-->
+    <!--        android:columnOrderPreserved="false"-->
+    <!--        android:padding="15dp"-->
+    <!--        android:rowCount="3"-->
+    <!--        tools:targetApi="ice_cream_sandwich">-->
+    <!--        <Button-->
+    <!--            android:width="0dp"-->
+    <!--            android:height="0dp"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="0dp"-->
+    <!--            android:layout_row="0"-->
+    <!--            android:layout_rowWeight="1"-->
+    <!--            android:text="New Passport"-->
+    <!--            android:textColor="@android:color/black"-->
+    <!--            android:textSize="20sp"-->
+    <!--            android:layout_marginHorizontal="30dp"-->
+    <!--            android:layout_marginTop="50dp"-->
+    <!--            android:background="@android:color/darker_gray"-->
+    <!--            android:clickable="true"-->
+    <!--            android:elevation="10dp"/>-->
+    <!--        <Button-->
+    <!--            android:width="0dp"-->
+    <!--            android:height="0dp"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="0dp"-->
+    <!--            android:layout_row="1"-->
+    <!--            android:layout_rowWeight="1"-->
+    <!--            android:text="Renew Passport"-->
+    <!--            android:textColor="@android:color/black"-->
+    <!--            android:textSize="20sp"-->
+    <!--            android:layout_marginHorizontal="30dp"-->
+    <!--            android:layout_marginTop="25dp"-->
+    <!--            android:background="@android:color/darker_gray"-->
+    <!--            android:clickable="true"/>-->
+    <!--        <Button-->
+    <!--            android:width="0dp"-->
+    <!--            android:height="0dp"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="0dp"-->
+    <!--            android:layout_row="2"-->
+    <!--            android:layout_rowWeight="1"-->
+    <!--            android:text="Lost Passport"-->
+    <!--            android:textColor="@android:color/black"-->
+    <!--            android:textSize="20sp"-->
+    <!--            android:layout_marginHorizontal="30dp"-->
+    <!--            android:layout_marginTop="25dp"-->
+    <!--            android:layout_marginBottom="25dp"-->
+    <!--            android:background="@android:color/darker_gray"-->
+    <!--            android:clickable="true"/>-->
+    <!--    </GridLayout>-->
+</LinearLayout>

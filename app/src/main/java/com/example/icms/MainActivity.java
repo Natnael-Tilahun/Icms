@@ -9,8 +9,11 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -18,6 +21,7 @@ import com.google.android.material.navigation.NavigationView;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout drawer;
     ActionBarDrawerToggle toogle;
+    private CardView passcard, visacard, loccard, infocard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,15 +29,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         drawer = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+        setSupportActionBar(toolbar);
+//        getSupportActionBar().setTitle("ICMS");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
         toogle = new ActionBarDrawerToggle
                 (this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        toogle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.white));
         drawer.addDrawerListener(toogle);
         toogle.syncState();
 
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        passcard = findViewById(R.id.passcard);
+        visacard = findViewById(R.id.visacard);
+        loccard = findViewById(R.id.locationcard);
+        infocard = findViewById(R.id.informationcard);
+
+//        passcard.setOnClickListener(this);
+//        visacard.setOnClickListener(this);
+//        loccard.setOnClickListener(this);
+//        infocard.setOnClickListener(this);
 
         HomeFragment fragment = new HomeFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -45,6 +61,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.notification_menu, menu);
+//        MenuItem notification=menu.findItem(R.id.notification);
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
@@ -98,4 +121,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
         }
     }
+
+//    @Override
+//    public void onClick(View v) {
+//        Intent i;
+//        switch (v.getId()){
+//            case R.id.passcard:
+//                i=new Intent(this,PassportServices.class);
+//                startActivity(i);
+//                break;
+//            case R.id.visacard:
+//                i=new Intent(this,PassportServices.class);
+//                startActivity(i);
+//                break;
+//            case R.id.locationcard:
+//                i=new Intent(this,PassportServices.class);
+//                startActivity(i);
+//                break;
+//            case R.id.informationcard:
+//                i=new Intent(this,PassportServices.class);
+//                startActivity(i);
+//                break;
+//        }
+//    }
 }

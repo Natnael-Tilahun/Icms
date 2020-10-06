@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@color/primarytheme1"
     android:orientation="vertical"
     android:weightSum="10"
     tools:context=".HomeFragment">
@@ -20,6 +20,8 @@
             android:layout_height="wrap_content"
             android:paddingVertical="23dp"
             android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@android:color/white"
             android:text="Wellcome to ICMS"
             android:textSize="40sp"
             app:fontFamily="@font/baloo" />
@@ -30,7 +32,7 @@
         android:layout_height="0dp"
         android:layout_weight="8"
         android:alignmentMode="alignMargins"
-        android:background="@drawable/bg"
+        android:background="@drawable/bg2"
         android:columnCount="2"
         android:columnOrderPreserved="false"
         android:padding="15dp"
@@ -48,8 +50,10 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
-            android:elevation="8dp"
-            app:cardCornerRadius="8dp">
+            android:clickable="true"
+            android:elevation="15dp"
+            app:cardBackgroundColor="@color/design_default_color_on_primary"
+            app:cardCornerRadius="10dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -74,6 +78,7 @@
                     android:gravity="center_horizontal"
                     android:text="Passport Services"
                     android:textSize="18sp"
+                    android:textColor="@android:color/black"
                     android:textStyle="bold|italic"
                     app:fontFamily="@font/aclonica" />
             </LinearLayout>
@@ -90,7 +95,9 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
-            android:elevation="8dp"
+            android:clickable="true"
+            android:elevation="15dp"
+            app:cardBackgroundColor="@color/design_default_color_background"
             app:cardCornerRadius="8dp">
 
             <LinearLayout
@@ -114,6 +121,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="Visa Services"
+                    android:textColor="@android:color/black"
                     android:textSize="18sp"
                     android:textStyle="bold|italic"
                     app:fontFamily="@font/aclonica" />
@@ -131,7 +139,9 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
-            android:elevation="8dp"
+            android:clickable="true"
+            android:elevation="15dp"
+            app:cardBackgroundColor="@color/design_default_color_background"
             app:cardCornerRadius="8dp">
 
             <LinearLayout
@@ -154,7 +164,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="Get Information"
+                    android:text="Get Location"
+                    android:textColor="@android:color/black"
                     android:textSize="18sp"
                     android:textStyle="bold|italic"
                     app:fontFamily="@font/aclonica" />
@@ -172,7 +183,9 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
-            android:elevation="8dp"
+            android:clickable="true"
+            android:elevation="15dp"
+            app:cardBackgroundColor="@color/design_default_color_background"
             app:cardCornerRadius="8dp">
 
             <LinearLayout
@@ -195,7 +208,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="Get Location"
+                    android:text="Get Information"
+                    android:textColor="@android:color/black"
                     android:textSize="18sp"
                     android:textStyle="bold|italic"
                     app:fontFamily="@font/aclonica" />

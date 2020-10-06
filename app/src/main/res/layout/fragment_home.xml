@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="#0336FF"
     android:orientation="vertical"
     android:weightSum="10"
     tools:context=".HomeFragment">
@@ -18,8 +18,12 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="20dp"
+
             android:text="Wellcome to ICMS"
+            android:paddingLeft="5dp"
             android:textSize="30sp"
+            android:textColor="@android:color/white"
             app:fontFamily="@font/baloo" />
     </RelativeLayout>
 
@@ -28,7 +32,7 @@
         android:layout_height="0dp"
         android:layout_weight="8"
         android:alignmentMode="alignMargins"
-        android:background="@drawable/bg"
+        android:background="@drawable/bg2"
         android:columnCount="2"
         android:columnOrderPreserved="false"
         android:padding="10dp"
@@ -37,7 +41,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/passcard"
             android:layout_width="0dp"
-
+            app:cardBackgroundColor="@android:color/white"
             android:layout_height="0dp"
             android:layout_row="0"
             android:layout_rowWeight="1"
@@ -50,7 +54,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
+            app:cardElevation="10dp"
             tools:targetApi="lollipop">
 
             <LinearLayout
@@ -74,6 +78,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
+                    android:text="Passport Services"
+                    android:textColor="@android:color/black"
+
                     android:textSize="18sp"
                     android:textStyle="bold|italic"
                     app:fontFamily="@font/aclonica" />
@@ -83,8 +90,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/visacard"
             android:layout_width="0dp"
-
-
+            app:cardBackgroundColor="@android:color/white"
             android:layout_height="0dp"
             android:layout_row="0"
             android:layout_rowWeight="1"
@@ -97,7 +103,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
+            app:cardElevation="10dp"
             tools:targetApi="lollipop">
 
             <LinearLayout
@@ -122,6 +128,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="Visa Services"
+                    android:textColor="@android:color/black"
                     android:textSize="18sp"
                     android:textStyle="bold|italic"
                     app:fontFamily="@font/aclonica" />
@@ -131,7 +138,6 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/locationcard"
             android:layout_width="0dp"
-
             android:layout_height="0dp"
             android:layout_row="1"
             android:layout_rowWeight="1"
@@ -145,6 +151,7 @@
             android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
+            app:cardBackgroundColor="@android:color/white"
             tools:targetApi="lollipop">
 
             <LinearLayout
@@ -161,14 +168,15 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_margin="10dp"
-                    app:srcCompat="@drawable/passiconi" />
+                    app:srcCompat="@drawable/liconiv" />
 
                 <TextView
                     android:id="@+id/locationtextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="Passport Services"
+                    android:text="Get Location"
+                    android:textColor="@android:color/black"
                     android:textSize="18sp"
                     android:textStyle="bold|italic"
                     app:fontFamily="@font/aclonica" />
@@ -178,8 +186,8 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/informationcard"
             android:layout_width="0dp"
-
             android:layout_height="0dp"
+            app:cardBackgroundColor="@android:color/white"
             android:layout_row="1"
             android:layout_rowWeight="1"
             android:layout_column="1"
@@ -208,14 +216,15 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_margin="10dp"
-                    app:srcCompat="@drawable/vicon" />
+                    app:srcCompat="@drawable/iiconsi" />
 
                 <TextView
                     android:id="@+id/nformationtextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="Visa Services"
+                    android:text="Get Information"
+                    android:textColor="@android:color/black"
                     android:textSize="18sp"
                     android:textStyle="bold|italic"
                     app:fontFamily="@font/aclonica" />
