@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -51,11 +50,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 startActivity(new Intent(getActivity(), VisaServices.class));
                 break;
             case R.id.locationcard:
-                MapsFragment fragment = new MapsFragment();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, fragment);
-                transaction.commit();
-
+                startActivity(new Intent(getActivity(), GetLocation.class));
                 break;
             case R.id.informationcard:
                 startActivity(new Intent(getActivity(), GetInformation.class));

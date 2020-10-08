@@ -35,7 +35,8 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:backgroundTint="@color/secondarytheme2"
+        android:backgroundTint="@color/white"
         app:headerLayout="@layout/nav_header"
-        app:menu="@menu/drawer_menu" />
+        app:menu="@menu/drawer_menu"
+        tools:targetApi="lollipop" />
 </androidx.drawerlayout.widget.DrawerLayout>
