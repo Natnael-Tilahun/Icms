@@ -3,9 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/notification_nav"
-        android:actionLayout="@layout/notification_badge"
-        android:icon="@drawable/ic_baseline_notifications_24"
-        android:title="Notification"
-        app:actionViewClass="androidx.cardview.widget.CardView"
-        app:showAsAction="ifRoom" />
+        android:title="@string/notification"
+        app:actionLayout="@layout/notification_badge"
+        app:showAsAction="always" />
 </menu>

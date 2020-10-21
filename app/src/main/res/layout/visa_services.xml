@@ -8,7 +8,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity"
     tools:ignore="ScrollViewCount">
-    <!--    android:weightSum="10"-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +27,7 @@
                 android:paddingVertical="15dp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
-                android:text="Visa Sevices"
+                android:text="@string/visa_sevices_tv"
                 android:textColor="@android:color/white"
                 android:textSize="40sp"
                 app:fontFamily="@font/baloo" />
@@ -46,7 +45,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tourist Visa"
+                android:text="@string/tourist_visa"
                 android:textColor="@android:color/black"
                 android:textSize="30sp" />
 
@@ -58,7 +57,7 @@
                 android:elevation="30dp"
                 android:padding="0dp"
                 android:shadowRadius="@android:integer/config_longAnimTime"
-                android:text="Tourist Visa (Online)"
+                android:text="@string/tourist_visa_online"
                 android:textColor="@color/primarytheme1"
                 android:textSize="23sp"
                 app:cornerRadius="20dp"
@@ -74,7 +73,7 @@
                 android:elevation="30dp"
                 android:padding="0dp"
                 android:shadowRadius="@android:integer/config_longAnimTime"
-                android:text="Tourist Visa (On Arrival"
+                android:text="@string/tourist_visa_on_arrival"
                 android:textColor="@color/primarytheme1"
                 android:textSize="23sp"
                 app:cornerRadius="20dp"
@@ -85,7 +84,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Business Visa"
+                android:layout_marginTop="10dp"
+                android:text="@string/business_visa"
                 android:textColor="@android:color/black"
                 android:textSize="30sp" />
 
@@ -96,7 +96,7 @@
                 android:backgroundTint="@android:color/white"
                 android:padding="0dp"
                 android:shadowRadius="@android:integer/config_longAnimTime"
-                android:text="Confrence Visa"
+                android:text="@string/confrence_visa"
                 android:textColor="@color/primarytheme1"
                 android:textSize="23sp"
                 app:cornerRadius="20dp"
@@ -112,7 +112,7 @@
                 android:elevation="30dp"
                 android:padding="0dp"
                 android:shadowRadius="@android:integer/config_longAnimTime"
-                android:text="Investment Visa"
+                android:text="@string/investment_visa"
                 android:textColor="@color/primarytheme1"
                 android:textSize="23sp"
                 app:cornerRadius="20dp"
@@ -128,7 +128,7 @@
                 android:elevation="30dp"
                 android:padding="0dp"
                 android:shadowRadius="@android:integer/config_longAnimTime"
-                android:text="Foreign Business Firm Employment Visa"
+                android:text="@string/foreign_business_firm_employment_visa"
                 android:textColor="@color/primarytheme1"
                 android:textSize="20sp"
                 app:cornerRadius="20dp"
@@ -144,7 +144,7 @@
                 android:elevation="30dp"
                 android:padding="0dp"
                 android:shadowRadius="@android:integer/config_longAnimTime"
-                android:text="Journalist Visa"
+                android:text="@string/journalist_visa"
                 android:textColor="@color/primarytheme1"
                 android:textSize="20sp"
                 app:cornerRadius="20dp"
@@ -160,7 +160,7 @@
                 android:elevation="30dp"
                 android:padding="0dp"
                 android:shadowRadius="@android:integer/config_longAnimTime"
-                android:text="Ethiopian Private Business Firm Work Visa"
+                android:text="@string/ethiopian_private_business_firm_work_visa"
                 android:textColor="@color/primarytheme1"
                 android:textSize="20sp"
                 app:cornerRadius="20dp"
@@ -176,7 +176,7 @@
                 android:elevation="30dp"
                 android:padding="0dp"
                 android:shadowRadius="@android:integer/config_longAnimTime"
-                android:text="International Organization Work Visa"
+                android:text="@string/international_organization_work_visa"
                 android:textColor="@color/primarytheme1"
                 android:textSize="20sp"
                 app:cornerRadius="20dp"
@@ -192,7 +192,7 @@
                 android:elevation="30dp"
                 android:padding="0dp"
                 android:shadowRadius="@android:integer/config_longAnimTime"
-                android:text=" Government Institutions Short Work Visa"
+                android:text="@string/government_institutions_short_work_visa"
                 android:textColor="@color/primarytheme1"
                 android:textSize="20sp"
                 app:cornerRadius="20dp"
@@ -208,13 +208,30 @@
                 android:elevation="30dp"
                 android:padding="0dp"
                 android:shadowRadius="@android:integer/config_longAnimTime"
-                android:text="NGO work Visa"
+                android:text="@string/ngo_work_visa"
                 android:textColor="@color/primarytheme1"
                 android:textSize="20sp"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/primarytheme1"
                 app:strokeWidth="3dp"
                 tools:targetApi="lollipop" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginVertical="0dp"
+                android:backgroundTint="@android:color/white"
+                android:elevation="30dp"
+                android:padding="0dp"
+                android:shadowRadius="@android:integer/config_longAnimTime"
+                android:text="@string/ethiopian_government_employment_visa"
+                android:textColor="@color/primarytheme1"
+                android:textSize="20sp"
+                app:cornerRadius="20dp"
+                app:strokeColor="@color/primarytheme1"
+                app:strokeWidth="3dp"
+                tools:targetApi="lollipop" />
+
 
         </LinearLayout>
     </LinearLayout>

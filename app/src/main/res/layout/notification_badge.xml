@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="?attr/actionBarSize"
-    android:layout_height="?android:attr/actionBarSize">
+    style="?attr/actionButtonStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:focusable="true">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_gravity="center"
-        android:src="@drawable/ic_baseline_notifications_24" />
+        android:contentDescription="Notification icon"
+        android:src="@drawable/ic_notifications" />
 
     <TextView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp"
+        android:id="@+id/notification_badge_tv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="right|end|top"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
         android:background="@drawable/badge"
         android:gravity="center"
-        android:text="12"
+        android:padding="3dp"
+        android:text="10"
         android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
         android:textStyle="bold" />
 
 </FrameLayout>

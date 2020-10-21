@@ -18,10 +18,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/primarytheme1"
             android:elevation="40dp"
             android:theme="@style/AppTheme.NoActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             tools:targetApi="lollipop" />
 
         <FrameLayout

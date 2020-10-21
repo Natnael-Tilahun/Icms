@@ -12,9 +12,9 @@ public class VisaServices extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.visa_services);
         ActionBar actionBar = getSupportActionBar();
-//        actionBar.setTitle("passport");
-//        actionBar.setDisplayShowHomeEnabled(true);
-//        actionBar.setDisplayHomeAsUpEnabled(true);
+//        actionBar.setTitle("Visa Services");
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
     }
 }

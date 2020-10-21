@@ -20,10 +20,12 @@
             android:layout_height="wrap_content"
             android:padding="20dp"
 
-            android:text="Wellcome to ICMS"
+            android:paddingStart="5dp"
             android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:textSize="30sp"
             android:textColor="@android:color/white"
+            android:text="@string/wellcome_to_icms"
             app:fontFamily="@font/baloo" />
     </RelativeLayout>
 
@@ -71,6 +73,7 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/passport_imageview"
                     app:srcCompat="@drawable/passiconi" />
 
                 <TextView
@@ -78,9 +81,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="Passport Services"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/passport_services"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                     android:textColor="@android:color/black"
-
                     android:textSize="18sp"
                     android:textStyle="bold|italic"
                     app:fontFamily="@font/aclonica" />
@@ -120,6 +124,7 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/visa_imageview"
                     app:srcCompat="@drawable/vicon" />
 
                 <TextView
@@ -127,8 +132,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="Visa Services"
+                    android:fontFamily="@font/roboto_bold"
                     android:textColor="@android:color/black"
+                    android:text="@string/visa_services"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                     android:textSize="18sp"
                     android:textStyle="bold|italic"
                     app:fontFamily="@font/aclonica" />
@@ -168,6 +175,7 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/getlocation_imageview"
                     app:srcCompat="@drawable/liconiv" />
 
                 <TextView
@@ -175,10 +183,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="Get Location"
+                    android:fontFamily="@font/roboto_bold"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
                     android:textStyle="bold|italic"
+                    android:text="@string/get_location"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                     app:fontFamily="@font/aclonica" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -216,6 +226,7 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/getinformation_imageview"
                     app:srcCompat="@drawable/iiconsi" />
 
                 <TextView
@@ -223,7 +234,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="Get Information"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/get_information"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
                     android:textStyle="bold|italic"

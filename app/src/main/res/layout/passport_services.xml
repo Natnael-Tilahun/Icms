@@ -16,13 +16,13 @@
         android:layout_weight="2">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/passportservices_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingVertical="15dp"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:text="Passport Sevices"
+            android:text="@string/passport_sevices"
             android:textColor="@android:color/white"
             android:textSize="40sp"
             app:fontFamily="@font/baloo" />
@@ -38,22 +38,24 @@
         android:padding="20dp">
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/newpassport_btn"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginVertical="10dp"
             android:backgroundTint="@android:color/white"
             android:elevation="30dp"
             android:padding="15dp"
-            android:shadowColor="@color/design_default_color_on_primary"
-            android:shadowRadius="@android:integer/config_longAnimTime"
-            android:text="New Passport"
+            android:shadowColor="@color/black"
+            android:text="@string/new_passport"
             android:textColor="@color/primarytheme1"
             android:textSize="25sp"
             app:cornerRadius="20dp"
             app:strokeColor="@color/primarytheme1"
-            app:strokeWidth="3dp" />
+            app:strokeWidth="3dp"
+            tools:targetApi="lollipop" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/renewpassport_btn"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginVertical="10dp"
@@ -61,14 +63,16 @@
             android:elevation="30dp"
             android:padding="15dp"
             android:shadowRadius="@android:integer/config_longAnimTime"
-            android:text="Renew Passport"
+            android:text="@string/renew_passport"
             android:textColor="@color/primarytheme1"
             android:textSize="25sp"
             app:cornerRadius="20dp"
             app:strokeColor="@color/primarytheme1"
-            app:strokeWidth="3dp" />
+            app:strokeWidth="3dp"
+            tools:targetApi="lollipop" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/lostpassport_btn"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginVertical="10dp"
@@ -76,13 +80,14 @@
             android:elevation="30dp"
             android:padding="15dp"
             android:shadowRadius="@android:integer/config_longAnimTime"
-            android:text="Lost Passport"
+            android:text="@string/lost_passport"
             android:textColor="@color/primarytheme1"
             android:textSize="25sp"
             app:cornerRadius="20dp"
             app:strokeColor="@color/primarytheme1"
 
-            app:strokeWidth="3dp" />
+            app:strokeWidth="3dp"
+            tools:targetApi="lollipop" />
 
     </LinearLayout>
     <!--    <GridLayout-->

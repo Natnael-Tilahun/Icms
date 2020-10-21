@@ -46,7 +46,7 @@ public class MapsFragment extends Fragment {
             googleMap.addMarker(new MarkerOptions().position(Immigration_Office_Bahirdar_Branch).title("Immigration Office Bahirdar Branch"));
             googleMap.addMarker(new MarkerOptions().position(Immigration_Office_Mekelle_Branch).title("Immigration Office Mekelle Branch"));
             googleMap.addMarker(new MarkerOptions().position(Immigration_Office_Dessie_Branch).title("Immigration Office Dessie Branch"));
-            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Main_Department_For_Immigration_and_Nationality_Affairs, 15f));
+//            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Main_Department_For_Immigration_and_Nationality_Affairs, 15f));
 //            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Immigration_Office_Hawassa_Branch,15f));
 //            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Immigration_Office_Diredawa_Branch,15f));
         }

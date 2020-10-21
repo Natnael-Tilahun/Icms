@@ -4,8 +4,8 @@
     package="com.example.icms"
     android:compileSdkVersion="29"
     android:versionCode="1"
-    android:versionName="1.0">
-
+    android:versionName="1.0"
+    tools:ignore="GradleOverrides">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -20,7 +20,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity
+            android:name=".Notification"
+            android:parentActivityName=".MainActivity"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".ServiceFees"
+            android:parentActivityName=".GetInformation"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".VisaRequirements"
+            android:parentActivityName=".GetInformation"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".PassportRequirements"
+            android:parentActivityName=".GetInformation"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".LostPassport"
+            android:parentActivityName=".PassportServices"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".RenewPassport"
+            android:parentActivityName=".PassportServices"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".NewPassport"
+            android:parentActivityName=".PassportServices"
+            tools:targetApi="jelly_bean" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

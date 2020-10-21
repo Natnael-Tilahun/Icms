@@ -1,16 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AboutFragment">
+    android:id="@+id/Faq_layout"
+    android:background="@color/primarytheme1"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".FaqFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:background="@android:color/background_light"
-        android:text="About fragment" />
+        android:layout_height="0dp"
+        android:layout_weight="2">
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/passportservices_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/baloo"
+            android:padding="15dp"
+            android:text="@string/about_us_tv"
+            android:textColor="@android:color/white"
+            android:textSize="35sp"
+            tools:targetApi="jelly_bean" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:background="@drawable/bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:padding="20dp"
+            android:text="@string/icms"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:targetApi="jelly_bean" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/about_us_text"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:targetApi="lollipop" />
+    </LinearLayout>
+</LinearLayout>

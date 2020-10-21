@@ -1,5 +1,9 @@
 package com.example.icms;
 
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,21 +11,15 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout drawer;
     ActionBarDrawerToggle toogle;
-    private CardView passcard, visacard, loccard, infocard;
+    CardView passcard, visacard, loccard, infocard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setSupportActionBar(toolbar);
 //        getSupportActionBar().setTitle("ICMS");
         toolbar.setTitleTextColor(getResources().getColor(R.color.white));
+        toolbar.setBackgroundColor(getResources().getColor(R.color.primarytheme1));
         toogle = new ActionBarDrawerToggle
                 (this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         toogle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.white));
@@ -45,17 +44,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         visacard = findViewById(R.id.visacard);
         loccard = findViewById(R.id.locationcard);
         infocard = findViewById(R.id.informationcard);
-
 //        passcard.setOnClickListener(this);
 //        visacard.setOnClickListener(this);
 //        loccard.setOnClickListener(this);
 //        infocard.setOnClickListener(this);
-
         HomeFragment fragment = new HomeFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment_container, fragment, "Home");
         transaction.commit();
-
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
@@ -63,12 +59,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.notification_menu, menu);
-//        MenuItem notification=menu.findItem(R.id.notification);
-        return super.onCreateOptionsMenu(menu);
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(final Menu menu) {
+//        getMenuInflater().inflate(R.menu.notification_menu,menu);
+//        final MenuItem menuItem=menu.findItem(R.menu.notification_menu);
+//        final FrameLayout actionView=(FrameLayout)menu.findItem(R.id.notification_nav).getActionView();
+//        smsCountText=(TextView)actionView.findViewById(R.id.notification_badge_tv);
+//        setupbadge();
+//        actionView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View V) {
+//                onOptionsItemSelected(menuItem);
+//            }
+//        });
+//        return true;
+//    }
+
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        switch (item.getItemId()) {
+//            case R.id.notification_nav: {
+//                return true;
+//            }
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -98,12 +113,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragment_container, fragment, "Feedback");
             transaction.commit();
+        } else if (id == R.id.nav_faq) {
+            FaqFragment fragment = new FaqFragment();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, fragment, "FAQ");
+            transaction.commit();
         } else if (id == R.id.nav_about) {
             AboutFragment fragment = new AboutFragment();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragment_container, fragment, "About");
             transaction.commit();
         } else if (id == R.id.nav_logout) {
+            showDialog(R.layout.fragment_logout);
             LogoutFragment fragment = new LogoutFragment();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragment_container, fragment, "Logout");
@@ -111,6 +132,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void showDialog(View view) {
+        FragmentManager manager = getSupportFragmentManager();
+        LogoutFragment logoutFragment = new LogoutFragment();
+        logoutFragment.show(manager, "LogoutFragment");
     }
 
     @Override
@@ -142,6 +169,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //                i=new Intent(this,PassportServices.class);
 //                startActivity(i);
 //                break;
+//        }
+//    }
+//    private void setupbadge(){
+//        if (smsCountText!=null){
+//            if (pendingSmsCount==0){
+//                if (smsCountText.getVisibility()!=View.GONE){
+//                    smsCountText.setVisibility(View.GONE);
+//                }
+//                else {
+//                    smsCountText.setText(String.valueOf(Math.min(pendingSmsCount,99)));
+//                    if (smsCountText.getVisibility()!=View.VISIBLE) {
+//                        smsCountText.setVisibility(View.VISIBLE);
+//                    }
+//                }
+//            }
 //        }
 //    }
 }
