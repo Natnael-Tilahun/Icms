@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Icms</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -42,7 +42,7 @@
     <string name="tourist_visa_online">Tourist Visa (Online)</string>
     <string name="tourist_visa_on_arrival">Tourist Visa (On Arrival</string>
     <string name="business_visa">Business Visa</string>
-    <string name="confrence_visa">Confrence Visa</string>
+    <string name="confrence_visa" tools:ignore="DuplicateDefinition">Confrence Visa</string>
     <string name="investment_visa">Investment Visa</string>
     <string name="foreign_business_firm_employment_visa">Foreign Business Firm Employment Visa</string>
     <string name="journalist_visa">Journalist Visa</string>
@@ -51,19 +51,15 @@
     <string name="government_institutions_short_work_visa">Government Institutions Short Work Visa</string>
     <string name="ngo_work_visa">NGO work Visa</string>
     <string name="ethiopian_government_employment_visa">Ethiopian Government Employment Visa</string>
-    <string name="username">Username</string>
+    =
     <string name="submit">Submit</string>
-    <string name="phone">Phone</string>
-    <string name="email">Email</string>
     <string name="fullname">Full Name</string>
     <string name="please_fill_legitimate_informations">Please fill legitimate informations:</string>
     <string name="new_passport_start_your_application_here">New Passport: Start your application here:</string>
-    <string name="feedback">Feedback</string>
     <string name="your_feedback_will_help_us_feel_free_to_give_us_any_comment">Your feedback will help us. Feel free to give us any comment:</string>
     <string name="give_us_feedback">Give Us feedback:</string>
     <string name="home">Home</string>
     <string name="track_my_service">Track my service</string>
-    <string name="setting">Setting</string>
     <string name="faq">FAQ</string>
     <string name="profile_group">profile</string>
     <string name="profile">Profile</string>
@@ -74,7 +70,7 @@
     <string name="notification">Notification</string>
     <string name="about_us_tv">About Us:</string>
     <string name="icms">ICMS</string>
-    <string name="about_us_text">This App is Build by Computer Science Graduate Students. This App is build for only final year thesis project purpose but all informations and requiremEnts listed are legitmate. You can also Apply yourself directly through Government portal for the same.</string>
+    <string name="about_us_text">This App is Build by Computer Science Graduate Students. This App is build for only final year thesis project purpose but all informations and requiremEnts listed are legitimate. You can also Apply yourself directly through Government portal for the same.</string>
     <string name="profile_imageview">profile_imageview</string>
     <string name="username">Username</string>
     <string name="wellcome_to_icms">Wellcome to ICMS</string>
@@ -95,31 +91,15 @@
     <string name="passport_number">Passport Number</string>
     <string name="reference_number_id">Reference Number/ID</string>
     <string name="check_passport_status">Check Passport status:</string>
-    <string name="reference_number_id">Reference Number/ID</string>
-    <string name="username">Username</string>
     <string name="setting">Setting</string>
     <string name="change_username">Change Username</string>
     <string name="change_full_name">Change Full Name</string>
     <string name="change_password">Change Password</string>
     <string name="change_phone">Change Phone</string>
     <string name="change_profile_picture">Change Profile Picture</string>
-    <string name="wellcome_to_icms">Wellcome to ICMS</string>
-    <string name="passport_services">Passport Services</string>
-    <string name="visa_services">Visa Services</string>
-    <string name="get_location">Get Location</string>
-    <string name="get_information">Get Information</string>
     <string name="visa_sevices_tv">Visa Sevices</string>
-    <string name="tourist_visa">Tourist Visa</string>
-    <string name="tourist_visa_online">Tourist Visa (Online)</string>
-    <string name="tourist_visa_on_arrival">Tourist Visa (On Arrival</string>
-    <string name="business_visa">Business Visa</string>
-    <string name="confrence_visa">Confrence Visa</string>
-    <string name="investment_visa">Investment Visa</string>
-    <string name="foreign_business_firm_employment_visa">Foreign Business Firm Employment Visa</string>
-    <string name="journalist_visa">Journalist Visa</string>
-    <string name="ethiopian_private_business_firm_work_visa">Ethiopian Private Business Firm Work Visa</string>
-    <string name="international_organization_work_visa">International Organization Work Visa</string>
-    <string name="government_institutions_short_work_visa">Government Institutions Short Work Visa</string>
-    <string name="ngo_work_visa">NGO work Visa</string>
-    <string name="ethiopian_government_employment_visa">Ethiopian Government Employment Visa</string>
+    <string name="frequently_asked_questions">Frequently Asked Questions:</string>
+    <string name="info_title">Info_Title</string>
+    <string name="info_description">Info_description</string>
+
 </resources>
