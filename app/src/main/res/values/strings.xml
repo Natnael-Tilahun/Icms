@@ -3,7 +3,6 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
@@ -24,10 +23,15 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
-    <string name="passport_sevices">Passport Sevices</string>
+    <string name="passport_sevices">Passport Sevices:</string>
     <string name="new_passport">New Passport</string>
-    <string name="renew_passport">Renew Passport</string>
+    <string name="renew_passport">Expired Passport</string>
+    <string name="passport_page_run_out">Passport page run out</string>
+    <string name="damaged_passport">Damaged Passport</string>
     <string name="lost_passport">Lost Passport</string>
+    <string name="change_of_passport_data">Change of Passport Data</string>
+    <string name="valid_passport">Valid Passport</string>
+    <string name="urgent_passport">Urgent Passport</string>
     <string name="renew_passport_text">Renew Passport:</string>
     <string name="lost_passport_text">Lost Passport:</string>
     <string name="important_informations_required_to_process_your_services">Important informations required to Process your services:</string>
@@ -36,26 +40,34 @@
     <string name="service_fees">Service fees</string>
     <string name="requirements_to_passport_services">Requirements to Passport services:</string>
     <string name="our_services_fees">Our Services Fees:</string>
-    <string name="requirements_to_visa_services">Requirements to Visa Services:</string>
+    <string name="requirements_to_visa_services">Requirements to proceed your Visa Services:</string>
     <string name="visa_sevices">Visa Sevices:</string>
-    <string name="tourist_visa">Tourist Visa</string>
+    <string name="tourist_visa">Tourist Visa(VT)</string>
     <string name="tourist_visa_online">Tourist Visa (Online)</string>
     <string name="tourist_visa_on_arrival">Tourist Visa (On Arrival</string>
-    <string name="business_visa">Business Visa</string>
-    <string name="confrence_visa" tools:ignore="DuplicateDefinition">Confrence Visa</string>
-    <string name="investment_visa">Investment Visa</string>
-    <string name="foreign_business_firm_employment_visa">Foreign Business Firm Employment Visa</string>
-    <string name="journalist_visa">Journalist Visa</string>
-    <string name="ethiopian_private_business_firm_work_visa">Ethiopian Private Business Firm Work Visa</string>
-    <string name="international_organization_work_visa">International Organization Work Visa</string>
-    <string name="government_institutions_short_work_visa">Government Institutions Short Work Visa</string>
-    <string name="ngo_work_visa">NGO work Visa</string>
-    <string name="ethiopian_government_employment_visa">Ethiopian Government Employment Visa</string>
+    <string name="business_visa">Business Visa(BV)</string>
+    <string name="confrence_visa" tools:ignore="DuplicateDefinition">Confrence Visa(CV)</string>
+    <string name="investment_visa">Investment Visa(IV)</string>
+    <string name="foreign_business_firm_employment_visa">Foreign Business Firm Employment Visa(FV)</string>
+    <string name="journalist_visa">Journalist Visa(JV)</string>
+    <string name="ethiopian_private_business_firm_work_visa">Ethiopian Private Business Firm Work Visa(PE)</string>
+    <string name="international_organization_work_visa">International Organization Work Visa(RI)</string>
+    <string name="government_institutions_short_work_visa">Government Institutions Short Work Visa(GIV)</string>
+    <string name="ngo_work_visa">NGO work Visa(NGO)</string>
+    <string name="ethiopian_government_employment_visa">Ethiopian Government Employment Visa(GV)</string>
     =
+    <string name="next">Next</string>
     <string name="submit">Submit</string>
     <string name="fullname">Full Name</string>
     <string name="please_fill_legitimate_informations">Please fill legitimate informations:</string>
     <string name="new_passport_start_your_application_here">New Passport: Start your application here:</string>
+    <string name="expired_passport_start_your_application_here">Expired Passport: Start your application here:</string>
+    <string name="pagerunout_passport_start_your_application_here">Passport Page run out: Start your application here:</string>
+    <string name="damaged_passport_start_your_application_here">Damaged Passport: Start your application here:</string>
+    <string name="lost_passport_start_your_application_here">Lost Passport: Start your application here:</string>
+    <string name="changeofdata_passport_start_your_application_here">Change of Passport Data: Start your application here:</string>
+    <string name="valid_passport_start_your_application_here">Valid Passport: Start your application here:</string>
+    <string name="urgent_passport_start_your_application_here">Urgent Passport: Start your application here:</string>
     <string name="your_feedback_will_help_us_feel_free_to_give_us_any_comment">Your feedback will help us. Feel free to give us any comment:</string>
     <string name="give_us_feedback">Give Us feedback:</string>
     <string name="home">Home</string>
@@ -70,7 +82,7 @@
     <string name="notification">Notification</string>
     <string name="about_us_tv">About Us:</string>
     <string name="icms">ICMS</string>
-    <string name="about_us_text">This App is Build by Computer Science Graduate Students. This App is build for only final year thesis project purpose but all informations and requiremEnts listed are legitimate. You can also Apply yourself directly through Government portal for the same.</string>
+    <string name="about_us_text">This App is Build by Computer Science Graduate Students. This App is build for only final year industrial project purpose but all informations and requirements listed are legitimate. You can also Apply yourself directly through Government portal for the same.</string>
     <string name="profile_imageview">profile_imageview</string>
     <string name="username">Username</string>
     <string name="wellcome_to_icms">Wellcome to ICMS</string>
@@ -82,7 +94,7 @@
     <string name="get_location">Get Location</string>
     <string name="getinformation_imageview">getinformation_imageview</string>
     <string name="get_information">Get Information</string>
-    <string name="your_detail">Your Detail</string>
+    <string name="My_detail">My Detail</string>
     <string name="full_name">Full Name</string>
     <string name="email">Email</string>
     <string name="phone">Phone</string>
@@ -93,7 +105,7 @@
     <string name="check_passport_status">Check Passport status:</string>
     <string name="setting">Setting</string>
     <string name="change_username">Change Username</string>
-    <string name="change_full_name">Change Full Name</string>
+    <string name="change_email">Change Email </string>
     <string name="change_password">Change Password</string>
     <string name="change_phone">Change Phone</string>
     <string name="change_profile_picture">Change Profile Picture</string>
@@ -101,5 +113,721 @@
     <string name="frequently_asked_questions">Frequently Asked Questions:</string>
     <string name="info_title">Info_Title</string>
     <string name="info_description">Info_description</string>
+
+    //passport requirements strings
+    <string name="passport_requirements_tv">Requirements to proceed your passport process:</string>
+    <string name="requirement_description_tv">Requirement_description</string>
+    <string name="requirement_title_tv">Requirement_title</string>
+    <string name="passport_requirement_title_one">
+      <br>  <b>Procedure</b></br>
+    </string>
+    <string name="passport_requirement_description_one" formatted="true">
+        <br>Ethiopia is currently issuing electronic passports that require fingerprints.
+            Therefore,all applicants must be made in-person at the
+            Main Department for Immigration and Nationality Affairs offices or Embassy of Ethiopia if the applicant is abroad.</br>
+    </string>
+    <string name="passport_requirement_title_two">
+        <br><b>Application for a new Ethiopian passport in Ethiopia</b></br>
+    </string>
+    <string name="passport_requirement_description_two" formatted="true">
+        <br>- Application form is provided which should duly fill before submission.\n</br>
+        <br>- The following documents are to be attached together with the application document:\n</br>
+        <br> 1. Recent passport-sized colour photo.\n</br>
+        <br> 2. A clear scanned or picture of an identity card.\n</br>
+        <br> 3. The correct fee must be enclosed with your application.Please make sure that the fee is exact amount in required currency.\n</br>
+        <br>- One should then proceed to have their fingerprint impression taken in the immigration office with your original documents
+            when you get notification message.\n</br>
+        <br>- The processing time at is 1-3 days depending on your inquiry
+            and one is required to collect the passport through post office or in person.\n</br>
+        <br>- The day of collection will be communicated by notification message.\n</br>
+    </string>
+    <string name="passport_requirement_title_three">
+        <br><b>Application for a new Ethiopian passport for a new Child Born Abroad</b></br>
+    </string>
+    <string name="passport_requirement_description_three" formatted="true">
+        <br>A child born outside of Ethiopia to an Ethiopian citizen parent(s) is eligible for Ethiopian citizenship.\n</br>
+        <br>- The parent must answer all the questions outlined in the application form and provide their fingerprints.\n </br>
+        <br>- Applicants under the age of 14 are exempted from providing fingerprints.\n</br>
+        <br>The following documents are required to be attached when together with the application:\n</br>
+        <br>1. The completed Ethiopian passport application form.\n</br>
+        <br>2. Clear recent passport-sized colour photo.\n </br>
+        <br>3. Clear scanned or picture of documents certifying the parent(s) Ethiopian Citizenship.\n</br>
+        <br>4. Clear scanned or picture of the child\'s birth certificate.\n </br>
+        <br>5. The correct fee must be enclosed with your application.\n</br>
+        <br>- As Ethiopian passports are issued in Ethiopia.It may take up to two months to process the application.
+            We will notify you by notification message when the passport has been issued and ready to collection.\n </br>
+        <br>- Applicants are required to collect their passport in person at consular section or through post office.\n</br>
+    </string>
+    <string name="passport_requirement_title_eleven">
+        <br><b>Application for renewal Ethiopian passport in Ethiopia</b></br>
+    </string>
+    <string name="passport_requirement_description_eleven" formatted="true">
+        <br>- Renewal application form is provided which should duly fill before submission.\n</br>
+        <br>- The following documents are to be attached together with the application document:\n</br>
+        <br>1. Recent passport-sized colour photo.\n</br>
+        <br>2. A clear scanned or picture of an identity card.\n</br>
+        <br>3. Scanned or picture of original expired passport.\n</br>
+        <br>4. The correct fee must be enclosed with your application.
+            Please make sure that the fee is exact amount in required currency.\n</br>
+        <br>- One should then proceed to have their fingerprint impression taken in the immigration office with
+            your original documents when you get notification message.\n</br>
+        <br>- The processing time at is 1-3 days depending on your inquiry
+            and one is required to collect the passport through post office or in person.\n</br>
+        <br>- The day of collection will be communicated by notification message.\n</br>
+    </string>
+    <string name="passport_requirement_title_twelve">
+        <br><b>Urgent Services</b></br>
+    </string>
+    <string name="passport_requirement_description_twelve" formatted="true">
+        <br>If you are applying for Urgent Services, you must have reason or evidence like:\n\n</br>
+        <br>- Medical letter\n</br>
+        <br>- Scholarship and DV\n</br>
+        <br>- Letter from authorized organization\n</br>
+        <br>- Foreign residence permit \n</br>
+        <br>- Invitation paper \n</br>
+        <br>- Urgent travel for work\n</br>
+        <br>- Travel for compassionate reason \n</br>
+    </string>
+    <string name="passport_requirement_title_ten">
+        <br><b>Application for a lost or damaged Ethiopian passport in Ethiopia</b></br>
+    </string>
+    <string name="passport_requirement_description_ten" formatted="true">
+        <br>Replacement for Lost/Damaged passport all the same requirements as applying for an Ethiopian passport.\n</br>
+        <br>- Lost/Damaged application form is provided which should duly fill before submission.\n</br>
+        <br>- The following documents are to be attached together with the application document:\n</br>
+        <br>1. Recent passport-sized colour photo.\n</br>
+        <br>2. A clear scanned or picture of an identity card.\n</br>
+        <br>3. Proof of police record.\n</br>
+        <br>4. Scanned or picture of lost passport(if available)\n</br>
+        <br>5. The correct fee must be enclosed with your application.
+            Please make sure that the fee is exact amount in required currency.\n</br>
+        <br>- One should then proceed to have their fingerprint impression taken in the immigration office with
+            your original documents when you get notification message.\n</br>
+        <br>- The processing time at is 1-3 days depending on your inquiry
+            and one is required to collect the passport through post office or in person.\n</br>
+        <br>- The day of collection will be communicated by notification message.\n</br>
+    </string>
+    <string name="passport_requirement_title_four">
+        <br><b>Required Documents</b></br>
+    </string>
+    <string name="passport_requirement_description_four" formatted="true">
+        <br>- A clear recent passport-sized colour photographs(3\*4 cm size).\n</br>
+        <br>- A clear scanned or picture of documents certifying the parent(S) Ethiopian citizenship.\n</br>
+        <br>- A clear scanned or picture of the child\'s birth certificate.\n</br>
+        <br>- Proof of payment of application processing fees.Please make sure that the fee is exact amount in required currency.\n</br>
+        <br>- A completed Ethiopian passport application form.\n</br>
+    </string>
+    <string name="passport_requirement_title_five">
+        <br><b>Eligibility</b></br>
+    </string>
+    <string name="passport_requirement_description_five">
+        <br>- One need to be an Ethiopian citizen.\n</br>
+        <br>- The child needs to be born of Ethiopian parents.\n</br>
+    </string>
+    <string name="passport_requirement_title_six">
+        <br><b>Validity</b></br>
+    </string>
+    <string name="passport_requirement_description_six">
+        <br>- The Ethiopian passport is valid for 5 year from after being processed.\n</br>
+    </string>
+    <string name="passport_requirement_title_seven">
+        <br><b>Need for the Document</b></br>
+    </string>
+    <string name="passport_requirement_description_seven">
+        <br>- The document is used for identification purposes.\n</br>
+        <br>- It is one of the requirements needed when traveling across international borders.\n</br>
+    </string>
+    <string name="passport_requirement_title_eight">
+        <br><b>Processing Time</b></br>
+    </string>
+    <string name="passport_requirement_description_eight">
+        <br>- The processing time at Ethiopian immigration is 1-3 days depending your inquiry.\n</br>
+        <br>- It takes up to two months to process the application from abroad.\n</br>
+    </string>
+    <string name="passport_requirement_title_thirteen">
+        <br><b>Emergency</b></br>
+    </string>
+    <string name="passport_requirement_description_thirteen">
+        <br>Emergency requests are handled in INVEA main office or branch offices in person. \n</br>
+    </string>
+    <string name="passport_requirement_title_nine">
+        <br><b>Others</b></br>
+    </string>
+    <string name="passport_requirement_description_nine">
+        <br>The Ethiopian passport is a travel document issued to citizens of Ethiopia for international travel.
+            The document is a biometric machine-readable passport with a burgundy cover with the text
+            "Federal Democratic Republic of Ethiopia" above the coat of arms,and the text "passport"
+            below it in English and Amharic.The passport is valid for 5 years and contains 32 pages.\n</br>
+    </string>
+
+    //Faq strings
+    <string name="faq_description_tv">Faq_description</string>
+    <string name="faq_title_tv">Faq_title</string>
+    <string name="faq_title_one">
+        <br><b>What is the processing time for Ethiopian e-Passport?</b></br>/
+    </string>
+    <string name="faq_description_one">
+        <br>Under normal circumstance,the e-passport processing time is up to 3 days though it can be earlier.</br>
+    </string>
+    <string name="faq_title_two">
+        <br><b>What is the processing time for Ethiopian e-Visa?</b></br>
+    </string>
+    <string name="faq_description_two">
+        <br>Under normal circumstance,the e-passport processing time is up to 3 days though it can be earlier.
+            so,it is advisable to apply at least 3 days before your departure.</br>
+    </string>
+    <string name="faq_title_three">
+        <br><b>Will Passport physically in Ethiopian Immigration Nationality And Vital Events Agency continue to issue passport
+            after Ethiopia launches online passport application?</b></br>
+    </string>
+    <string name="faq_description_three">
+        <br>Yes.You can also get passport on your nearest Ethiopian Immigration Nationality And Vital Events Agency.</br>
+    </string>
+    <string name="faq_title_four">
+        <br><b>Will Visa-on-arrival and Ethiopian Embassies continue to issue visa after Ethiopia launches online visa
+            and passport application?</b></br>
+    </string>
+    <string name="faq_description_four">
+        <br>Yes.You can also get visa on your arrival(if you are eligible)at Addis Abeba Bole
+        International Airport or at your nearest Ethiopian Embassy.</br>
+    </string>
+    <string name="faq_title_five">
+        <br><b>Is it possible to send picture files of my passport,photo and/or resident permit instead of scans while applying
+            for Ethiopian e-Visa and e-Passport?</b></br>
+    </string>
+    <string name="faq_description_five">
+        <br>Yes.As far as it is clearly visible you can upload camera-captured picture files(in supported image formats)
+            of your passport,photo and/or residence permit documents.</br>
+    </string>
+    <string name="faq_title_six">
+        <br><b>Can i contact any Ethiopian embassy to check on the status of my e-Visa?</b></br>
+    </string>
+    <string name="faq_description_six">
+        <br>No.Please check your e-Visa status online. Once e-Visa is approved,an approval letter is sent directly to your
+            email address or notification.</br>
+    </string>
+    <string name="faq_title_seven">
+        <br><b>What are the benefits of online visa application over visa on arrival?</b></br>
+    </string>
+    <string name="faq_description_seven">
+        <br>The online visa application saves your time. There are no visits to embassies or consulates and no complex paperwork.
+        The online process is very easy, more secure than traditional visa application processes and it allows you to have your
+        approved e-Visa ready before you leave for your trip.It also saves your money like air ticket hotel reservations since
+            there are chances that you would be denied of visa on arrival.You will also be able to beat the long queues at the airport.</br>
+    </string>
+    <string name="faq_title_eight">
+        <br><b>What are the benefits of online passport application over passport on physical?</b></br>
+    </string>
+    <string name="faq_description_eight">
+        <br>The online passport application saves your time. There are no visits to Immigration Offices and no complex paperwork.
+        The online process is very easy, more secure than traditional passport application processes and it allows you to have your
+            approved passport ready before you leave for your trip.You will also be able to beat the long queues at the Immigration Offices.</br>
+    </string>
+    <string name="faq_title_nine">
+        <br><b>May i know the reason why the application is rejected?</b></br>
+    </string>
+    <string name="faq_description_nine">
+        <br>If it is rejected,the office will notify you of the rejection but not the reason why.</br>
+    </string>
+    <string name="faq_title_ten">
+        <br><b>Do i get a refund if my application is rejected?</b></br>
+    </string>
+    <string name="faq_description_ten">
+        <br>Payment of the application fee does not guarantee approval of a visa.
+        Unfortunately, we are not able to refund as we have clearly stated in our Terms Conditions.</br>
+    </string>
+    <string name="faq_title_eleven">
+        <br><b>When does validity of my e-visa start? Is it from the date of entry to Ethiopia or date of issue?</b></br>
+    </string>
+    <string name="faq_description_eleven">
+        <br>The validity of Ethiopian e-Visa starts from the date of entry to Ethiopia you selected while applying your application
+            not from the date of issue.</br>
+    </string>
+    <string name="faq_title_twelve">
+        <br><b>I entered one or more of my personal information(Full Name/Nationality/Passport Number/Email address, ete.)
+            incorrectly.Could you please modify it?</b></br>
+    </string>
+    <string name="faq_description_twelve">
+        <br>Applicants are prompted to confirm all the provided information are correct and accurate before submitting the
+        application form. Our e-Visa system is not able to update or modify any of the information applicants have entered
+        wrongly. Applicants are responsible to provide all the information correctly and accurately to avoid unnecessary issues
+        at Ethiopian Immigration counter upon arrival. We do encourage to make sure all the information provided are correct
+            before submitting the application.</br>
+    </string>
+    <string name="faq_title_thirteen">
+        <br><b>How do i receive my e-visa Approval Letter?</b></br>
+    </string>
+    <string name="faq_description_thirteen">
+        <br>When your e-Visa application has been approved, an approval letter is sent to your designated email address or through notification message.
+            Alternatively you may check the status of your request for e-visa directly from our application and download if from your e-mail if approved.</br>
+    </string>
+    <string name="faq_title_fourteen">
+        <br><b>How do i receive my final passport?</b></br>
+    </string>
+    <string name="faq_description_fourteen">
+        <br>You can get your passport by Your postal address.</br>
+    </string>
+
+    //visa requirement strings
+    <string name="visa_requirement_title_one">
+        <br><b>Things You Should Know About Ethiopian e-Visa</b></br>
+    </string>
+    <string name="visa_requirement_description_one">
+        <br>Please refer the following requirements for Ethiopian e-VISA:\n
+- Nationals of African States who can\'t make e-Visa payment online can apply online
+            and make the payment on arrival at Addis Ababa Bole International Airport in cash.\n\n
+Please carefully read and comply to the important notices and guidelines stated in each step of the application form.\n
+- The validity of Ethiopian e-Visa starts from the date you intend to enter Ethiopia not from date of issue.\n
+- Your passport must be valid for at least 6 months from the date you intend to enter Ethiopia.\n
+- e-Visa application fees are not refundable.\n
+            - A passport size photo and scanned copy of passport is required.\n</br>
+    </string>
+    <string name="visa_requirement_title_two">
+        <br><b>International Organizations/Embassies Work Visa - RI</b></br>
+    </string>
+    <string name="visa_requirement_description_two">
+        <br>International organizations/embassies work visa is issued to foreign nationals
+            with ordinary passports who are invited by international organizations or embassies
+            resident in Ethiopian for different work purposes.\n\n
+           <b>Requirements:\n\n</b>
+- Copy of the following documents is mandatory.\n
+- Recent passport-size photo of the applicant.\n
+- Passport of the visa applicant which is valid for at least 6 months from the intended date of entry to Ethiopia.\n
+- Formal application letter by the organization/embassies to the Ministry of Foreign Affairs of Ethiopia.\n
+- Note verbal or support letter from Ministry of Foreign Affairs of Ethiopia.\n\n
+            <b>Processing Time:\n</b>
+            - Under normal circumstances, the processing time for international organizations/embassies work visa is 3 days.
+            So, travelers should submit their application at least 3 days before their estimated date of arrival.\n\n
+            <b>Duration and Validity:\n</b>
+           - The validity of the international organizations/embassies work visa starts counting from the date intended to enter Ethiopia\n
+        </br>
+    </string>
+    <string name="visa_requirement_title_three">
+        <b>Tourist Visa - VT\n</b>
+    </string>
+    <string name="visa_requirement_description_three">
+        <br>Tourist visa is an electronic single-entry visa issued by the Ethiopian Government for visitors who wish to travel to
+            the country for tourism or other non-business related purposes only.\n\n
+            <b>Eligibility:\n</b>
+            - Citizens of all countries in the globe are eligible for tourist visa provided that the below requirements are fulfilled.\n\n
+            <b>Requirements:\n</b>
+            - Copy of the following documents is mandatory.\n
+- Recent passport-size photo of the applicant.\n
+- Passport of the visa applicant which is valid for at least 6 months from the intended date of entry to Ethiopia.\n\n
+            <b>Processing Time:\n</b>
+            - Under normal circumstances, the processing time for tourist visa is 3 days.
+            So, travelers should submit their application at least 3 days before their estimated date of arrival.\n\n
+            <b>Duration and Validity:\n</b>
+           - Single entry tourist visa is valid up to 90 days starting from the intended date of arrival in Ethiopia.
+            If arrival date of the travelers is changed, travelers should contact the e-Visa Support Team at Support@evisa.gov.et to
+            adjust validity period of their visa.\n\n
+            <b>Extension:\n</b>
+            - Travelers can request for extension before the visa expires by going in person to the Head Office of The Immigration,
+            Nationality and Vital Events Agency (Addis Ababa, Ethiopia). Travelers who stay beyond the validity period without
+            extending are subject to fines and legal penalties.\n
+        </br>
+    </string>
+    <string name="visa_requirement_title_four">
+        <br><b>Visa On Arrival</b></br>
+    </string>
+    <string name="visa_requirement_description_four">
+        <br>Tourist visa (valid for up to three months) can be issued on arrival at Addis Ababa Bole
+            International Airport to nationals of the following countries and territories,or
+            persons holding residence permits issued by these countries or territories.\n\n
+            Applicants who claim to have permanent residence in one of the eligible countries are required
+            to show valid residence permit document up on arrival.\n\n
+            <b>Good News!\n</b>
+- Ethiopia has officially launched Visa-On-Arrival service for tourists from all African Union member states.\n
+- Nationals of Africa Union member states can pay the visa fee in cash at Bole International Airport to get tourist visa.\n
+- We encourage you to submit your visa applications online so that you will be notified of the status ahead of your travel
+            and avoid inconveniences that might be created in case you are denied entry.\n\n
+            Below are additional countries whose citizens are eligible for visa on arrival.\n
+            - Check your country if it is in blow list:\n\n
+            Argentina, Australia, Austria, Belgium, Canada, China, Denmark, Djibouti (Exempted - Allowed to enter without visa.),
+            France, Greece, Hong Kong-China, India, Israel, Italy, Japan, Kenya (Exempted - Allowed to enter without visa.),
+            Macau-China,  Mexico, Netherlands, New zealand, Norway, Poland, Portugal, Russia, South Korea, Spain, Sweden, Switzerland,
+            Thailand, United Kingdom, United States. </br>
+    </string>
+    <string name="visa_requirement_title_five">
+        <br><b>Journalist Visa - JV\n</b></br>
+    </string>
+    <string name="visa_requirement_description_five">
+        <br>Journalist visa is issued to foreign Journalists, media professionals or film makers,
+        coming to cover events, report for media organizations or produce films, TV or written material of various kinds.\n\n
+        <b>Requirements:\n</b>
+            Copy of the following documents is mandatory.\n
+- Recent passport-size photo of the applicant.\n
+- Passport of the visa applicant which is valid for at least 6 months from the intended date of entry to Ethiopia.\n
+- Written application by the inviting institution or company.\n
+- Support Letter from Ministry of foreign Affairs or Government communications office of Ethiopia.\n\n
+            <b>Processing Time:\n</b>
+            - Under normal circumstances, the processing time for tourist visa is 3 days.
+            So, travelers should submit their application at least 3 days before their estimated date of arrival.\n\n
+            <b>Duration and Validity:\n</b>
+           - The Validity of the Visa starts counting from the date intended to enter Ethiopia Travelers can request for extension before
+            the visa expires by going in person to the Head Office of The Immigration, Nationality and Vital Events Agency (Addis Ababa, Ethiopia).\n\n
+            <b>Extension:\n</b>
+           - Journalist visa can\'t be extended.\n
+        </br>
+    </string>
+    <string name="visa_requirement_title_six">
+        <br><b>Investment Visa - IV\n</b></br>
+    </string>
+    <string name="visa_requirement_description_six">
+        <br>This is a visa issued to foreign Nationals who are engaged in investment activities.
+            It can also be issued to potential investors who wish to come and invest in Ethiopia.\n\n
+           <b>Requirements:\n</b>
+- Recent passport-size photo and passport copy of the traveler which has at least 6 months validity from the date of entry are mandatory.\n
+Additionally, if the traveler is coming to invest or see investment opportunities in Ethiopia for the first time, the requirement is:\n
+- A support letter( a proof that you are traveling for investment purpose) from the nearest Embassy of Ethiopia.\n
+If the traveler is invited by a company that has been involved in investment activities in Ethiopia, the requirements are:\n
+- Official application letter written by the inviting company addressed to the Immigration, Nationality and Vital Events Agency of Ethiopia.\n
+- Business License of the inviting company.\n
+- Support Letter from Investment Commission of Ethiopia.\n\n
+          <b>Processing Time:\n</b>
+- Under normal circumstances, the processing time for tourist visa is 3 days.
+            So, travelers should submit their application at least 3 days before their estimated date of arrival.\n\n
+            <b>Duration and Validity:\n</b>
+- The Validity of the Visa starts counting from the date intended to Enter Ethiopia Travelers can request for extension before the visa
+            expires by going in person to the Head Office of The Immigration, Nationality and Vital Events Agency(Addis Ababa, Ethiopia).\n
+</br>
+    </string>
+    <string name="visa_requirement_title_seven">
+        <br><b>Ethiopian Government Institutions Short Task Visa - GIV\n</b></br>
+    </string>
+    <string name="visa_requirement_description_seven">
+        <br>Government Institutions Short Task Visa is issued to foreign nationals who wish to enter Ethiopia to
+            accomplish certain tasks for government institutions for a short period of time.\n\n
+            <b>Requirements:\n</b>
+Copy of the following documents is mandatory.\n
+- Recent passport-size photo of the applicant.\n
+- Passport of the visa applicant which is valid for at least 6 months from the intended date of entry to Ethiopia.\n
+- Written application letter by relevant Government institution.\n\n
+            <b>Processing Time:\n</b>
+- Under normal circumstances, the processing time for visa is 3 days. So, travelers should submit their application at least
+            3 days before their estimated date of arrival.\n\n
+            <b>Duration and Validity:\n</b>
+- The Validity of the visa starts counting from the date intended to enter Ethiopia. Travelers can request for
+            extension before the visa expires by going in person to the Head Office of The Immigration, Nationality
+            and Vital Events Agency (Addis Ababa, Ethiopia).\n</br>
+    </string>
+    <string name="visa_requirement_title_eight">
+        <br><b>Non-Governmental Organizations(NGO) Work Visa - NV\n</b></br>
+    </string>
+    <string name="visa_requirement_description_eight">
+        <br>An NGO visa is a visa issued to those foreign nationals who are invited by NGOs operating in Ethiopia for Employment
+            or short term assignments.\n\n
+            <b>Requirements:\n</b>
+Copy of the following documents is mandatory.\n
+- Recent passport-size photo of the applicant.\n
+- Passport of the visa applicant which is valid for at least 6 months from the intended date of entry to Ethiopia.\n
+- Official application letter written by the inviting organization and addressed to the Immigration, Nationality and Vital Events Agency of Ethiopia.\n
+- Registration License of the inviting organization.\n\n
+            <b>Processing Time:\n</b>
+- Under normal circumstances, the processing time for tourist visa is 3 days.
+            So, travelers should submit their application at least 3 days before their estimated date of arrival.\n\n
+            <b>Duration and Validity:\n</b>
+- The Validity of the visa starts counting from the date intended to enter Ethiopia.\n\n
+            <b>Extension:\n</b>
+- NGO Visa cannot be extended.\n</br>
+    </string>
+    <string name="visa_requirement_title_nine">
+        <br><b>Conference Visa - CV\n</b></br>
+    </string>
+    <string name="visa_requirement_description_nine">
+        <br>A conference visa is issued to those who wish to visit Ethiopia for International conferences provided that they have an
+            invitation to the conference, seminar or workshop being organized in Ethiopia by a Ministry or Department of the Government
+            of Federal Democratic Republic of Ethiopia, Regional State Governments, Educational Institutions and Universities or organizations
+            owned by the private sector or by the Government of Ethiopia, United Nations or its specialized agencies, African Union or reputed NGOs.\n\n
+            <b><u>Requirements:</u>\n\n</b>
+            - Recent passport-size photo, copy of passport of the applicant which is valid for at least 6 months from the intended entry
+            date to Ethiopia and invitation letter are required.\n\n
+            - Please refer to the following additional requirements.\n
+            <b>- Inviting company category:Governmental(Ethiopian)</b>\n
+            Description - Any governmental organization, ministry, department or educational institution of the Government of Ethiopia.\n\
+            Required Documents: Formal application letter written by the inviting company to the Immigration, Nationality and Vital
+                Events Agency of Ethiopia.\n\n
+
+               <b>- Inviting company category: International Organizations</b>\n
+            Description: Any International or Inter-Governmental Organizations such as United Nations and Africa Union\n
+            Required Documents: - Formal application letter written by the inviting organization to the Ministry of Foreign Affairs of Ethiopia.\n
+            - Note Verbal(support letter) from the Ministry of Foreign Affairs of Ethiopia.\n\n
+
+               <b>Inviting company category:NGO\n</b>
+            Description:Non-Governmental organizations(NGOs) which are REGISTERED in Ethiopia\n
+            Required Documents:- Formal application letter written by the inviting organization to the Immigration, Nationality and Vital Events Agency of Ethiopia.\n
+                - Registration license of the inviting organization.\n\n
+
+            <b>Inviting company category: Private\n</b>
+            Description: Any legal private company registered and based in Ethiopia\n
+            Required Documents:- Application letter written by the inviting company to the Immigration, Nationality and Vital Events Agency of Ethiopia.\n
+                - Business License(renewed for the fiscal year) of the inviting company.\n
+                - Taxpayer Identification Number(TIN) certificate(renewed for the fiscal year) of the inviting company.\n\n
+            <b><u>Note:\n</u></b>
+            - Invitation Letter: issued by the inviting company/organization to the participant should describe the conference briefly
+            such as conference name, start date, end date and venue.\n
+            - Note verbal: is a letter from the Ministry of Foreign Affairs of Ethiopia to the Immigration,
+            Nationality and Vital Events Agency stating that an organization/company has officially requested for visa.\n\n
+            <b>Duration and Validity:\n</b>
+            The conference visa is a 30 (thirty)-day single entry visa whose validity starts from the intended date of entry to Ethiopia.\n\n
+            <b>Extension:\n</b>
+            Conference Visa can not be extended.\n
+        </br>
+    </string>
+    <string name="visa_requirement_title_ten">
+        <b>Ethiopian Government Employment Visa - GV</b>
+    </string>
+    <string name="visa_requirement_description_ten">
+    <br>Government employment visa issued to foreign nationals to be employed by different Ethiopian Government institutions/ministries.\n\n
+        <b>Requirements\n</b>
+Copy of the following documents is mandatory.\n
+        - Recent passport-size photo of the applicant.\n
+        - Passport of the visa applicant which is valid for at least 6 months from the intended date of entry to Ethiopia.\n
+        - Written application letter by relevant Government institution.\n\n
+        <b>Processing Time\n</b>
+        - Under normal circumstances, the processing time for tourist visa is 3 days.
+        So, travelers should submit their application at least 3 days before their estimated date of arrival.\n\n
+        <b>Duration and Validity</b>\n
+        - The Validity of the Visa starts counting from the date intended to Enter Ethiopia Travelers can request for extension
+        before the visa expires by going in person to the Head Office of The Immigration, Nationality and Vital Events Agency (Addis Ababa, Ethiopia).\n\n
+        <b>Extension</b>\n
+Travelers can request for extension before the visa expires by going in person to the Head Office of The Main Department for Immigration,
+        Nationality and Vital Events Agency (Addis Ababa, Ethiopia). Travelers who stay beyond the validity period without extending are
+        subject to fines and legal penalties.\n</br>
+    </string>
+    <string name="visa_requirement_title_eleven">
+        <b>Foreign Business Firm Employment Visa - WV</b>
+    </string>
+    <string name="visa_requirement_description_eleven">
+        <br>Foreign Business Firm Employment Visa is issued to foreign nationals who are entering Ethiopia
+            to be employed by business firms owned/operated by foreigners.\n\n
+            <b>Requirements</b>\n
+            Copy of the following documents is mandatory.\n
+            - Recent passport-size photo of the applicant.\n
+            - Passport of the visa applicant which is valid for at least 6 months from the intended date of entry to Ethiopia.\n
+            - Formal application letter by the inviting company.\n
+            - Business license of the inviting company.\n
+            - TIN(Taxpayer Identification Number) Certificate of the inviting company.\n
+            - Contractual agreement between the inviting company and the visa applicant.\n\n
+            <b>Processing Time</b>\n
+            - Under normal circumstances, the processing time for tourist visa is 3 days. So, travelers should submit their
+            application at least 3 days before their estimated date of arrival.\n\n
+            <b>Duration and Validity</b>\n
+            - The Validity of the Visa starts counting from the date intended to Enter Ethiopia.\n\n
+            <b>Extension</b>\n
+            - Travelers can request for extension before the visa expires by going in person to the Head Office of The
+            Immigration, Nationality and Vital Events Agency (Addis Ababa, Ethiopia). Travelers who stay beyond the validity
+            period without extending are subject to fines and legal penalties.\n</br>
+    </string>
+    <string name="visa_requirement_title_twelve">
+        <b>Ethiopian Private Business Firm Work Visa - PE</b>
+    </string>
+    <string name="visa_requirement_description_twelve">
+        <br>Private Business Firm Visa is issued to foreign nationals coming for employment or other short term
+            assignments with Ethiopian private business firms.\n\n
+            <b>Requirements</b>\n
+            Copy of the following documents is mandatory.\n
+            - Recent passport-size photo of the applicant.\n
+            - Passport of the visa applicant which is valid for at least 6 months from the intended date of entry to Ethiopia.\n
+            - Formal application/request letter written by the inviting company and addressed to Main Department for
+            Immigration and Nationality Affairs of Ethiopia.\n
+            - Business license of the inviting company.\n
+            - Taxpayer Identification Number(TIN) Certificate of the inviting company\n
+            - Contractual agreement between the inviting company and the visa applicant.\n\n
+            <b>Processing Time</b>\n
+            - Under normal circumstances, the processing time for tourist visa is 3 days. So, travelers should submit
+            their application at least 3 days before their estimated date of arrival.\n\n
+            <b>Duration and Validity</b>\n
+            - The Validity of the Visa starts counting from the date intended to enter Ethiopia Travelers
+            can request for extension before the visa expires by going in person to the Head Office of the
+            Immigration, Nationality and Vital Events Agency (Addis Ababa, Ethiopia).\n\n
+            <b>Extension</b>\n
+            -Travelers can request for extension before the visa expires by going in person to the Head Office of the
+            Immigration, Nationality and Vital Events Agency (Addis Ababa, Ethiopia). Travelers who stay beyond the
+            validity period without extending are subject to fines and legal penalties.\n</br>
+    </string>
+    <string name="visa_requirement_title_thirteen">
+        <b>e-Visa Extension</b>
+    </string>
+    <string name="visa_requirement_description_thirteen">
+        <br>The visa extension service is a visa service for foreign nationals with valid IV, GV, GIV, WV, RI, PE and VT visas who need to
+            prolong their visas on reasonable grounds. Foreign nationals can extend their visas by going, in person,to the
+            Immigration, Nationality and Vital Events Agency in Addis Ababa (Arada sub-city, Arat Kilo), or by applying online visa extension on this Application.
+            Visitors should n\’t stay for longer than their visa allows. There are consequences of overstaying beyond the validity period of a visa and the
+            foreign nationals who overstay in Ethiopia are subject to fines and legal penalties\n</br>
+    </string>
+    <string name="visa_requirement_title_fourteen">
+        <b>Requirements for e-Visa Extension</b>
+    </string>
+    <string name="visa_requirement_description_fourteen">
+        <br><b>General Requirements:</b>\n
+            - The passport of the applicant should be valid for at least six months since the date when the validity of the extended visa starts.\n
+            - Student Visa, NGO Visa(NV), Conference Visa(CV), and Journalist Visa( JV Visa)  cannot be extended.\n
+            - The validity period of the extended visa will start from the next day after the initial visa expires.\n\n
+            Additional Specific Requirements\n
+            -Relevant documents should be attached as required when applying for a visa extension.\n\n
+            For GV and GIV visas:\n
+            - Supporting letter from the relevant government institution\n\n
+            For WV and PE visas:\n
+            - Supporting letter from the relevant company /business organization\n
+            - Renewed /valid business license of company /business organization\n\n
+            For IV visas:\n
+            - Supporting letter from the office of Investment Commission of the Government of Ethiopia\n\n
+            For RI visas:\n
+            -Support letter from international organization or embassy who invited the applicant.\n
+            - Note verbal or support letter from the Ministry of Foreign Affairs of the Government of Ethiopia.\n</br>
+    </string>
+
+    //service fees strings
+    <string name="ethiopian_new_passport_fee_title">
+        <b>Ethiopian New Passport Fee:</b>
+    </string>
+    <string name="ethiopian_new_passport_fee_description">
+        <br>- 32 pages - 600ETB\n
+            - 64 pages - 2186ETB\n
+        -For Urgent: Additional 50% payment of the requested document\n</br>
+</string>
+
+    <string name="expired_passport_fee_title">
+          <b>Ethiopian Expired Passport Fee:</b>
+    </string>
+    <string name="expired_passport_fee_description">
+        <br>- 32 pages - 600 ETB\n
+        - 64 pages - 2186 ETB\n
+        -For Urgent: Additional 50% payment of the requested document\n</br>
+    </string>
+
+    <string name="passport_page_run_out_fee_title">
+          <b>Passport page run out Fee:</b>
+    </string>
+    <string name="passport_page_run_out_fee_description">
+        <br>- 32 pages - 600+50%=900\n
+        - 64 pages - 2186+50%=3279 ETB\n
+        - If your passport has more than 6 month\'s validity,the payment will have additional 50% of the requested passport.\n\n
+        -For Urgent: Additional 50% payment of the requested document\n</br>
+    </string>
+
+    <string name="damaged_passport_fee_title">
+          <b>Damaged Passport Fee:</b>
+    </string>
+    <string name="damaged_passport_fee_description">
+        <br>- 32 pages - 600 ETB\n
+        - 64 pages - 2186 ETB\n\n
+        - If your passport has more than 6 month\'s validity,the payment will have additional 50% of the requested passport.\n\n
+        - 32 pages - 500+50%=900\n
+        - 64 page - 2186+50%=3279\n
+        -For Urgent: Additional 50% payment of the requested document\n</br>
+    </string>
+
+    <string name="lost_passport_fee_title">
+          <b>Lost Passport Fee:</b>
+    </string>
+    <string name="lost_passport_fee_description">
+        <br>- 32 pages - 600+50%=900\n
+        - 64 pages - 2186+50%=3279 ETB\n\n
+        - Replacement of lost passport for both valid and expired passport has additional 50% payment\n\n
+        -For Urgent: Additional 50% payment of the requested document\n</br>
+    </string>
+
+    <string name="Valid_passport_fee_title">
+          <b>Valid Passport Fee:</b>
+    </string>
+    <string name="Valid_passport_fee_description">
+        <br>- 32 pages - 600+50%=900\n
+        - 64 pages - 2186+50%=3279 ETB\n\n
+        - For both valid and expired passport has additional 50% payment\n\n
+        -For Urgent: Additional 50% payment of the requested document\n</br>
+    </string>
+
+    <string name="online_tourist_visa_fee_title">
+        <b>Online Tourist Visa Fee:</b>
+    </string>
+    <string name="online_tourist_visa_fee_description">
+        <br>- Single Entry 30 Days 52 USD\n
+            - Single Entry 90 Days 72USD</br>
+    </string>
+
+    <string name="journalist_visa_fee_title">
+        <b>Journalist Visa Fee:</b>
+    </string>
+    <string name="journalist_visa_fee_description">
+            <br>- Single Entry 30 Days 42 USD</br>
+    </string>
+
+    <string name="international_organizations_embassies_work_visa_ri_fee_title">
+        <b>International Organizations/Embassies Work Visa - RI Fee:</b>
+    </string>
+    <string name="international_organizations_embassies_work_visa_ri_fee_description">
+        <br>- Single Entry 30 Days 52 USD</br>
+    </string>
+
+    <string name="investment_visa_iv_fee_title">
+      <b>  Investment Visa - IV Fee:</b>
+    </string>
+    <string name="investment_visa_iv_fee_description">
+        <br>- Single Entry 30 days 32 USD\n
+        - Multiple Entry	90 days	42 USD\n
+        - Multiple Entry	6 months 62 USD\n
+            - Multiple Entry	12 months 122 USD\n</br>
+    </string>
+
+    <string name="ethiopian_government_institutions_short_task_visa_giv_fee_title">
+       <b>Ethiopian Government Institutions Short Task Visa - GIV Fee:</b>
+    </string>
+    <string name="ethiopian_government_institutions_short_task_visa_giv_fee_description">
+        <br>- Single Entry 30 days 22 USD\n
+        - Multiple Entry 90 days 82 USD\n
+            - Multiple Entry	6 months 122 USD\n</br>
+    </string>
+
+    <string name="non_governmental_organizations_ngo_work_visa_nv_fee_title">
+      <b>  Non-Governmental Organizations(NGO) Work Visa - NV Fee:</b>
+    </string>
+    <string name="non_governmental_organizations_ngo_work_visa_nv_fee_description">
+        <br>- Single Entry 30 Days 62 USD\n</br>
+    </string>
+
+    <string name="conference_visa_cv_fee_title">
+        <b>Conference Visa - CV Fee:</b>
+    </string>
+    <string name="conference_visa_cv_fee_description">
+        <br>- Single Entry 30 Days 32 USD\n</br>
+    </string>
+
+    <string name="ethiopian_government_employment_visa_gv_fee_title">
+       <b> Ethiopian Government Employment Visa - GV Fee:</b>
+    </string>
+    <string name="ethiopian_government_employment_visa_gv_fee_description">
+        <br>- Single Entry 30Days 32 USD\n</br>
+    </string>
+
+    <string name="foreign_business_firm_employment_visa_wv_fee_title">
+       <b> Foreign Business Firm Employment Visa - WV Fee:</b>
+    </string>
+    <string name="foreign_business_firm_employment_visa_wv_fee_description">
+        <br>- Single Entry 30 Days 42 USD \n</br>
+    </string>
+
+    <string name="ethiopian_private_business_firm_work_visa_pe_fee_title">
+        <b>Ethiopian Private Business Firm Work Visa - PE Fee:</b>
+    </string>
+    <string name="ethiopian_private_business_firm_work_visa_pe_fee_description">
+        <br>- Single Entry 30 Days 32 USD\n</br>
+    </string>
+
+    <string name="visa_extension_fee_title">
+        <b>Visa Extension Fee:</b>
+    </string>
+    <string name="visa_extension_fee_description">
+       <br> The extension fee depends on the number of times the applicant is requesting for a visa extension.
+           An additional service charge of USD 2 will also be added.\n\n
+           - If the visa is being extended for the first time, there shall be an additional 100% charge above the initial e-visa application fee.\n\n
+           - If extended for the second time for up to 15 days,  there shall be an additional 150% charge above the initial e-visa application fee.\n\n
+           - If extended for the third time for 10 up to days,  there shall be an additional 200% charge above the initial e-visa application fee.\n\n
+           E.g. If an applicant who applied for single entry 30 days visa is extending his/her visa for the first time, the visa extension fee will be USD 102.
+           This means, USD 50 (initial visa application fee) + USD 50 (additional visa extension charge ) + USD 2(Service Charge)  \n
+    </br></string>
+    <string name="copyright">Copyright \u00a9 2020 ICMS</string>
+
 
 </resources>

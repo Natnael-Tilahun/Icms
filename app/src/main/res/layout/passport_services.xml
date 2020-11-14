@@ -1,94 +1,178 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/passport_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/primarytheme1"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:weightSum="10"
-    tools:context=".MainActivity">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2">
-
-        <TextView
-            android:id="@+id/passportservices_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingVertical="15dp"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:text="@string/passport_sevices"
-            android:textColor="@android:color/white"
-            android:textSize="40sp"
-            app:fontFamily="@font/baloo" />
-    </RelativeLayout>
+    android:background="@color/primarytheme1"
+    tools:ignore="ScrollViewCount">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="8"
-        android:background="@drawable/bg2"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        android:padding="20dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/newpassport_btn"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
-            android:backgroundTint="@android:color/white"
-            android:elevation="30dp"
             android:padding="15dp"
-            android:shadowColor="@color/black"
-            android:text="@string/new_passport"
-            android:textColor="@color/primarytheme1"
-            android:textSize="25sp"
-            app:cornerRadius="20dp"
-            app:strokeColor="@color/primarytheme1"
-            app:strokeWidth="3dp"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/passportservices_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/passport_sevices"
+                android:textColor="@android:color/white"
+                android:textSize="40sp"
+            app:fontFamily="@font/baloo" />
+    </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:background="@drawable/bg2"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="35dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/newpassport_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginVertical="5dp"
+                android:backgroundTint="@android:color/white"
+                android:elevation="30dp"
+                android:fontFamily="@font/roboto_medium"
+                android:shadowColor="@color/black"
+                android:text="@string/new_passport"
+                android:padding="0dp"
+                android:textColor="@color/primarytheme1"
+                android:textAllCaps="false"
+                app:cornerRadius="20dp"
+                app:strokeColor="@color/primarytheme1"
+                android:textSize="20sp"
+                app:strokeWidth="3dp"
             tools:targetApi="lollipop" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/renewpassport_btn"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginVertical="10dp"
-            android:backgroundTint="@android:color/white"
-            android:elevation="30dp"
-            android:padding="15dp"
-            android:shadowRadius="@android:integer/config_longAnimTime"
-            android:text="@string/renew_passport"
-            android:textColor="@color/primarytheme1"
-            android:textSize="25sp"
-            app:cornerRadius="20dp"
-            app:strokeColor="@color/primarytheme1"
-            app:strokeWidth="3dp"
-            tools:targetApi="lollipop" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/expiredpassport_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginVertical="5dp"
+                android:backgroundTint="@android:color/white"
+                android:elevation="30dp"
+                android:fontFamily="@font/roboto_medium"
+                android:shadowRadius="@android:integer/config_longAnimTime"
+                android:text="@string/renew_passport"
+                android:padding="0dp"
+                android:textAllCaps="false"
+                android:textColor="@color/primarytheme1"
+                android:textSize="20sp"
+                app:cornerRadius="20dp"
+                app:strokeColor="@color/primarytheme1"
+                app:strokeWidth="3dp"
+                tools:targetApi="lollipop" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/lostpassport_btn"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginVertical="10dp"
-            android:backgroundTint="@android:color/white"
-            android:elevation="30dp"
-            android:padding="15dp"
-            android:shadowRadius="@android:integer/config_longAnimTime"
-            android:text="@string/lost_passport"
-            android:textColor="@color/primarytheme1"
-            android:textSize="25sp"
-            app:cornerRadius="20dp"
-            app:strokeColor="@color/primarytheme1"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/passport_page_runout_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginVertical="5dp"
+                android:backgroundTint="@android:color/white"
+                android:elevation="30dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="0dp"
+                android:shadowRadius="@android:integer/config_longAnimTime"
+                android:text="@string/passport_page_run_out"
+                android:textAllCaps="false"
+                android:textColor="@color/primarytheme1"
+                android:textSize="20sp"
+                app:cornerRadius="20dp"
+                app:strokeColor="@color/primarytheme1"
+                app:strokeWidth="3dp"
+                tools:targetApi="lollipop" />
 
-            app:strokeWidth="3dp"
-            tools:targetApi="lollipop" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/damaged_passport_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginVertical="5dp"
+                android:backgroundTint="@android:color/white"
+                android:elevation="30dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="0dp"
+                android:shadowRadius="@android:integer/config_longAnimTime"
+                android:text="@string/damaged_passport"
+                android:textColor="@color/primarytheme1"
+                android:textAllCaps="false"
+                app:cornerRadius="20dp"
+                android:textSize="20sp"
+                app:strokeColor="@color/primarytheme1"
+                app:strokeWidth="3dp"
+                tools:targetApi="lollipop" />
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/lostpassport_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginVertical="5dp"
+                android:backgroundTint="@android:color/white"
+                android:elevation="30dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="0dp"
+                android:shadowRadius="@android:integer/config_longAnimTime"
+                android:text="@string/lost_passport"
+                android:textColor="@color/primarytheme1"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                app:cornerRadius="20dp"
+                app:strokeColor="@color/primarytheme1"
+                app:strokeWidth="3dp"
+                tools:targetApi="lollipop" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/change_of_passport_data_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginVertical="5dp"
+                android:backgroundTint="@android:color/white"
+                android:elevation="30dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="0dp"
+                android:shadowRadius="@android:integer/config_longAnimTime"
+                android:text="@string/change_of_passport_data"
+                android:textAllCaps="false"
+                android:textColor="@color/primarytheme1"
+                android:textSize="20sp"
+                app:cornerRadius="20dp"
+                app:strokeColor="@color/primarytheme1"
+                app:strokeWidth="3dp"
+                tools:targetApi="lollipop" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/urgent_passport_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginVertical="5dp"
+                android:backgroundTint="@android:color/white"
+                android:elevation="30dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="0dp"
+                android:shadowRadius="@android:integer/config_longAnimTime"
+                android:text="@string/urgent_passport"
+                android:textAllCaps="false"
+                android:textColor="@color/primarytheme1"
+                android:textSize="20sp"
+                app:cornerRadius="20dp"
+                app:strokeColor="@color/primarytheme1"
+                app:strokeWidth="3dp"
+                tools:targetApi="lollipop" />
+
+        </LinearLayout>
     </LinearLayout>
     <!--    <GridLayout-->
     <!--        android:layout_width="match_parent"-->
@@ -146,4 +230,4 @@
     <!--            android:background="@android:color/darker_gray"-->
     <!--            android:clickable="true"/>-->
     <!--    </GridLayout>-->
-</LinearLayout>
+</ScrollView>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/servicefees_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primarytheme1"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".PassportRequirement">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/baloo"
+            android:padding="10dp"
+            android:text="Service fees:"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            tools:targetApi="jelly_bean" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="8.5"
+        android:background="@drawable/bg2"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/servicefees_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:background="@color/primarytheme1"-->
+    <!--    android:orientation="vertical"-->
+    <!--    tools:context=".MainActivity"-->
+    <!--    tools:ignore="ScrollViewCount">-->
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:weightSum="10">-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_weight="2"-->
+    <!--            android:padding="15dp">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/servicefees_tv"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:padding="0dp"-->
+    <!--                android:text="@string/our_services_fees"-->
+    <!--                android:textColor="@android:color/white"-->
+    <!--                android:textSize="30sp"-->
+    <!--                app:fontFamily="@font/baloo" />-->
+    <!--        </RelativeLayout>-->
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_weight="8"-->
+    <!--            android:background="@drawable/bg"-->
+    <!--            android:gravity="center_horizontal"-->
+    <!--            android:orientation="vertical"-->
+    <!--            android:padding="15dp">-->
+    <!--                <TextView-->
+    <!--                    android:id="@+id/passportfee_tv"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="@string/ethiopian_new_passport_fee"-->
+    <!--                    android:textColor="@android:color/black"-->
+    <!--                    android:background="@drawable/border_rectangle"-->
+    <!--                    android:padding="10dp"-->
+    <!--                    android:fontFamily="@font/roboto_medium"-->
+    <!--                    android:layout_marginVertical="5dp"-->
+    <!--                    android:textSize="25sp"-->
+    <!--                    tools:targetApi="jelly_bean" />-->
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/expired_passport_fee"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:background="@drawable/border_rectangle"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:fontFamily="@font/roboto_medium"-->
+    <!--                android:layout_marginVertical="5dp"-->
+    <!--                android:textSize="25sp"-->
+    <!--                tools:targetApi="jelly_bean" />-->
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/passport_page_run_out_fee"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:background="@drawable/border_rectangle"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:fontFamily="@font/roboto_medium"-->
+    <!--                android:layout_marginVertical="5dp"-->
+    <!--                android:textSize="25sp"-->
+    <!--                tools:targetApi="jelly_bean" />-->
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/damaged_passport_fee"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:background="@drawable/border_rectangle"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:fontFamily="@font/roboto_medium"-->
+    <!--                android:layout_marginVertical="5dp"-->
+    <!--                android:textSize="25sp"-->
+    <!--                tools:targetApi="jelly_bean" />-->
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/lost_passport_fee"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:background="@drawable/border_rectangle"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:fontFamily="@font/roboto_medium"-->
+    <!--                android:layout_marginVertical="5dp"-->
+    <!--                android:textSize="25sp"-->
+    <!--                tools:targetApi="jelly_bean" />-->
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/Valid_passport_fee"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:background="@drawable/border_rectangle"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:fontFamily="@font/roboto_medium"-->
+    <!--                android:layout_marginVertical="5dp"-->
+    <!--                android:textSize="25sp"-->
+    <!--                tools:targetApi="jelly_bean" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/online_tourist_visa_fee"-->
+    <!--                android:background="@drawable/border_rectangle"-->
+    <!--                android:layout_marginVertical="5dp"-->
+    <!--                android:fontFamily="@font/roboto_medium"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:textSize="25sp"-->
+    <!--                tools:targetApi="jelly_bean" />-->
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/journalist_visa_fee"-->
+    <!--                android:background="@drawable/border_rectangle"-->
+    <!--                android:layout_marginVertical="5dp"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:fontFamily="@font/roboto_medium"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="25sp"-->
+    <!--                tools:targetApi="jelly_bean" />-->
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/international_organizations_embassies_work_visa_ri_fee"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:layout_marginVertical="5dp"-->
+    <!--                android:fontFamily="@font/roboto_medium"-->
+    <!--                android:background="@drawable/border_rectangle"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="25sp"-->
+    <!--                tools:targetApi="jelly_bean" />-->
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/investment_visa_iv_fee"-->
+    <!--                android:background="@drawable/border_rectangle"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:fontFamily="@font/roboto_medium"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:layout_marginVertical="5dp"-->
+    <!--                android:textSize="25sp"-->
+    <!--                tools:targetApi="jelly_bean" />-->
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/ethiopian_government_institutions_short_task_visa_giv_fee"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:fontFamily="@font/roboto_medium"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:layout_marginVertical="5dp"-->
+    <!--                android:background="@drawable/border_rectangle"-->
+    <!--                android:textSize="25sp"-->
+    <!--                tools:targetApi="jelly_bean" />-->
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/non_governmental_organizations_ngo_work_visa_nv_fee"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:fontFamily="@font/roboto_medium"-->
+    <!--                android:layout_marginVertical="5dp"-->
+    <!--                android:background="@drawable/border_rectangle"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="25sp"-->
+    <!--                tools:targetApi="jelly_bean" />-->
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/conference_visa_cv_fee"-->
+    <!--                android:background="@drawable/border_rectangle"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:fontFamily="@font/roboto_medium"-->
+    <!--                android:layout_marginVertical="5dp"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="25sp"-->
+    <!--                tools:targetApi="jelly_bean" />-->
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/ethiopian_government_employment_visa_gv_fee"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:fontFamily="@font/roboto_medium"-->
+    <!--                android:layout_marginVertical="5dp"-->
+    <!--                android:background="@drawable/border_rectangle"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="25sp"-->
+    <!--                tools:targetApi="jelly_bean" />-->
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/foreign_business_firm_employment_visa_wv_fee"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:fontFamily="@font/roboto_medium"-->
+    <!--                android:layout_marginVertical="5dp"-->
+    <!--                android:background="@drawable/border_rectangle"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="25sp"-->
+    <!--                tools:targetApi="jelly_bean" />-->
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/ethiopian_private_business_firm_work_visa_pe_fee"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:layout_marginVertical="5dp"-->
+    <!--                android:fontFamily="@font/roboto_medium"-->
+    <!--                android:background="@drawable/border_rectangle"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="25sp"-->
+    <!--                tools:targetApi="jelly_bean" />-->
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/visa_extension_fee"-->
+    <!--                android:background="@drawable/border_rectangle"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:fontFamily="@font/roboto_medium"-->
+    <!--                android:layout_marginVertical="5dp"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="25sp"-->
+    <!--                tools:targetApi="jelly_bean" />-->
+
+    <!--        </LinearLayout>-->
+    <!--    </LinearLayout>-->
+    <!--</ScrollView>-->

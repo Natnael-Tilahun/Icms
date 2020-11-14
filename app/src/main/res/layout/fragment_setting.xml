@@ -1,147 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_weight="10"
+    android:layout_height="wrap_content"
     android:background="@color/primarytheme1"
+    tools:ignore="ScrollViewCount"
     android:orientation="vertical"
     tools:context=".SettingFragment">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3">
-
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/profile_iv"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerInParent="true"
-            android:background="@drawable/border_oval"
-            android:backgroundTint="@color/white"
-            android:src="@drawable/ic_profile"
-            app:strokeWidth="5dp"
-            tools:targetApi="lollipop" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_iv"
-            android:layout_gravity="center"
-            android:layout_marginVertical="10dp"
-            android:drawableTint="@color/black"
-            android:gravity="center"
-            android:paddingHorizontal="40dp"
-            android:text="@string/username"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-            tools:targetApi="m" />
-
-    </RelativeLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="7"
-        android:background="@drawable/bg"
-        android:orientation="vertical"
-        android:padding="30dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <com.google.android.material.textview.MaterialTextView
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            android:gravity="center"
-            android:text="@string/setting"
-            android:textColor="@color/black"
-            android:textSize="35sp" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginVertical="10dp"
-            android:background="@drawable/border_rectangle"
-            android:clickable="true"
-            android:drawableStart="@drawable/ic_edit"
-            android:drawableLeft="@drawable/ic_edit"
-            android:focusable="true"
-            android:gravity="center"
             android:padding="10dp"
-            android:text="@string/change_username"
-            android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:layout_weight="3">
 
-        <com.google.android.material.textview.MaterialTextView
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profile_iv"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/border_oval"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/ic_profile"
+                app:strokeWidth="5dp"
+                tools:targetApi="lollipop" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_iv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="0dp"
+                android:fontFamily="@font/roboto_regular"
+                android:drawableTint="@color/black"
+                android:gravity="center"
+                android:text="@string/username"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                tools:targetApi="m" />
+
+        </RelativeLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginVertical="10dp"
-            android:background="@drawable/border_rectangle"
-            android:clickable="true"
-            android:drawableStart="@drawable/ic_edit"
-            android:drawableLeft="@drawable/ic_edit"
-            android:focusable="true"
-            android:gravity="center"
-            android:padding="10dp"
-            android:paddingHorizontal="0dp"
-            android:text="@string/change_full_name"
-            android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:layout_weight="7"
+            android:background="@drawable/bg"
+            android:orientation="vertical"
+            android:padding="30dp">
 
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginVertical="10dp"
-            android:background="@drawable/border_rectangle"
-            android:clickable="true"
-            android:drawableStart="@drawable/ic_lock"
-            android:drawableLeft="@drawable/ic_lock"
-            android:focusable="true"
-            android:gravity="center"
-            android:padding="10dp"
-            android:paddingHorizontal="40dp"
-            android:text="@string/change_password"
-            android:textColor="@color/black"
-            android:textSize="25sp" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center"
+                android:paddingBottom="20dp"
+                android:text="@string/setting"
+                android:textColor="@color/black"
+                android:textSize="35sp" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginVertical="10dp"
-            android:background="@drawable/border_rectangle"
-            android:clickable="true"
-            android:drawableStart="@drawable/ic_phone"
-            android:drawableLeft="@drawable/ic_phone"
-            android:focusable="true"
-            android:gravity="center"
-            android:padding="10dp"
-            android:paddingHorizontal="0dp"
-            android:text="@string/change_phone"
-            android:textColor="@color/black"
-            android:textSize="25sp" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/border_rectangle"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_edit"
+                android:drawableLeft="@drawable/ic_edit"
+                android:focusable="true"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="10dp"
+                android:text="@string/change_username"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginVertical="10dp"
-            android:background="@drawable/border_rectangle"
-            android:clickable="true"
-            android:drawableStart="@drawable/ic_profile"
-            android:drawableLeft="@drawable/ic_profile"
-            android:focusable="true"
-            android:gravity="center"
-            android:padding="10dp"
-            android:paddingHorizontal="0dp"
-            android:text="@string/change_profile_picture"
-            android:textColor="@color/black"
-            android:textSize="25sp" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/border_rectangle"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_email"
+                android:drawableLeft="@drawable/ic_email"
+                android:focusable="true"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="10dp"
+                android:paddingHorizontal="0dp"
+                android:text="@string/change_email"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
 
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/border_rectangle"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawableLeft="@drawable/ic_lock"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="10dp"
+                android:paddingHorizontal="40dp"
+                android:text="@string/change_password"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="25sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/border_rectangle"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawableLeft="@drawable/ic_phone"
+                android:focusable="true"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:padding="10dp"
+                android:paddingHorizontal="0dp"
+                android:text="@string/change_phone"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/border_rectangle"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_profile"
+                android:drawableLeft="@drawable/ic_profile"
+                android:focusable="true"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="10dp"
+                android:paddingHorizontal="0dp"
+                android:text="@string/change_profile_picture"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</ScrollView>

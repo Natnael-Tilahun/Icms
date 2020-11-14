@@ -53,8 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginVertical="5dp"
-                android:backgroundTint="@android:color/white"
-                android:elevation="30dp"
+                android:background="@android:color/white"
                 android:padding="0dp"
                 android:shadowRadius="@android:integer/config_longAnimTime"
                 android:text="@string/tourist_visa_online"
@@ -62,15 +61,13 @@
                 android:textSize="23sp"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/primarytheme1"
-                app:strokeWidth="3dp"
-                tools:targetApi="lollipop" />
+                app:strokeWidth="3dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginVertical="0dp"
-                android:backgroundTint="@android:color/white"
-                android:elevation="30dp"
+                android:background="@android:color/white"
                 android:padding="0dp"
                 android:shadowRadius="@android:integer/config_longAnimTime"
                 android:text="@string/tourist_visa_on_arrival"
@@ -78,8 +75,7 @@
                 android:textSize="23sp"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/primarytheme1"
-                app:strokeWidth="3dp"
-                tools:targetApi="lollipop" />
+                app:strokeWidth="3dp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -93,7 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginVertical="5dp"
-                android:backgroundTint="@android:color/white"
+                android:background="@android:color/white"
                 android:padding="0dp"
                 android:shadowRadius="@android:integer/config_longAnimTime"
                 android:text="@string/confrence_visa"
@@ -101,15 +97,12 @@
                 android:textSize="23sp"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/primarytheme1"
-                app:strokeWidth="3dp"
-                tools:targetApi="lollipop" />
-
+                app:strokeWidth="3dp" />
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginVertical="0dp"
-                android:backgroundTint="@android:color/white"
-                android:elevation="30dp"
+                android:background="@android:color/white"
                 android:padding="0dp"
                 android:shadowRadius="@android:integer/config_longAnimTime"
                 android:text="@string/investment_visa"
@@ -117,15 +110,13 @@
                 android:textSize="23sp"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/primarytheme1"
-                app:strokeWidth="3dp"
-                tools:targetApi="lollipop" />
+                app:strokeWidth="3dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginVertical="0dp"
-                android:backgroundTint="@android:color/white"
-                android:elevation="30dp"
+                android:background="@android:color/white"
                 android:padding="0dp"
                 android:shadowRadius="@android:integer/config_longAnimTime"
                 android:text="@string/foreign_business_firm_employment_visa"
@@ -133,15 +124,13 @@
                 android:textSize="20sp"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/primarytheme1"
-                app:strokeWidth="3dp"
-                tools:targetApi="lollipop" />
+                app:strokeWidth="3dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginVertical="0dp"
-                android:backgroundTint="@android:color/white"
-                android:elevation="30dp"
+                android:background="@android:color/white"
                 android:padding="0dp"
                 android:shadowRadius="@android:integer/config_longAnimTime"
                 android:text="@string/journalist_visa"
@@ -149,15 +138,13 @@
                 android:textSize="20sp"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/primarytheme1"
-                app:strokeWidth="3dp"
-                tools:targetApi="lollipop" />
+                app:strokeWidth="3dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginVertical="0dp"
-                android:backgroundTint="@android:color/white"
-                android:elevation="30dp"
+                android:background="@android:color/white"
                 android:padding="0dp"
                 android:shadowRadius="@android:integer/config_longAnimTime"
                 android:text="@string/ethiopian_private_business_firm_work_visa"
@@ -165,15 +152,13 @@
                 android:textSize="20sp"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/primarytheme1"
-                app:strokeWidth="3dp"
-                tools:targetApi="lollipop" />
+                app:strokeWidth="3dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginVertical="0dp"
-                android:backgroundTint="@android:color/white"
-                android:elevation="30dp"
+                android:background="@android:color/white"
                 android:padding="0dp"
                 android:shadowRadius="@android:integer/config_longAnimTime"
                 android:text="@string/international_organization_work_visa"
@@ -181,15 +166,13 @@
                 android:textSize="20sp"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/primarytheme1"
-                app:strokeWidth="3dp"
-                tools:targetApi="lollipop" />
+                app:strokeWidth="3dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginVertical="0dp"
-                android:backgroundTint="@android:color/white"
-                android:elevation="30dp"
+                android:background="@android:color/white"
                 android:padding="0dp"
                 android:shadowRadius="@android:integer/config_longAnimTime"
                 android:text="@string/government_institutions_short_work_visa"
@@ -197,15 +180,13 @@
                 android:textSize="20sp"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/primarytheme1"
-                app:strokeWidth="3dp"
-                tools:targetApi="lollipop" />
+                app:strokeWidth="3dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginVertical="0dp"
-                android:backgroundTint="@android:color/white"
-                android:elevation="30dp"
+                android:background="@android:color/white"
                 android:padding="0dp"
                 android:shadowRadius="@android:integer/config_longAnimTime"
                 android:text="@string/ngo_work_visa"
@@ -213,15 +194,13 @@
                 android:textSize="20sp"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/primarytheme1"
-                app:strokeWidth="3dp"
-                tools:targetApi="lollipop" />
+                app:strokeWidth="3dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginVertical="0dp"
-                android:backgroundTint="@android:color/white"
-                android:elevation="30dp"
+                android:background="@android:color/white"
                 android:padding="0dp"
                 android:shadowRadius="@android:integer/config_longAnimTime"
                 android:text="@string/ethiopian_government_employment_visa"
@@ -229,10 +208,7 @@
                 android:textSize="20sp"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/primarytheme1"
-                app:strokeWidth="3dp"
-                tools:targetApi="lollipop" />
-
-
+                app:strokeWidth="3dp" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

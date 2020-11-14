@@ -50,6 +50,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
             android:clickable="true"
             android:elevation="15dp"
             app:cardBackgroundColor="@color/design_default_color_on_primary"
@@ -99,6 +100,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
             android:clickable="true"
             android:elevation="15dp"
             app:cardBackgroundColor="@color/design_default_color_background"
@@ -231,6 +233,15 @@
                     app:fontFamily="@font/aclonica" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
     </GridLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/secondarytheme2"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/copyright"
+        android:textAlignment="center"
+        android:textColor="@color/black" />
+
 </LinearLayout>

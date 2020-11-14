@@ -26,6 +26,7 @@
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -36,5 +37,18 @@
         android:backgroundTint="@color/white"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/drawer_menu"
-        tools:targetApi="lollipop" />
+        tools:targetApi="lollipop">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/copyright"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            tools:ignore="RtlCompat" />
+    </com.google.android.material.navigation.NavigationView>
+
 </androidx.drawerlayout.widget.DrawerLayout>

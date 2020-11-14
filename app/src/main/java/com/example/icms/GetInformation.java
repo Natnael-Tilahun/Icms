@@ -28,7 +28,7 @@ public class GetInformation extends AppCompatActivity {
         passrequirements_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(GetInformation.this, PassportRequirements.class);
+                Intent intent = new Intent(GetInformation.this, PassportRequirement.class);
                 startActivity(intent);
             }
         });

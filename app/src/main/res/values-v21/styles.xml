@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.Light">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:statusBarColor">#00000000</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
         <item name="popupMenuBackground">@color/secondarytheme2</item>
         <item name="popupTheme">@color/secondarytheme2</item>
         <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>-->
 
     </style>
 

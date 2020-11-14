@@ -29,45 +29,45 @@
             app:fontFamily="@font/baloo" />
     </RelativeLayout>
 
-    <GridLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="8"
-        android:alignmentMode="alignMargins"
         android:background="@drawable/bg2"
-        android:columnCount="2"
-        android:columnOrderPreserved="false"
-        android:padding="10dp"
-        android:rowCount="2">
+        android:orientation="vertical"
+        android:padding="10dp">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/passcard"
-            android:layout_width="0dp"
-            app:cardBackgroundColor="@android:color/white"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_row="0"
-            android:layout_rowWeight="1"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="10dp"
-            tools:targetApi="lollipop">
+            android:layout_gravity="center_vertical"
+            android:layout_weight="4"
+            android:orientation="horizontal">
 
-            <LinearLayout
+            <androidx.cardview.widget.CardView
+                android:id="@+id/passcard"
                 android:layout_width="wrap_content"
+                app:cardBackgroundColor="@android:color/white"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="5dp"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_gravity="start"
+                android:foregroundGravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="10dp">
 
-                <ImageView
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
                     android:id="@+id/passimageView"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -91,34 +91,30 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/visacard"
-            android:layout_width="0dp"
-            app:cardBackgroundColor="@android:color/white"
-            android:layout_height="0dp"
-            android:layout_row="0"
-            android:layout_rowWeight="1"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="10dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="10dp"
-            tools:targetApi="lollipop">
-
-            <LinearLayout
+            <androidx.cardview.widget.CardView
+                android:id="@+id/visacard"
                 android:layout_width="wrap_content"
+                app:cardBackgroundColor="@android:color/white"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="5dp"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_gravity="end"
+                android:foregroundGravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="10dp">
 
-                <ImageView
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
                     android:id="@+id/visaimage"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -139,37 +135,42 @@
                     android:textSize="18sp"
                     android:textStyle="bold|italic"
                     app:fontFamily="@font/aclonica" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/locationcard"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_row="1"
-            android:layout_rowWeight="1"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            app:cardBackgroundColor="@android:color/white"
-            tools:targetApi="lollipop">
+            android:layout_gravity="center_vertical"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <LinearLayout
+            <androidx.cardview.widget.CardView
+                android:id="@+id/locationcard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="5dp"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_gravity="start"
+                android:foregroundGravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@android:color/white">
 
-                <ImageView
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
                     android:id="@+id/locationimageView"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -193,34 +194,30 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/informationcard"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:cardBackgroundColor="@android:color/white"
-            android:layout_row="1"
-            android:layout_rowWeight="1"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="10dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            tools:targetApi="lollipop">
-
-            <LinearLayout
+            <androidx.cardview.widget.CardView
+                android:id="@+id/informationcard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="5dp"
-                android:gravity="center"
-                android:orientation="vertical">
+                app:cardBackgroundColor="@android:color/white"
+                android:layout_gravity="end"
+                android:foregroundGravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
 
-                <ImageView
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
                     android:id="@+id/informationimage"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -241,8 +238,8 @@
                     android:textSize="18sp"
                     android:textStyle="bold|italic"
                     app:fontFamily="@font/aclonica" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-    </GridLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

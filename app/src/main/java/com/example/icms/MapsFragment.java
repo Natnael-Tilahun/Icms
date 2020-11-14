@@ -1,17 +1,14 @@
 package com.example.icms;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -39,6 +36,12 @@ public class MapsFragment extends Fragment {
             LatLng Immigration_Office_Bahirdar_Branch = new LatLng(11.578323, 37.360165);
             LatLng Immigration_Office_Mekelle_Branch = new LatLng(13.497173, 39.466066);
             LatLng Immigration_Office_Dessie_Branch = new LatLng(11.129661, 39.636329);
+            LatLng Immigration_Office_Afar_Branch = new LatLng(11.440047, 40.844144);
+            LatLng Immigration_Office_Benishangul_Gumuz_Branch = new LatLng(10.055061, 34.547277);
+            LatLng Immigration_Office_Harari_Branch = new LatLng(9.322165, 42.114715);
+//            LatLng Immigration_Office_Harari_Branch = new LatLng(9.322165, 42.114715);
+//            LatLng Immigration_Office_Harari_Branch = new LatLng(9.322165, 42.114715);
+
 
             googleMap.addMarker(new MarkerOptions().position(Main_Department_For_Immigration_and_Nationality_Affairs).title("Main Department For Immigration & Nationality Affairs"));
             googleMap.addMarker(new MarkerOptions().position(Immigration_Office_Hawassa_Branch).title("Immigration Office Hawassa Branch"));
@@ -46,6 +49,12 @@ public class MapsFragment extends Fragment {
             googleMap.addMarker(new MarkerOptions().position(Immigration_Office_Bahirdar_Branch).title("Immigration Office Bahirdar Branch"));
             googleMap.addMarker(new MarkerOptions().position(Immigration_Office_Mekelle_Branch).title("Immigration Office Mekelle Branch"));
             googleMap.addMarker(new MarkerOptions().position(Immigration_Office_Dessie_Branch).title("Immigration Office Dessie Branch"));
+            googleMap.addMarker(new MarkerOptions().position(Immigration_Office_Afar_Branch).title("Immigration Office Afar Branch"));
+            googleMap.addMarker(new MarkerOptions().position(Immigration_Office_Benishangul_Gumuz_Branch).title("Immigration Office Benishangul Gumuz Branch"));
+            googleMap.addMarker(new MarkerOptions().position(Immigration_Office_Harari_Branch).title("Immigration Office Harari Branch"));
+//            googleMap.addMarker(new MarkerOptions().position(Immigration_Office_Harari_Branch).title("Immigration Office Harari Branch"));
+//            googleMap.addMarker(new MarkerOptions().position(Immigration_Office_Harari_Branch).title("Immigration Office Harari Branch"));
+
 //            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Main_Department_For_Immigration_and_Nationality_Affairs, 15f));
 //            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Immigration_Office_Hawassa_Branch,15f));
 //            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Immigration_Office_Diredawa_Branch,15f));

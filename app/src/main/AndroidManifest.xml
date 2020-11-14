@@ -17,9 +17,65 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".UrgentPassportApplicationForm2"
+            android:parentActivityName=".UrgentPassport"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".ChangeOfPassDataApplicationForm2"
+            android:parentActivityName=".ChangeOfPassportData"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".LostPassportApplicationForm2"
+            android:parentActivityName=".LostPassport"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".DamagedPassportApplicationForm2"
+            android:parentActivityName=".DamagedPassport"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".PassPageRunOutApplicationForm2"
+            android:parentActivityName=".PageRunOutPassport"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".ExpiredPassportApplicationForm2"
+            android:parentActivityName=".ExpiredPassport"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".NewPassportApplicationForm2"
+            android:parentActivityName=".NewPassport"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".LostPassport"
+            android:parentActivityName=".PassportServices"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".UrgentPassport"
+            android:parentActivityName=".PassportServices"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".ChangeOfPassportData"
+            android:parentActivityName=".PassportServices"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".DamagedPassport"
+            android:parentActivityName=".PassportServices"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".PageRunOutPassport"
+            android:parentActivityName=".PassportServices"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".ExpiredPassport"
+            android:parentActivityName=".PassportServices"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".PassportRequirement"
+            android:parentActivityName=".GetInformation"
+            tools:targetApi="jelly_bean" />
         <activity
             android:name=".Notification"
             android:parentActivityName=".MainActivity"
@@ -31,18 +87,6 @@
         <activity
             android:name=".VisaRequirements"
             android:parentActivityName=".GetInformation"
-            tools:targetApi="jelly_bean" />
-        <activity
-            android:name=".PassportRequirements"
-            android:parentActivityName=".GetInformation"
-            tools:targetApi="jelly_bean" />
-        <activity
-            android:name=".LostPassport"
-            android:parentActivityName=".PassportServices"
-            tools:targetApi="jelly_bean" />
-        <activity
-            android:name=".RenewPassport"
-            android:parentActivityName=".PassportServices"
             tools:targetApi="jelly_bean" />
         <activity
             android:name=".NewPassport"
