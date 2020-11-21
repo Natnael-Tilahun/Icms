@@ -8,6 +8,14 @@ import android.widget.Button;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.icms.changeofpassportdata_process.ChangeOfPassportData;
+import com.example.icms.damagedpassport_process.DamagedPassport;
+import com.example.icms.expiredpassport_process.ExpiredPassport;
+import com.example.icms.lostpassport_process.LostPassport;
+import com.example.icms.newpassport_process.NewPassport;
+import com.example.icms.pagerunoutpassport_process.PageRunOutPassport;
+import com.example.icms.urgentpassport_process.UrgentPassport;
+
 public class PassportServices extends AppCompatActivity {
     Button newpassport_btn, expiredpassport_btn, pagerunoutpassport_btn, damagedpassport_btn, lostpassport_btn, changeofpassportdata_btn, validpassport_btn, urgentpassport_btn;
 

@@ -8,7 +8,7 @@
     android:background="@color/primarytheme1"
     android:orientation="vertical"
     android:weightSum="10"
-    tools:context=".FaqFragment">
+    tools:context=".faq_fragment.FaqFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"

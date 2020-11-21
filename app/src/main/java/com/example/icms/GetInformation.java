@@ -8,6 +8,10 @@ import android.widget.Button;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.icms.passportrequirement_recyclerview.PassportRequirement;
+import com.example.icms.servicefees_recyclerview.ServiceFees;
+import com.example.icms.visarequirement_recyclerview.VisaRequirements;
+
 public class GetInformation extends AppCompatActivity {
     Button passrequirements_btn, visarequirements_btn, servicefees_btn;
 

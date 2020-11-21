@@ -20,181 +20,185 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
+        <activity android:name=".Signup"></activity>
+        <activity android:name=".Login" />
+        <activity android:name=".EthiopianGovernmentEmploymentVisa_GV" />
+        <activity android:name=".NGOWorkVisa_NGO" />
+        <activity android:name=".GovernmentInstitutionsShortWorkVisa_GIV" />
+        <activity android:name=".InternationalOrganizationWorkVisa_RI" />
+        <activity android:name=".EthiopianPrivateBusinessFirmWorkVisa_PE" />
+        <activity android:name=".JournalistVisa" />
+        <activity android:name=".ForeignBusinessFIrmEmploymentVisa_FV" />
+        <activity android:name=".InvestmentVisa" />
+        <activity android:name=".ConfrenceVisa" />
+        <activity android:name=".TouristVisa_onArrival" />
+        <activity android:name=".TouristVisa_online" />
         <activity
-            android:name=".UrgentPassportPayWithCBE"
-            android:parentActivityName=".UrgentPassportAppliacationForm4"
+            android:name=".urgentpassport_process.UrgentPassportPayWithCBE"
+            android:parentActivityName=".urgentpassport_process.UrgentPassportAppliacationForm4"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".ChangeOfPassportDataPayWithCBE"
-            android:parentActivityName=".ChangeofPassDataApplicatioForm4"
+            android:name=".changeofpassportdata_process.ChangeOfPassportDataPayWithCBE"
+            android:parentActivityName=".changeofpassportdata_process.ChangeofPassDataApplicatioForm4"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".LostPassportPayWithCBE"
-            android:parentActivityName=".LostPassportApplicationForm4"
+            android:name=".lostpassport_process.LostPassportPayWithCBE"
+            android:parentActivityName=".lostpassport_process.LostPassportApplicationForm4"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".DamagedPassportPayWithCBE"
-            android:parentActivityName=".DamagedPassportApplicatonForm4"
+            android:name=".damagedpassport_process.DamagedPassportPayWithCBE"
+            android:parentActivityName=".damagedpassport_process.DamagedPassportApplicatonForm4"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".PageRunOutPassportPayWithCBE"
-            android:parentActivityName=".PageRunOutPassportApplicationForm4"
+            android:name=".pagerunoutpassport_process.PageRunOutPassportPayWithCBE"
+            android:parentActivityName=".pagerunoutpassport_process.PageRunOutPassportApplicationForm4"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".ExpiredPassportPayWithCBE"
-            android:parentActivityName=".ExpiredPassportApplicationForm4"
+            android:name=".expiredpassport_process.ExpiredPassportPayWithCBE"
+            android:parentActivityName=".expiredpassport_process.ExpiredPassportApplicationForm4"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".NewPassportPayWithCBE"
-            android:parentActivityName=".NewPassportApplicationForm4"
-            tools:targetApi="jelly_bean" />
-
-
-        <activity
-            android:name=".UrgentPassportPayWithCBEBirr"
-            android:parentActivityName=".UrgentPassportAppliacationForm4"
+            android:name=".newpassport_process.NewPassportPayWithCBE"
+            android:parentActivityName=".newpassport_process.NewPassportApplicationForm4"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".ChangeofPassDataPayWithCBEBirr"
-            android:parentActivityName=".ChangeofPassDataApplicatioForm4"
+            android:name=".urgentpassport_process.UrgentPassportPayWithCBEBirr"
+            android:parentActivityName=".urgentpassport_process.UrgentPassportAppliacationForm4"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".LostPassportPayWithCBEBirr"
-            android:parentActivityName=".LostPassportApplicationForm4"
+            android:name=".changeofpassportdata_process.ChangeofPassDataPayWithCBEBirr"
+            android:parentActivityName=".changeofpassportdata_process.ChangeofPassDataApplicatioForm4"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".DamagedPassportPayWithCBEBirr"
-            android:parentActivityName=".ChangeofPassDataApplicatioForm4"
+            android:name=".lostpassport_process.LostPassportPayWithCBEBirr"
+            android:parentActivityName=".lostpassport_process.LostPassportApplicationForm4"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".PassportPagerunoutPayWithCBEBirr"
-            android:parentActivityName=".PageRunOutPassportApplicationForm4"
+            android:name=".damagedpassport_process.DamagedPassportPayWithCBEBirr"
+            android:parentActivityName=".changeofpassportdata_process.ChangeofPassDataApplicatioForm4"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".ExpiredPassportPayWithCBEBirr"
-            android:parentActivityName=".ExpiredPassportApplicationForm4"
+            android:name=".pagerunoutpassport_process.PassportPagerunoutPayWithCBEBirr"
+            android:parentActivityName=".pagerunoutpassport_process.PageRunOutPassportApplicationForm4"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".NewPassportPayWithCBEBirr"
-            android:parentActivityName=".NewPassportApplicationForm4"
-            tools:targetApi="jelly_bean" />
-
-
-        <activity
-            android:name=".UrgentPassportAppliacationForm4"
-            android:parentActivityName=".UrgentPassportApplicationForm3"
+            android:name=".expiredpassport_process.ExpiredPassportPayWithCBEBirr"
+            android:parentActivityName=".expiredpassport_process.ExpiredPassportApplicationForm4"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".ChangeofPassDataApplicatioForm4"
-            android:parentActivityName=".ChangePassportDataApplicationForm3"
+            android:name=".newpassport_process.NewPassportPayWithCBEBirr"
+            android:parentActivityName=".newpassport_process.NewPassportApplicationForm4"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".LostPassportApplicationForm4"
-            android:parentActivityName=".LostPassportApplicationForm3"
+            android:name=".urgentpassport_process.UrgentPassportAppliacationForm4"
+            android:parentActivityName=".urgentpassport_process.UrgentPassportApplicationForm3"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".DamagedPassportApplicatonForm4"
-            android:parentActivityName=".DamagedPassportApplicationForm3"
+            android:name=".changeofpassportdata_process.ChangeofPassDataApplicatioForm4"
+            android:parentActivityName=".changeofpassportdata_process.ChangePassportDataApplicationForm3"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".PageRunOutPassportApplicationForm4"
-            android:parentActivityName=".PageRunOutPassportApplicationForm3"
+            android:name=".lostpassport_process.LostPassportApplicationForm4"
+            android:parentActivityName=".lostpassport_process.LostPassportApplicationForm3"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".ExpiredPassportApplicationForm4"
-            android:parentActivityName=".ExpiredPassportApplicationForm3"
+            android:name=".damagedpassport_process.DamagedPassportApplicatonForm4"
+            android:parentActivityName=".damagedpassport_process.DamagedPassportApplicationForm3"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".NewPassportApplicationForm4"
-            android:parentActivityName=".NewPassportApplicationForm3"
-            tools:targetApi="jelly_bean" />
-
-
-        <activity
-            android:name=".UrgentPassportApplicationForm3"
-            android:parentActivityName=".UrgentPassportApplicationForm2"
+            android:name=".pagerunoutpassport_process.PageRunOutPassportApplicationForm4"
+            android:parentActivityName=".pagerunoutpassport_process.PageRunOutPassportApplicationForm3"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".ChangePassportDataApplicationForm3"
-            android:parentActivityName=".ChangeOfPassDataApplicationForm2"
+            android:name=".expiredpassport_process.ExpiredPassportApplicationForm4"
+            android:parentActivityName=".expiredpassport_process.ExpiredPassportApplicationForm3"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".LostPassportApplicationForm3"
-            android:parentActivityName=".LostPassportApplicationForm2"
+            android:name=".newpassport_process.NewPassportApplicationForm4"
+            android:parentActivityName=".newpassport_process.NewPassportApplicationForm3"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".DamagedPassportApplicationForm3"
-            android:parentActivityName=".DamagedPassportApplicationForm2"
+            android:name=".urgentpassport_process.UrgentPassportApplicationForm3"
+            android:parentActivityName=".urgentpassport_process.UrgentPassportApplicationForm2"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".PageRunOutPassportApplicationForm3"
-            android:parentActivityName=".PassPageRunOutApplicationForm2"
+            android:name=".changeofpassportdata_process.ChangePassportDataApplicationForm3"
+            android:parentActivityName=".changeofpassportdata_process.ChangeOfPassDataApplicationForm2"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".ExpiredPassportApplicationForm3"
-            android:parentActivityName=".ExpiredPassportApplicationForm2"
+            android:name=".lostpassport_process.LostPassportApplicationForm3"
+            android:parentActivityName=".lostpassport_process.LostPassportApplicationForm2"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".NewPassportApplicationForm3"
-            android:parentActivityName=".NewPassportApplicationForm2"
-            tools:targetApi="jelly_bean" />
-
-        <activity
-            android:name=".UrgentPassportApplicationForm2"
-            android:parentActivityName=".UrgentPassport"
+            android:name=".damagedpassport_process.DamagedPassportApplicationForm3"
+            android:parentActivityName=".damagedpassport_process.DamagedPassportApplicationForm2"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".ChangeOfPassDataApplicationForm2"
-            android:parentActivityName=".ChangeOfPassportData"
+            android:name=".pagerunoutpassport_process.PageRunOutPassportApplicationForm3"
+            android:parentActivityName=".pagerunoutpassport_process.PassPageRunOutApplicationForm2"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".LostPassportApplicationForm2"
-            android:parentActivityName=".LostPassport"
+            android:name=".expiredpassport_process.ExpiredPassportApplicationForm3"
+            android:parentActivityName=".expiredpassport_process.ExpiredPassportApplicationForm2"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".DamagedPassportApplicationForm2"
-            android:parentActivityName=".DamagedPassport"
+            android:name=".newpassport_process.NewPassportApplicationForm3"
+            android:parentActivityName=".newpassport_process.NewPassportApplicationForm2"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".PassPageRunOutApplicationForm2"
-            android:parentActivityName=".PageRunOutPassport"
+            android:name=".urgentpassport_process.UrgentPassportApplicationForm2"
+            android:parentActivityName=".urgentpassport_process.UrgentPassport"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".ExpiredPassportApplicationForm2"
-            android:parentActivityName=".ExpiredPassport"
+            android:name=".changeofpassportdata_process.ChangeOfPassDataApplicationForm2"
+            android:parentActivityName=".changeofpassportdata_process.ChangeOfPassportData"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".NewPassportApplicationForm2"
-            android:parentActivityName=".NewPassport"
+            android:name=".lostpassport_process.LostPassportApplicationForm2"
+            android:parentActivityName=".lostpassport_process.LostPassport"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".LostPassport"
+            android:name=".damagedpassport_process.DamagedPassportApplicationForm2"
+            android:parentActivityName=".damagedpassport_process.DamagedPassport"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".pagerunoutpassport_process.PassPageRunOutApplicationForm2"
+            android:parentActivityName=".pagerunoutpassport_process.PageRunOutPassport"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".expiredpassport_process.ExpiredPassportApplicationForm2"
+            android:parentActivityName=".expiredpassport_process.ExpiredPassport"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".newpassport_process.NewPassportApplicationForm2"
+            android:parentActivityName=".newpassport_process.NewPassport"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".lostpassport_process.LostPassport"
             android:parentActivityName=".PassportServices"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".UrgentPassport"
+            android:name=".urgentpassport_process.UrgentPassport"
             android:parentActivityName=".PassportServices"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".ChangeOfPassportData"
+            android:name=".changeofpassportdata_process.ChangeOfPassportData"
             android:parentActivityName=".PassportServices"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".DamagedPassport"
+            android:name=".damagedpassport_process.DamagedPassport"
             android:parentActivityName=".PassportServices"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".PageRunOutPassport"
+            android:name=".pagerunoutpassport_process.PageRunOutPassport"
             android:parentActivityName=".PassportServices"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".ExpiredPassport"
+            android:name=".expiredpassport_process.ExpiredPassport"
             android:parentActivityName=".PassportServices"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".PassportRequirement"
+            android:name=".passportrequirement_recyclerview.PassportRequirement"
             android:parentActivityName=".GetInformation"
             tools:targetApi="jelly_bean" />
         <activity
@@ -202,15 +206,15 @@
             android:parentActivityName=".MainActivity"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".ServiceFees"
+            android:name=".servicefees_recyclerview.ServiceFees"
             android:parentActivityName=".GetInformation"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".VisaRequirements"
+            android:name=".visarequirement_recyclerview.VisaRequirements"
             android:parentActivityName=".GetInformation"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".NewPassport"
+            android:name=".newpassport_process.NewPassport"
             android:parentActivityName=".PassportServices"
             tools:targetApi="jelly_bean" />
         <!--
