@@ -1,5 +1,6 @@
 package com.example.icms;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -124,11 +125,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             transaction.replace(R.id.fragment_container, fragment, "About");
             transaction.commit();
         } else if (id == R.id.nav_logout) {
-            showDialog(R.layout.fragment_logout);
             LogoutFragment fragment = new LogoutFragment();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragment_container, fragment, "Logout");
             transaction.commit();
+            Dialog dialog = new Dialog(getApplicationContext());
+            dialog.setContentView(R.layout.logout_dialog);
+            dialog.setCanceledOnTouchOutside(false);
+            dialog.show();
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;

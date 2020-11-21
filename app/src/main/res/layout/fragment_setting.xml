@@ -69,6 +69,7 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/changeusername_tv"
                 android:layout_gravity="center"
                 android:layout_marginVertical="10dp"
                 android:background="@drawable/border_rectangle"
@@ -86,6 +87,7 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/changeemail_tv"
                 android:layout_gravity="center"
                 android:layout_marginVertical="10dp"
                 android:background="@drawable/border_rectangle"
@@ -104,6 +106,7 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/chanegpaassword_tv"
                 android:layout_gravity="center"
                 android:layout_marginVertical="10dp"
                 android:background="@drawable/border_rectangle"
@@ -122,6 +125,7 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/changephone_tv"
                 android:layout_gravity="center"
                 android:layout_marginVertical="10dp"
                 android:background="@drawable/border_rectangle"
@@ -140,6 +144,7 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/changeprofilepic_tv"
                 android:layout_gravity="center"
                 android:layout_marginVertical="10dp"
                 android:background="@drawable/border_rectangle"

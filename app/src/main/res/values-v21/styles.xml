@@ -9,12 +9,16 @@
         <item name="popupMenuBackground">@color/secondarytheme2</item>
         <item name="popupTheme">@color/secondarytheme2</item>
         <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:windowAnimationStyle">@style/animation</item>
         <!--        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>-->
 
     </style>
 
-    <style name="TextAppearance.MaterialComponents.Body1." parent="TextAppearance.MaterialComponents.Body1">
+    <style name="TextAppearance.MaterialComponents.Body1." parent="TextAppearance.MaterialComponents.Body1"></style>
 
+    <style name="animation">
+        <item name="android:windowEnterAnimation">@anim/fragment_fade_enter</item>
+        <item name="android:windowExitAnimation">@anim/fragment_fade_exit</item>
     </style>
 
 </resources>

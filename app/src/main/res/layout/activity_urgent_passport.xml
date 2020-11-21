@@ -24,11 +24,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:padding="0dp"
+                android:padding="15dp"
                 android:text="@string/urgent_passport_start_your_application_here"
                 android:textColor="@android:color/white"
-                android:textSize="30sp"
-                app:fontFamily="@font/baloo" />
+                android:textSize="25sp"
+                app:fontFamily="@font/roboto_regular" />
         </RelativeLayout>
 
         <LinearLayout
@@ -119,6 +119,7 @@
                 android:backgroundTint="@color/primarytheme1"
                 android:fontFamily="@font/roboto_bold"
                 android:text="@string/next"
+                android:drawableRight="@drawable/ic_baseline_navigate_next_24"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
                 android:textColor="@color/white"
                 android:textSize="25sp"

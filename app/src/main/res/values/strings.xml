@@ -828,6 +828,16 @@ Travelers can request for extension before the visa expires by going in person t
            This means, USD 50 (initial visa application fee) + USD 50 (additional visa extension charge ) + USD 2(Service Charge)  \n
     </br></string>
     <string name="copyright">Copyright \u00a9 2020 ICMS</string>
+    <string name="newpassappform4_tv">You can proceed to payment now. Please note that your request will not be proceed until you make the payment successfully.\n Total amount to be paid: 600Br</string>
+    <string name="payment_instruction_detail">
+        - Dial *847# (CBE-Birr USSD service) on your phone\n
+        - Reply 5 for Bill Pay\n
+        - Reply 2 for input SHORT CODE\n
+        - Enter 555555 when requested\n
+        - When requested for Bill Reference NO. enter the Application CODE\n
+        - When requested to confirm the payment, Reply 1\n
+        - Enter your CBE-Birr PIN to complete the payment and you are done.\n
+    </string>
 
 
 </resources>

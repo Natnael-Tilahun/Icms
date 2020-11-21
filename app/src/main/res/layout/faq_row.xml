@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:elevation="5dp"
-    app:cardCornerRadius="5dp"
+    app:cardCornerRadius="10dp"
     app:cardUseCompatPadding="true"
     tools:targetApi="lollipop">
 
@@ -24,7 +24,9 @@
             android:fontFamily="@font/roboto_bold"
             android:gravity="center_horizontal"
             android:padding="8dp"
+            android:drawableRight="@drawable/ic_baseline_arrow_drop_down_circle_24"
             android:text="@string/faq_title_tv"
+            android:drawablePadding="50dp"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp"

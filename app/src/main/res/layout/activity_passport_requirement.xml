@@ -20,10 +20,10 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:fontFamily="@font/baloo"
-            android:padding="10dp"
+            android:padding="15dp"
             android:text="@string/passport_requirements_tv"
             android:textColor="@color/white"
-            android:textSize="30sp"
+            android:textSize="25sp"
             tools:targetApi="jelly_bean" />
     </RelativeLayout>
 

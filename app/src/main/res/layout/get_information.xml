@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:paddingHorizontal="10dp"
+            android:paddingHorizontal="15dp"
             android:text="@string/important_informations_required_to_process_your_services"
             android:textColor="@android:color/white"
             android:textSize="25sp"

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -12,12 +13,21 @@ import androidx.appcompat.app.AppCompatActivity;
 public class LostPassportApplicationForm2 extends AppCompatActivity {
     public Uri fileUri;
     TextView newpassfilechooser;
+    Button lostpassappform2next_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lost_passport_application_form2);
         newpassfilechooser = findViewById(R.id.newpassfilechooser);
+        lostpassappform2next_btn = findViewById(R.id.lostpassportappform2next_btn);
+        lostpassappform2next_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LostPassportApplicationForm2.this, LostPassportApplicationForm3.class);
+                startActivity(intent);
+            }
+        });
         newpassfilechooser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
