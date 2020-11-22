@@ -12,16 +12,12 @@
             android:icon="@drawable/ic_track_service"
             android:title="@string/track_my_service" />
         <item
-            android:id="@+id/nav_setting"
-            android:icon="@drawable/ic_settings"
-            android:title="@string/setting" />
-        <item
             android:id="@+id/nav_faq"
             android:icon="@drawable/ic_faq"
             android:title="@string/faq" />
     </group>
 
-    <item android:title="@string/profile_group">
+    <item android:title="">
         <menu>
             <group android:checkableBehavior="single">
                 <item
@@ -29,14 +25,15 @@
                     android:icon="@drawable/ic_profile"
                     android:title="@string/profile" />
                 <item
-                    android:id="@+id/nav_logout"
-                    android:icon="@drawable/ic_logout"
-                    android:title="@string/logout" />
+                    android:id="@+id/nav_setting"
+                    android:icon="@drawable/ic_settings"
+                    android:title="@string/setting" />
+
             </group>
         </menu>
     </item>
 
-    <item android:title="@string/communication">
+    <item android:title="">
         <menu>
             <group android:checkableBehavior="single">
                 <item
@@ -47,6 +44,11 @@
                     android:id="@+id/nav_about"
                     android:icon="@drawable/ic_about"
                     android:title="@string/about_us" />
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/ic_logout"
+                    android:title="@string/logout" />
+
             </group>
         </menu>
     </item>

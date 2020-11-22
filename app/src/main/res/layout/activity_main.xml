@@ -37,6 +37,7 @@
         android:backgroundTint="@color/white"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/drawer_menu"
+        app:itemTextAppearance="@font/roboto_medium"
         tools:targetApi="lollipop">
 
         <TextView

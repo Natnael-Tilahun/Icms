@@ -15,24 +15,59 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icms_ic_launcher_3"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/icms_ic_launcher_3"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Signup"></activity>
+        <activity android:name=".Signup" />
         <activity android:name=".Login" />
-        <activity android:name=".EthiopianGovernmentEmploymentVisa_GV" />
-        <activity android:name=".NGOWorkVisa_NGO" />
-        <activity android:name=".GovernmentInstitutionsShortWorkVisa_GIV" />
-        <activity android:name=".InternationalOrganizationWorkVisa_RI" />
-        <activity android:name=".EthiopianPrivateBusinessFirmWorkVisa_PE" />
-        <activity android:name=".JournalistVisa" />
-        <activity android:name=".ForeignBusinessFIrmEmploymentVisa_FV" />
-        <activity android:name=".InvestmentVisa" />
-        <activity android:name=".ConfrenceVisa" />
-        <activity android:name=".TouristVisa_onArrival" />
-        <activity android:name=".TouristVisa_online" />
+        <activity
+            android:name=".EthiopianGovernmentEmploymentVisa_GV"
+            android:parentActivityName=".VisaServices"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".NGOWorkVisa_NGO"
+            android:parentActivityName=".VisaServices"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".GovernmentInstitutionsShortWorkVisa_GIV"
+            android:parentActivityName=".VisaServices"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".InternationalOrganizationWorkVisa_RI"
+            android:parentActivityName=".VisaServices"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".EthiopianPrivateBusinessFirmWorkVisa_PE"
+            android:parentActivityName=".VisaServices"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".JournalistVisa"
+            android:parentActivityName=".VisaServices"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".ForeignBusinessFIrmEmploymentVisa_FV"
+            android:parentActivityName=".VisaServices"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".InvestmentVisa"
+            android:parentActivityName=".VisaServices"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".ConfrenceVisa"
+            android:parentActivityName=".VisaServices"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".TouristVisa_onArrival"
+            android:parentActivityName=".VisaServices"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".TouristVisa_online"
+            android:parentActivityName=".VisaServices"
+            tools:targetApi="jelly_bean" />
+
+
         <activity
             android:name=".urgentpassport_process.UrgentPassportPayWithCBE"
             android:parentActivityName=".urgentpassport_process.UrgentPassportAppliacationForm4"

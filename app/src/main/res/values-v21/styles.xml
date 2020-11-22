@@ -14,11 +14,13 @@
 
     </style>
 
-    <style name="TextAppearance.MaterialComponents.Body1." parent="TextAppearance.MaterialComponents.Body1"></style>
-
     <style name="animation">
         <item name="android:windowEnterAnimation">@anim/fragment_fade_enter</item>
         <item name="android:windowExitAnimation">@anim/fragment_fade_exit</item>
+    </style>
+
+    <style name="Style_MenuItem">
+        <item name="fontFamily">@font/roboto_medium</item>
     </style>
 
 </resources>

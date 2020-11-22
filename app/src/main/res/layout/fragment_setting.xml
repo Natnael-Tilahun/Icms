@@ -22,13 +22,12 @@
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/profile_iv"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/border_oval"
+                android:src="@drawable/ic_person"
                 android:backgroundTint="@color/white"
-                android:src="@drawable/ic_profile"
-                app:strokeWidth="5dp"
                 tools:targetApi="lollipop" />
 
             <com.google.android.material.textview.MaterialTextView

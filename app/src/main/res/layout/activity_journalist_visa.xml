@@ -1,9 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".JournalistVisa">
+    android:layout_height="wrap_content"
+    android:background="@color/primarytheme1"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/newpassport_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="15dp"
+                android:text="Journalist Visa: Start your application here:"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                app:fontFamily="@font/roboto_regular" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:background="@drawable/bg"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/please_fill_legitimate_informations"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                tools:targetApi="lollipop" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select CitizenShip"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/sp_site"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:outlineAmbientShadowColor="@color/primarytheme1"
+                android:padding="5dp" />
+
+            <!--        <com.google.android.material.textfield.TextInputLayout-->
+            <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_gravity="center_horizontal"-->
+            <!--            android:layout_marginVertical="10dp"-->
+            <!--            app:boxStrokeColor="@color/primarytheme1"-->
+            <!--            android:paddingHorizontal="20dp">-->
+
+            <!--            <com.google.android.material.textfield.TextInputEditText-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:cursorVisible="true"-->
+            <!--                android:hint="@string/fullname"-->
+            <!--                android:maxLength="20"-->
+            <!--                android:textColorHint="@color/black"-->
+            <!--                android:drawableLeft="@drawable/ic_person"-->
+            <!--                android:drawablePadding="15dp"-->
+            <!--                android:drawableTint="@color/black"-->
+            <!--                android:inputType="textPersonName"-->
+            <!--                android:keyboardNavigationCluster="true"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:textCursorDrawable="@color/black"-->
+            <!--                android:textSize="20sp"-->
+            <!--                android:drawableStart="@drawable/ic_person"-->
+            <!--                tools:targetApi="o" />-->
+            <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+            <!--        <com.google.android.material.textfield.TextInputLayout-->
+            <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_gravity="center_horizontal"-->
+            <!--            android:layout_marginVertical="10dp"-->
+            <!--            android:paddingHorizontal="20dp"-->
+            <!--            app:boxStrokeColor="@color/primarytheme1">-->
+
+            <!--            <com.google.android.material.textfield.TextInputEditText-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:cursorVisible="true"-->
+            <!--                android:hint="@string/email"-->
+            <!--                android:textColorHint="@color/black"-->
+            <!--                android:drawableLeft="@drawable/ic_email"-->
+            <!--                android:drawablePadding="15dp"-->
+            <!--                android:drawableTint="@color/black"-->
+            <!--                android:maxLength="30"-->
+            <!--                android:inputType="textEmailAddress"-->
+            <!--                android:keyboardNavigationCluster="true"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:textCursorDrawable="@color/black"-->
+            <!--                android:textSize="20sp"-->
+            <!--                android:drawableStart="@drawable/ic_email"-->
+            <!--                tools:targetApi="o" />-->
+            <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+            <!--        <com.google.android.material.textfield.TextInputLayout-->
+            <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_gravity="center_horizontal"-->
+            <!--            android:layout_marginVertical="10dp"-->
+            <!--            app:boxStrokeColor="@color/primarytheme1"-->
+            <!--            android:paddingHorizontal="20dp">-->
+
+            <!--            <com.google.android.material.textfield.TextInputEditText-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:cursorVisible="true"-->
+            <!--                android:hint="@string/phone"-->
+            <!--                android:textColorHint="@color/black"-->
+            <!--                android:drawableLeft="@drawable/ic_phone"-->
+            <!--                android:drawablePadding="15dp"-->
+            <!--                android:drawableTint="@color/black"-->
+            <!--                android:inputType="phone"-->
+            <!--                android:maxLength="10"-->
+            <!--                android:keyboardNavigationCluster="true"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:textCursorDrawable="@color/black"-->
+            <!--                android:textSize="20sp"-->
+            <!--                android:drawableStart="@drawable/ic_phone"-->
+            <!--                tools:targetApi="o" />-->
+            <!--        </com.google.android.material.textfield.TextInputLayout>-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/newpassnext_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"
+                android:backgroundTint="@color/primarytheme1"
+                android:drawableRight="@drawable/ic_baseline_navigate_next_24"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/next"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                tools:targetApi="lollipop" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:text="@string/TV_info_tv"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

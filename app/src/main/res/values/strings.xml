@@ -838,6 +838,8 @@ Travelers can request for extension before the visa expires by going in person t
         - When requested to confirm the payment, Reply 1\n
         - Enter your CBE-Birr PIN to complete the payment and you are done.\n
     </string>
+    <string name="TV_info_tv">Please select country of citizenship according to your travel document/document.\n
+    People with dual nationality should choose the nationality according to the passport to be used for travel.</string>
 
 
 </resources>
