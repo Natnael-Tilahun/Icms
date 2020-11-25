@@ -20,6 +20,81 @@
         android:roundIcon="@mipmap/icms_ic_launcher_3"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".JV_AppForm5"></activity>
+        <activity android:name=".JV_AppForm4" />
+        <activity android:name=".JV_AppForm3" />
+        <activity android:name=".FV_AppForm4" />
+        <activity android:name=".FV_AppForm3" />
+        <activity android:name=".IV_AppForm5" />
+        <activity android:name=".IV_AppForm4" />
+        <activity android:name=".IV_AppForm3" />
+        <activity android:name=".TV_onarrivalAppForm4" />
+        <activity android:name=".TV_onlineAppForm4" />
+        <activity android:name=".CV_AppForm6" />
+        <activity
+            android:name=".CV_AppForm5"
+            android:parentActivityName=".CV_AppForm4"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".CV_AppForm4"
+            android:parentActivityName=".CV_AppForm3"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".CV_AppForm3"
+            android:parentActivityName=".CV_AppForm2"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".TV_onarrival_AppForm3"
+            android:parentActivityName=".TV_onarrival_AppForm2"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".TV_online_AppForm3"
+            android:parentActivityName=".TV_onlineAppForm2"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".GV_AppForm2"
+            android:parentActivityName=".EthiopianGovernmentEmploymentVisa_GV"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".NGO_AppForm2"
+            android:parentActivityName=".NGOWorkVisa_NGO"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".GIV_AppForm2"
+            android:parentActivityName=".GovernmentInstitutionsShortWorkVisa_GIV"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".RI_AppForm2"
+            android:parentActivityName=".InternationalOrganizationWorkVisa_RI"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".PE_AppForm2"
+            android:parentActivityName=".EthiopianPrivateBusinessFirmWorkVisa_PE"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".JV_AppForm2"
+            android:parentActivityName=".JournalistVisa"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".FV_AppForm2"
+            android:parentActivityName=".ForeignBusinessFIrmEmploymentVisa_FV"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".IV_AppForm2"
+            android:parentActivityName=".InvestmentVisa"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".CV_AppForm2"
+            android:parentActivityName=".ConfrenceVisa"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".TV_onarrival_AppForm2"
+            android:parentActivityName=".TouristVisa_onArrival"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".TV_onlineAppForm2"
+            android:parentActivityName=".TouristVisa_online"
+            tools:targetApi="jelly_bean" />
         <activity android:name=".Signup" />
         <activity android:name=".Login" />
         <activity
@@ -66,8 +141,6 @@
             android:name=".TouristVisa_online"
             android:parentActivityName=".VisaServices"
             tools:targetApi="jelly_bean" />
-
-
         <activity
             android:name=".urgentpassport_process.UrgentPassportPayWithCBE"
             android:parentActivityName=".urgentpassport_process.UrgentPassportAppliacationForm4"

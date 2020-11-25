@@ -838,8 +838,51 @@ Travelers can request for extension before the visa expires by going in person t
         - When requested to confirm the payment, Reply 1\n
         - Enter your CBE-Birr PIN to complete the payment and you are done.\n
     </string>
-    <string name="TV_info_tv">Please select country of citizenship according to your travel document/document.\n
-    People with dual nationality should choose the nationality according to the passport to be used for travel.</string>
+    <string name="TV_online_info_tv">
+        - Tourist Visa is a single-entry visa issued to visitors who wish to travel for touristic purposes only.\n
+        - People with dual nationality should choose the nationality according to the passport to be used for travel. Please select country of citizenship according to your travel document/document.\n
+</string>
+    <string name="confrence_info_tv">
+        - Please note that Business Visa is not issued for applicants whose age is under 18.\n
+        - Conference visa is issued to foreign nationals coming to Ethiopia to attend meetings, conferences, workshops, seminars, etc.</string>
+    <string name="journalist_info_tv">
+        - Please note that Business Visa is not issued for applicants whose age is under 18.\n
+        - Journalist visa is issued to foreign Journalists, media professionals or film makers, coming to cover events,
+        reports for media organizations or produce films, TV or written material of various kinds. </string>
+    <string name="FV_info_tv">
+        - Please note that Business Visa is not issued for applicants whose age is under 18.\n
+        - Foreign Business Firm Employment visa is issued to foreign nationals to be employed by business firms owned or operated by foreigners. </string>
 
+    <string name="GIV_info_tv">
+        - Please note that Business Visa is not issued for applicants whose age is under 18.\n
+        - GIV visa is issued to foreign nationals who are coming to accomplish certain tasks for government institutions for a short period of time.</string>
+    <string name="GV_info_tv">
+        - Please note that Business Visa is not issued for applicants whose age is under 18.\n
+        - GV visa issued to foreign nationals to be employed by different Ethiopian government institutions/ministries.</string>
+    <string name="investment_info_tv">
+        - Please note that Business Visa is not issued for applicants whose age is under 18.\n
+        - Investment visa is issued to foreign nationals who are engaged in investment activities. It can  also be issued to potential investors who wish to come to Ethiopia to see investment opportunities or invest in Ethiopia. </string>
+    <string name="ngo_info_tv">
+        - Please note that Business Visa is not issued for applicants whose age is under 18.\n
+        - NGO visa is issued to foreign nationals who are invited by NGOs operating in Ethiopia for employment or short-term assignments.</string>
+    <string name="RI_info_tv">
+        - Please note that Business Visa is not issued for applicants whose age is under 18.\n
+        - RI visa is issued to foreign nationals with ordinary passports who are invited by internationals organizations or Embassies resident in Ethiopia for different work purposes.</string>
+    <string name="WV_info_tv">
+        - Please note that Business Visa is not issued for applicants whose age is under 18.\n
+        - Foreign Business Firm Employment visa is issued to foreign nationals to be employed by business firms owned or operated by foreigners.</string>
+    <string name="PE_info_tv">
+        - Please note that Business Visa is not issued for applicants whose age is under 18.\n
+        - Ethiopian Private Business Firm Work visa is issued to foreign nationals coming for employment or other short-term assignments with Ethiopian private business firms.</string>
+    <string name="TV_onlineappform3_info_tv">
+        - Please make sure all the information provided is correct. The information will be checked against your passport at immigration counter upon arrival. If any of the information mismatches with the one on your passport,
+        you will be denied entry to Ethiopia.</string>
 
+    <string name="TV_onarrivalappform3_info_tv">
+        - Please make sure all the information provided is correct. The information will be checked against your passport at immigration counter upon arrival. If any of the information mismatches with the one on your passport,
+        you will be denied entry to Ethiopia.</string>
+
+    <string name="CV_appform3_info_tv">
+        - Please make sure all the information provided is correct. The information will be checked against your passport at immigration counter upon arrival. If any of the information mismatches with the one on your passport,
+        you will be denied entry to Ethiopia.</string>
 </resources>

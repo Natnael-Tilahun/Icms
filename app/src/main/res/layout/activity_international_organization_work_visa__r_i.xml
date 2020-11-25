@@ -50,21 +50,27 @@
                 android:textColor="@color/black"
                 android:textSize="25sp"
                 tools:targetApi="lollipop" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Select CitizenShip"
-                android:textSize="20sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Select CitizenShip"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
-            <Spinner
-                android:id="@+id/sp_site"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:outlineAmbientShadowColor="@color/primarytheme1"
-                android:padding="5dp" />
-
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:hint="Please Enter your Citizenship"
+        android:textSize="20sp" />
+</LinearLayout>
             <!--        <com.google.android.material.textfield.TextInputLayout-->
             <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
             <!--            android:layout_width="match_parent"-->
@@ -149,7 +155,7 @@
             <!--                tools:targetApi="o" />-->
             <!--        </com.google.android.material.textfield.TextInputLayout>-->
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/newpassnext_btn"
+                android:id="@+id/RI_next_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
@@ -167,8 +173,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@color/white"
-                android:text="@string/TV_info_tv"
+                android:background="@drawable/border_rectangle"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="15dp"
+                android:text="@string/RI_info_tv"
                 android:textSize="20sp" />
         </LinearLayout>
 
