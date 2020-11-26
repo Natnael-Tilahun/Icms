@@ -7,7 +7,7 @@
     android:background="#0336FF"
     android:orientation="vertical"
     android:weightSum="10"
-    tools:context=".HomeFragment">
+    tools:context=".drawerMenuFragments.HomeFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"

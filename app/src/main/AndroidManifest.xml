@@ -20,125 +20,290 @@
         android:roundIcon="@mipmap/icms_ic_launcher_3"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".JV_AppForm5"></activity>
-        <activity android:name=".JV_AppForm4" />
-        <activity android:name=".JV_AppForm3" />
-        <activity android:name=".FV_AppForm4" />
-        <activity android:name=".FV_AppForm3" />
-        <activity android:name=".IV_AppForm5" />
-        <activity android:name=".IV_AppForm4" />
-        <activity android:name=".IV_AppForm3" />
-        <activity android:name=".TV_onarrivalAppForm4" />
-        <activity android:name=".TV_onlineAppForm4" />
-        <activity android:name=".CV_AppForm6" />
         <activity
-            android:name=".CV_AppForm5"
-            android:parentActivityName=".CV_AppForm4"
+            android:name=".journalistVisa.JV_visapaywithcbebirr"
+            android:parentActivityName=".journalistVisa.JV_AppForm5"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".CV_AppForm4"
-            android:parentActivityName=".CV_AppForm3"
+            android:name=".journalistVisa.JV_visapaywithcbe"
+            android:parentActivityName=".journalistVisa.JV_AppForm5"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".CV_AppForm3"
-            android:parentActivityName=".CV_AppForm2"
+            android:name=".foreignBusinessFirmEmploymentVisa.FV_visapaywithcbebirr"
+            android:parentActivityName=".foreignBusinessFirmEmploymentVisa.FV_AppForm4"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".TV_onarrival_AppForm3"
-            android:parentActivityName=".TV_onarrival_AppForm2"
+            android:name=".foreignBusinessFirmEmploymentVisa.FV_visapaywithcbe"
+            android:parentActivityName=".foreignBusinessFirmEmploymentVisa.FV_AppForm4"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".TV_online_AppForm3"
-            android:parentActivityName=".TV_onlineAppForm2"
+            android:name=".investmentVisa.IV_paywithcbebirr"
+            android:parentActivityName=".investmentVisa.IV_AppForm5"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".GV_AppForm2"
-            android:parentActivityName=".EthiopianGovernmentEmploymentVisa_GV"
+            android:name=".investmentVisa.IV_paywithcbe"
+            android:parentActivityName=".investmentVisa.IV_AppForm5"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".NGO_AppForm2"
-            android:parentActivityName=".NGOWorkVisa_NGO"
+            android:name=".confrenceVisa.CV_paywithcbebirr"
+            android:parentActivityName=".confrenceVisa.CV_AppForm6"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".GIV_AppForm2"
-            android:parentActivityName=".GovernmentInstitutionsShortWorkVisa_GIV"
+            android:name=".confrenceVisa.CV_paywithcbe"
+            android:parentActivityName=".confrenceVisa.CV_AppForm6"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".RI_AppForm2"
-            android:parentActivityName=".InternationalOrganizationWorkVisa_RI"
+            android:name=".touristVisaOnline.TV_onlinepaywithcbebirr"
+            android:parentActivityName=".touristVisaOnline.TV_onlineAppForm4"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".PE_AppForm2"
-            android:parentActivityName=".EthiopianPrivateBusinessFirmWorkVisa_PE"
+            android:name=".touristVisaOnline.TV_onlinepaywithcbe"
+            android:parentActivityName=".touristVisaOnline.TV_onlineAppForm4"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".JV_AppForm2"
-            android:parentActivityName=".JournalistVisa"
+            android:name=".ethiopianGovernmentEmploymentVisa.GV_visapaywithcbebirr"
+            android:parentActivityName=".ethiopianGovernmentEmploymentVisa.GV_AppForm5"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".FV_AppForm2"
-            android:parentActivityName=".ForeignBusinessFIrmEmploymentVisa_FV"
+            android:name=".ethiopianGovernmentEmploymentVisa.GV_visapaywithcbe"
+            android:parentActivityName=".ethiopianGovernmentEmploymentVisa.GV_AppForm5"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".IV_AppForm2"
-            android:parentActivityName=".InvestmentVisa"
+            android:name=".ethiopianGovernmentEmploymentVisa.GV_AppForm5"
+            android:parentActivityName=".ethiopianGovernmentEmploymentVisa.GV_AppForm4"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".CV_AppForm2"
-            android:parentActivityName=".ConfrenceVisa"
+            android:name=".ethiopianGovernmentEmploymentVisa.GV_AppForm4"
+            android:parentActivityName=".ethiopianGovernmentEmploymentVisa.GV_AppForm3"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".TV_onarrival_AppForm2"
-            android:parentActivityName=".TouristVisa_onArrival"
+            android:name=".ethiopianGovernmentEmploymentVisa.GV_AppForm3"
+            android:parentActivityName=".ethiopianGovernmentEmploymentVisa.GV_AppForm2"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".TV_onlineAppForm2"
-            android:parentActivityName=".TouristVisa_online"
+            android:name=".governmentInstitutionsShortWorkVisa.GIV_AppForm"
+            android:parentActivityName=".governmentInstitutionsShortWorkVisa.GIV_AppForm2"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".NGOworkVisa.NGO_visapaywithcbebirr"
+            android:parentActivityName=".NGOworkVisa.NGO_AppForm5"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".NGOworkVisa.NGO_visapaywithcbe"
+            android:parentActivityName=".NGOworkVisa.NGO_AppForm5"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".NGOworkVisa.NGO_AppForm5"
+            android:parentActivityName=".NGOworkVisa.NGO_AppForm4"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".NGOworkVisa.NGO_AppForm4"
+            android:parentActivityName=".NGOworkVisa.NGO_AppForm3"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".NGOworkVisa.NGO_AppForm3"
+            android:parentActivityName=".NGOworkVisa.NGO_AppForm2"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".governmentInstitutionsShortWorkVisa.GIV_visapaywithcbebirr"
+            android:parentActivityName=".governmentInstitutionsShortWorkVisa.GIV_AppForm4"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".governmentInstitutionsShortWorkVisa.GIV_visapaywithcbe"
+            android:parentActivityName=".governmentInstitutionsShortWorkVisa.GIV_AppForm4"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".governmentInstitutionsShortWorkVisa.GIV_AppForm4"
+            android:parentActivityName=".governmentInstitutionsShortWorkVisa.GIV_AppForm3"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".governmentInstitutionsShortWorkVisa.GIV_AppForm3"
+            android:parentActivityName=".governmentInstitutionsShortWorkVisa.GIV_AppForm"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".internationalOrganizationWorkVisa.RI_visapaywithcbebirr"
+            android:parentActivityName=".internationalOrganizationWorkVisa.RI_AppForm4"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".internationalOrganizationWorkVisa.RI_visapaywithcbe"
+            android:parentActivityName=".internationalOrganizationWorkVisa.RI_AppForm4"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".internationalOrganizationWorkVisa.RI_AppForm4"
+            android:parentActivityName=".internationalOrganizationWorkVisa.RI_AppForm3"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".internationalOrganizationWorkVisa.RI_AppForm3"
+            android:parentActivityName=".internationalOrganizationWorkVisa.RI_AppForm2"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".ethiopianPrivateBusinessFirmWorkVisa.PE_visapaywithcbebirr"
+            android:parentActivityName=".ethiopianPrivateBusinessFirmWorkVisa.PE_AppForm5"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".ethiopianPrivateBusinessFirmWorkVisa.PE_visapaywithcbe"
+            android:parentActivityName=".ethiopianPrivateBusinessFirmWorkVisa.PE_AppForm5"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".ethiopianPrivateBusinessFirmWorkVisa.PE_AppForm5"
+            android:parentActivityName=".ethiopianPrivateBusinessFirmWorkVisa.PE_AppForm4"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".ethiopianPrivateBusinessFirmWorkVisa.PE_AppForm4"
+            android:parentActivityName=".ethiopianPrivateBusinessFirmWorkVisa.PE_AppForm3"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".ethiopianPrivateBusinessFirmWorkVisa.PE_AppForm3"
+            android:parentActivityName=".ethiopianPrivateBusinessFirmWorkVisa.PE_AppForm2"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".journalistVisa.JV_AppForm5"
+            android:parentActivityName=".journalistVisa.JV_AppForm4"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".journalistVisa.JV_AppForm4"
+            android:parentActivityName=".journalistVisa.JV_AppForm3"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".journalistVisa.JV_AppForm3"
+            android:parentActivityName=".journalistVisa.JV_AppForm2"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".foreignBusinessFirmEmploymentVisa.FV_AppForm4"
+            android:parentActivityName=".foreignBusinessFirmEmploymentVisa.FV_AppForm3"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".foreignBusinessFirmEmploymentVisa.FV_AppForm3"
+            android:parentActivityName=".foreignBusinessFirmEmploymentVisa.FV_AppForm2"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".investmentVisa.IV_AppForm5"
+            android:parentActivityName=".investmentVisa.IV_AppForm4"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".investmentVisa.IV_AppForm4"
+            android:parentActivityName=".investmentVisa.IV_AppForm3"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".investmentVisa.IV_AppForm3"
+            android:parentActivityName=".investmentVisa.IV_AppForm2"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".touristVisaOnline.TV_onlineAppForm4"
+            android:parentActivityName=".confrenceVisa.CV_AppForm3"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".confrenceVisa.CV_AppForm6"
+            android:parentActivityName=".confrenceVisa.CV_AppForm5"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".confrenceVisa.CV_AppForm5"
+            android:parentActivityName=".confrenceVisa.CV_AppForm4"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".confrenceVisa.CV_AppForm4"
+            android:parentActivityName=".confrenceVisa.CV_AppForm3"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".confrenceVisa.CV_AppForm3"
+            android:parentActivityName=".confrenceVisa.CV_AppForm2"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".touristVisaOnarrival.TV_onarrival_AppForm3"
+            android:parentActivityName=".touristVisaOnarrival.TV_onarrival_AppForm2"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".touristVisaOnline.TV_online_AppForm3"
+            android:parentActivityName=".touristVisaOnline.TV_onlineAppForm2"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".ethiopianGovernmentEmploymentVisa.GV_AppForm2"
+            android:parentActivityName=".ethiopianGovernmentEmploymentVisa.EthiopianGovernmentEmploymentVisa_GV"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".NGOworkVisa.NGO_AppForm2"
+            android:parentActivityName=".NGOworkVisa.NGOWorkVisa_NGO"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".governmentInstitutionsShortWorkVisa.GIV_AppForm2"
+            android:parentActivityName=".governmentInstitutionsShortWorkVisa.GovernmentInstitutionsShortWorkVisa_GIV"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".internationalOrganizationWorkVisa.RI_AppForm2"
+            android:parentActivityName=".internationalOrganizationWorkVisa.InternationalOrganizationWorkVisa_RI"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".ethiopianPrivateBusinessFirmWorkVisa.PE_AppForm2"
+            android:parentActivityName=".ethiopianPrivateBusinessFirmWorkVisa.EthiopianPrivateBusinessFirmWorkVisa_PE"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".journalistVisa.JV_AppForm2"
+            android:parentActivityName=".journalistVisa.JournalistVisa"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".foreignBusinessFirmEmploymentVisa.FV_AppForm2"
+            android:parentActivityName=".foreignBusinessFirmEmploymentVisa.ForeignBusinessFIrmEmploymentVisa_FV"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".investmentVisa.IV_AppForm2"
+            android:parentActivityName=".investmentVisa.InvestmentVisa"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".confrenceVisa.CV_AppForm2"
+            android:parentActivityName=".confrenceVisa.ConfrenceVisa"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".touristVisaOnarrival.TV_onarrival_AppForm2"
+            android:parentActivityName=".touristVisaOnarrival.TouristVisa_onArrival"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".touristVisaOnline.TV_onlineAppForm2"
+            android:parentActivityName=".touristVisaOnline.TouristVisa_online"
             tools:targetApi="jelly_bean" />
         <activity android:name=".Signup" />
         <activity android:name=".Login" />
         <activity
-            android:name=".EthiopianGovernmentEmploymentVisa_GV"
+            android:name=".ethiopianGovernmentEmploymentVisa.EthiopianGovernmentEmploymentVisa_GV"
             android:parentActivityName=".VisaServices"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".NGOWorkVisa_NGO"
+            android:name=".NGOworkVisa.NGOWorkVisa_NGO"
             android:parentActivityName=".VisaServices"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".GovernmentInstitutionsShortWorkVisa_GIV"
+            android:name=".governmentInstitutionsShortWorkVisa.GovernmentInstitutionsShortWorkVisa_GIV"
             android:parentActivityName=".VisaServices"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".InternationalOrganizationWorkVisa_RI"
+            android:name=".internationalOrganizationWorkVisa.InternationalOrganizationWorkVisa_RI"
             android:parentActivityName=".VisaServices"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".EthiopianPrivateBusinessFirmWorkVisa_PE"
+            android:name=".ethiopianPrivateBusinessFirmWorkVisa.EthiopianPrivateBusinessFirmWorkVisa_PE"
             android:parentActivityName=".VisaServices"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".JournalistVisa"
+            android:name=".journalistVisa.JournalistVisa"
             android:parentActivityName=".VisaServices"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".ForeignBusinessFIrmEmploymentVisa_FV"
+            android:name=".foreignBusinessFirmEmploymentVisa.ForeignBusinessFIrmEmploymentVisa_FV"
             android:parentActivityName=".VisaServices"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".InvestmentVisa"
+            android:name=".investmentVisa.InvestmentVisa"
             android:parentActivityName=".VisaServices"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".ConfrenceVisa"
+            android:name=".confrenceVisa.ConfrenceVisa"
             android:parentActivityName=".VisaServices"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".TouristVisa_onArrival"
+            android:name=".touristVisaOnarrival.TouristVisa_onArrival"
             android:parentActivityName=".VisaServices"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name=".TouristVisa_online"
+            android:name=".touristVisaOnline.TouristVisa_online"
             android:parentActivityName=".VisaServices"
             tools:targetApi="jelly_bean" />
         <activity

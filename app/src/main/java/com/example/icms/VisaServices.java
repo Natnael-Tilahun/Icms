@@ -7,6 +7,18 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.icms.NGOworkVisa.NGOWorkVisa_NGO;
+import com.example.icms.confrenceVisa.ConfrenceVisa;
+import com.example.icms.ethiopianGovernmentEmploymentVisa.EthiopianGovernmentEmploymentVisa_GV;
+import com.example.icms.ethiopianPrivateBusinessFirmWorkVisa.EthiopianPrivateBusinessFirmWorkVisa_PE;
+import com.example.icms.foreignBusinessFirmEmploymentVisa.ForeignBusinessFIrmEmploymentVisa_FV;
+import com.example.icms.governmentInstitutionsShortWorkVisa.GovernmentInstitutionsShortWorkVisa_GIV;
+import com.example.icms.internationalOrganizationWorkVisa.InternationalOrganizationWorkVisa_RI;
+import com.example.icms.investmentVisa.InvestmentVisa;
+import com.example.icms.journalistVisa.JournalistVisa;
+import com.example.icms.touristVisaOnarrival.TouristVisa_onArrival;
+import com.example.icms.touristVisaOnline.TouristVisa_online;
+
 public class VisaServices extends AppCompatActivity {
     Button touristvisaonline_btn, touristvisaonarrival_btn, confrencevisa_btn, investmentvisa_btn,
             foreignbnessfirmempvisa_btn, journalistvisa_btn, ethiopianprivatebnessfirmworkvisa_btn,

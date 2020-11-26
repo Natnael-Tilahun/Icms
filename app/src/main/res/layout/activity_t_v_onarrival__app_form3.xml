@@ -112,7 +112,7 @@
                 android:textSize="20sp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/TV_onarrival_appform3next_btn"
+                android:id="@+id/TV_onarrival_appform3submit_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -121,7 +121,7 @@
                 android:backgroundTint="@color/primarytheme1"
                 android:drawableRight="@drawable/ic_baseline_navigate_next_24"
                 android:fontFamily="@font/roboto_bold"
-                android:text="Next"
+                android:text="Submit"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Button"

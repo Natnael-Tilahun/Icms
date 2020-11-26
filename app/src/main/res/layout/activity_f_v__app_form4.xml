@@ -54,7 +54,7 @@
                 tools:targetApi="jelly_bean" />
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/urgentpasspaywithcbe_cv"
+                android:id="@+id/FV_paywithcbe_cv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -93,7 +93,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/urgentpasspaywithcbebirr_cv"
+                android:id="@+id/FV_paywithcbebirr_cv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"

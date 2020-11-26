@@ -13,6 +13,12 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.icms.drawerMenuFragments.AboutFragment;
+import com.example.icms.drawerMenuFragments.FeedbackFragment;
+import com.example.icms.drawerMenuFragments.HomeFragment;
+import com.example.icms.drawerMenuFragments.ProfileFragment;
+import com.example.icms.drawerMenuFragments.ServicestatusFragment;
+import com.example.icms.drawerMenuFragments.SettingFragment;
 import com.example.icms.faq_fragment.FaqFragment;
 import com.google.android.material.navigation.NavigationView;
 

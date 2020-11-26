@@ -7,7 +7,7 @@
     android:background="@color/primarytheme1"
     tools:ignore="ScrollViewCount"
     android:orientation="vertical"
-    tools:context=".SettingFragment">
+    tools:context=".drawerMenuFragments.SettingFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
