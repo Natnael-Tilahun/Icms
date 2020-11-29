@@ -21,6 +21,7 @@ import com.example.icms.drawerMenuFragments.ServicestatusFragment;
 import com.example.icms.drawerMenuFragments.SettingFragment;
 import com.example.icms.faq_fragment.FaqFragment;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout drawer;
@@ -138,8 +139,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //            dialog.setContentView(R.layout.logout_dialog);
 //            dialog.setCanceledOnTouchOutside(false);
 //            dialog.show();
-            Intent intent = new Intent(MainActivity.this, Login.class);
-            startActivity(intent);
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(MainActivity.this, Login.class));
+            finish();
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;

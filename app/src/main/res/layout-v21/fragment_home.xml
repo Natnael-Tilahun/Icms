@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:weightSum="10"
     android:background="@color/primarytheme1"
     android:orientation="vertical"
-    android:weightSum="10"
     tools:context=".drawerMenuFragments.HomeFragment">
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -243,5 +242,4 @@
         android:text="@string/copyright"
         android:textAlignment="center"
         android:textColor="@color/black" />
-
 </LinearLayout>

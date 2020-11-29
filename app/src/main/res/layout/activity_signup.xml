@@ -74,6 +74,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/signup_username_ET"
                 android:inputType="text"
                 android:textColor="@color/black" />
 
@@ -84,12 +85,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:hint="Phone Number/Email">
+            android:hint="Email">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="phone|textEmailAddress"
+                android:id="@+id/signup_email_ET"
+                android:inputType="textEmailAddress"
                 android:textColor="@color/black" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -106,6 +108,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/signup_password_ET"
                 android:inputType="textPassword"
                 android:textColor="@color/black" />
 
@@ -123,30 +126,27 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/signup_confirmpassword_ET"
                 android:inputType="textPassword"
                 android:textColor="@color/black" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!--        <Button-->
-        <!--            android:id="@+id/forgetpassword_button_signin_screen"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginTop="20dp"-->
-        <!--            android:background="#00000000"-->
-        <!--            android:fontFamily="@font/righteous"-->
-        <!--            android:text="forget password"-->
-        <!--            android:textColor="#000000"-->
-        <!--            android:textAlignment="textEnd"-->
-        <!--            android:layout_gravity="end"-->
-        <!--            android:paddingRight="-1dp"/>-->
+        <ProgressBar
+            android:id="@+id/signup_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center_vertical"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/signup_btn"
             android:layout_width="150dp"
             android:layout_height="55dp"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="50dp"
             android:background="@drawable/shape_login_button"
             android:fontFamily="@font/righteous"
             android:text="Sign Up"
@@ -172,7 +172,7 @@
             app:fontFamily="@font/righteous" />
 
         <Button
-            android:id="@+id/signin_button_signup_screen"
+            android:id="@+id/signin_button_onsignup_screen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#00000000"

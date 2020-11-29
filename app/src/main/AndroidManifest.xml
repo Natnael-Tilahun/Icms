@@ -12,6 +12,7 @@
          location permissions for the "MyLocation" functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -20,6 +21,22 @@
         android:roundIcon="@mipmap/icms_ic_launcher_3"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ForgetPassword"></activity>
+        <activity
+            android:name=".Splash_Screen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Signup"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Login"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".journalistVisa.JV_visapaywithcbebirr"
             android:parentActivityName=".journalistVisa.JV_AppForm5"
@@ -260,8 +277,6 @@
             android:name=".touristVisaOnline.TV_onlineAppForm2"
             android:parentActivityName=".touristVisaOnline.TouristVisa_online"
             tools:targetApi="jelly_bean" />
-        <activity android:name=".Signup" />
-        <activity android:name=".Login" />
         <activity
             android:name=".ethiopianGovernmentEmploymentVisa.EthiopianGovernmentEmploymentVisa_GV"
             android:parentActivityName=".VisaServices"
@@ -520,13 +535,7 @@
             tools:targetApi="jelly_bean" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
