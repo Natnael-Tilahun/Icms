@@ -23,7 +23,7 @@ public class LostPassport_Appointment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lost_passport__appointment);
         lostpassport_date_picker = findViewById(R.id.newpassport_date_picker);
-        lostpassport_appointment_next_btn = findViewById(R.id.newpassport_appointment_next_btn);
+        lostpassport_appointment_next_btn = findViewById(R.id.lostpassport_appointment_next_btn);
         mornning_two_three_TV = findViewById(R.id.mornning_two_three_TV);
         mornning_three_four_TV = findViewById(R.id.mornning_three_four_TV);
         morning_four_five_TV = findViewById(R.id.morning_four_five_TV);

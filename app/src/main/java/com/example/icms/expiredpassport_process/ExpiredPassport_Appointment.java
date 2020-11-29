@@ -22,7 +22,7 @@ public class ExpiredPassport_Appointment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expired_passport__appointment);
         expiredpassport_date_picker = findViewById(R.id.newpassport_date_picker);
-        expiredpassport_appointment_next_btn = findViewById(R.id.newpassport_appointment_next_btn);
+        expiredpassport_appointment_next_btn = findViewById(R.id.expiredpassport_appointment_next_btn);
         mornning_two_three_TV = findViewById(R.id.mornning_two_three_TV);
         mornning_three_four_TV = findViewById(R.id.mornning_three_four_TV);
         morning_four_five_TV = findViewById(R.id.morning_four_five_TV);
