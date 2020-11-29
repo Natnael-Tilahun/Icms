@@ -104,7 +104,7 @@
     <string name="reference_number_id">Reference Number/ID</string>
     <string name="check_passport_status">Check Passport status:</string>
     <string name="setting">Setting</string>
-    <string name="change_username">Change Username</string>
+    <string name="change_fullname">Change FullName</string>
     <string name="change_email">Change Email </string>
     <string name="change_password">Change Password</string>
     <string name="change_phone">Change Phone</string>

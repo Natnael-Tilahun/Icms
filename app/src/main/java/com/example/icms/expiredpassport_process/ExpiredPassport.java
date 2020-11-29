@@ -56,7 +56,7 @@ public class ExpiredPassport extends AppCompatActivity {
         exppassnext_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ExpiredPassport.this, ExpiredPassportApplicationForm2.class);
+                Intent intent = new Intent(ExpiredPassport.this, ExpiredPassport_Appointment.class);
                 startActivity(intent);
             }
         });

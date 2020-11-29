@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 public class Splash_Screen extends AppCompatActivity {
-    private static final int SPLASH_SCREEN = 3000;
+    private static final int SPLASH_SCREEN = 2000;
     Animation left, right;
     TextView splash_txt, splash_txt2;
     ImageView splash_img;

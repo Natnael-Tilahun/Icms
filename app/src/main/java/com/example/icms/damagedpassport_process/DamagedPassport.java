@@ -55,7 +55,7 @@ public class DamagedPassport extends AppCompatActivity {
         damagedpassnext_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DamagedPassport.this, DamagedPassportApplicationForm2.class);
+                Intent intent = new Intent(DamagedPassport.this, DamagedPassport_Appointment.class);
                 startActivity(intent);
             }
         });

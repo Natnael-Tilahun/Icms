@@ -7,10 +7,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.icms.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 
@@ -18,6 +21,10 @@ public class NewPassport extends AppCompatActivity {
 
     Spinner sp_site, sp_city, sp_office, sp_deliverysite;
     Button nextbtn;
+    FirebaseAuth mFirebaseAuth;
+    FirebaseFirestore mFirestore;
+    String selected_item;
+    TextView sp_site_error_TV;
     ArrayList<String> arrayList_site, arrayList_city, arrayList_office, arrayList_deliverysite;
 
     ArrayList<String> arrayList_AAdeliverysite, arrayList_bahirdardeliverysite, arrayList_dessiedeliverysite,
@@ -42,7 +49,10 @@ public class NewPassport extends AppCompatActivity {
         sp_city = findViewById(R.id.sp_city);
         sp_office = findViewById(R.id.sp_office);
         sp_deliverysite = findViewById(R.id.sp_deliverysite);
+        sp_site_error_TV = findViewById(R.id.sp_site_error_TV);
         nextbtn = findViewById(R.id.newpassnext_btn);
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        mFirestore = FirebaseFirestore.getInstance();
         fillArrayList();
 
         sp_site.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -55,13 +65,40 @@ public class NewPassport extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
         });
+
         nextbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NewPassport.this, NewPassportApplicationForm2.class);
-                startActivity(intent);
+                checkform();
             }
         });
+    }
+
+    private void checkform() {
+//         String site=sp_site.getSelectedItem().toString();
+        String site = arrayList_site.toString();
+        if (site.length() == 0) {
+            sp_site_error_TV.setVisibility(View.VISIBLE);
+            sp_site_error_TV.setError("please Select a site!");
+            sp_site_error_TV.requestFocus();
+        }
+        Intent intent = new Intent(NewPassport.this, NewPassport_Appointment.class);
+        startActivity(intent);
+
+//        if (sp_site.getSelectedItem()!=null){
+//            selected_item=sp_site.getSelectedItem().toString();
+//        }
+//        if(selected_item.matches("")){
+//            sp_site_error_TV.setVisibility(View.VISIBLE);
+//            sp_site_error_TV.setError("please Select a site!");
+//            sp_site_error_TV.requestFocus();
+//            return;
+//        }
+//        else {
+////            Intent intent = new Intent(NewPassport.this, NewPassportApplicationForm2.class);
+////            startActivity(intent);
+//        }
+
     }
 
     private void fillArrayList() {

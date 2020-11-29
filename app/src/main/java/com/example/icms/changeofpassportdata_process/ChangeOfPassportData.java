@@ -56,7 +56,7 @@ public class ChangeOfPassportData extends AppCompatActivity {
         changeofpassdatanext_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ChangeOfPassportData.this, ChangeOfPassDataApplicationForm2.class);
+                Intent intent = new Intent(ChangeOfPassportData.this, ChangeOfPassportData_Appointment.class);
                 startActivity(intent);
             }
         });

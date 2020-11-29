@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/primarytheme1"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/passportservices_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="15dp"
+                android:text="Appointment Date and Time:"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                tools:targetApi="jelly_bean" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="8.5"
+            android:background="@drawable/bg"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="0dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="15dp"
+                android:text="Select an appointment date:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:targetApi="jelly_bean" />
+
+            <DatePicker
+                android:id="@+id/expiredpassport_date_picker"
+                android:layout_width="match_parent"
+                android:layout_height="420dp"
+                android:background="@drawable/border_rectangle"
+                android:backgroundTint="@color/grey"
+                android:calendarTextColor="@color/black"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="5dp"
+                android:scrollbarSize="5dp"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="15dp"
+                android:text="Select an appointment time:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:targetApi="jelly_bean" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="0dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="Morning"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:targetApi="jelly_bean" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="AfterNoon"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:targetApi="jelly_bean" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mornning_two_three_TV"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:background="@drawable/border_oval"
+                    android:backgroundTint="@color/primarytheme1"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="2:00 - 3:00"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:targetApi="jelly_bean" />
+
+                <TextView
+                    android:id="@+id/afternoon_eight_nine_TV"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_oval"
+                    android:backgroundTint="@color/primarytheme1"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="8:00 - 9:00"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:targetApi="jelly_bean" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mornning_three_four_TV"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:background="@drawable/border_oval"
+                    android:backgroundTint="@color/primarytheme1"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="3:00 - 4:00"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:targetApi="jelly_bean" />
+
+                <TextView
+                    android:id="@+id/afternoon_ten_eleven_TV"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_oval"
+                    android:backgroundTint="@color/primarytheme1"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="9:00 - 10:00"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:targetApi="jelly_bean" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/morning_four_five_TV"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:background="@drawable/border_oval"
+                    android:backgroundTint="@color/primarytheme1"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="4:00 - 5:00"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:targetApi="jelly_bean" />
+
+                <TextView
+                    android:id="@+id/afternoon_eleven_twelve_TV"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_oval"
+                    android:backgroundTint="@color/primarytheme1"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="10:00 - 11:00"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:targetApi="jelly_bean" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mornning_five_six_TV"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:background="@drawable/border_oval"
+                    android:backgroundTint="@color/primarytheme1"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="5:00 - 6:00"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:targetApi="jelly_bean" />
+
+                <TextView
+                    android:id="@+id/afternoon_nine_ten_TV"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_oval"
+                    android:backgroundTint="@color/primarytheme1"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="11:00 - 12:00"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:targetApi="jelly_bean" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/expiredpassport_appointment_next_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"
+                android:backgroundTint="@color/primarytheme1"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Next"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                tools:targetApi="lollipop" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

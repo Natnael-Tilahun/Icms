@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,16 +7,20 @@
     android:background="@color/secondarytheme2"
     tools:context=".Signup">
 
-    <RelativeLayout
-        android:id="@+id/Header"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="130dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content">
 
-        <ImageView
+        <RelativeLayout
+            android:id="@+id/Header"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="130dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
             android:contentDescription="image"
             android:padding="10dp"
             android:src="@drawable/ehiopian_transparent_flag" />
@@ -69,12 +73,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
-            android:hint="username">
+            android:hint="FullName">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/signup_username_ET"
+                android:id="@+id/signup_fullname_ET"
                 android:inputType="text"
                 android:textColor="@color/black" />
 
@@ -84,7 +88,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:hint="Email">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -92,6 +96,21 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/signup_email_ET"
                 android:inputType="textEmailAddress"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Phone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signup_phone_ET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
                 android:textColor="@color/black" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -101,7 +120,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:hint="password"
             app:passwordToggleEnabled="true">
 
@@ -119,7 +138,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:hint="Confirm password"
             app:passwordToggleEnabled="true">
 
@@ -132,21 +151,26 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <ProgressBar
-            android:id="@+id/signup_progressbar"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:foregroundGravity="center_vertical"
-            android:visibility="gone" />
+            android:gravity="center">
+
+            <ProgressBar
+                android:id="@+id/signup_progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/signup_btn"
             android:layout_width="150dp"
             android:layout_height="55dp"
             android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:layout_marginTop="50dp"
+            android:layout_margin="5dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/shape_login_button"
             android:fontFamily="@font/righteous"
             android:text="Sign Up"
@@ -157,7 +181,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="60dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
@@ -182,4 +206,5 @@
             android:textSize="25sp" />
 
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

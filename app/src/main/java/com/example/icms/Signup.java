@@ -31,7 +31,7 @@ import java.util.Objects;
 public class Signup extends AppCompatActivity implements View.OnClickListener {
     Button signup_btn, signin_btn_on_signup;
     ProgressBar signup_progressbar;
-    EditText signup_username_ET, signup_email_ET, signup_password_ET, signup_confirmpassword_ET;
+    EditText signup_fullname_ET, signup_email_ET, signup_phone_ET, signup_password_ET, signup_confirmpassword_ET;
     FirebaseFirestore mFirestore;
     String userID;
     private FirebaseAuth mAuth;
@@ -50,8 +50,10 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
         signup_btn = findViewById(R.id.signup_btn);
         signin_btn_on_signup = findViewById(R.id.signin_button_onsignup_screen);
         signup_progressbar = findViewById(R.id.signup_progressbar);
-        signup_username_ET = findViewById(R.id.signup_username_ET);
+        signup_fullname_ET = findViewById(R.id.signup_fullname_ET);
         signup_email_ET = findViewById(R.id.signup_email_ET);
+
+        signup_phone_ET = findViewById(R.id.signup_phone_ET);
         signup_password_ET = findViewById(R.id.signup_password_ET);
         signup_confirmpassword_ET = findViewById(R.id.signup_confirmpassword_ET);
 
@@ -79,14 +81,16 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void registerUser() {
-        final String username = signup_username_ET.getText().toString().trim();
+        final String fullname = signup_fullname_ET.getText().toString().trim();
         final String email = signup_email_ET.getText().toString().trim();
+        final String phone = signup_phone_ET.getText().toString().trim();
+
         String password = signup_password_ET.getText().toString().trim();
         String confirmpassword = signup_confirmpassword_ET.getText().toString().trim();
 
-        if (username.isEmpty()) {
-            signup_username_ET.setError("Username is required!");
-            signup_username_ET.requestFocus();
+        if (fullname.isEmpty()) {
+            signup_fullname_ET.setError("Username is required!");
+            signup_fullname_ET.requestFocus();
             return;
         }
 
@@ -98,6 +102,17 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             signup_email_ET.setError("Please provide valid email!");
             signup_email_ET.requestFocus();
+            return;
+        }
+
+        if (phone.isEmpty()) {
+            signup_phone_ET.setError("Phone is required!");
+            signup_phone_ET.requestFocus();
+            return;
+        }
+        if (phone.length() < 10) {
+            signup_phone_ET.setError("Minimum phone number length should be 10 characters!");
+            signup_phone_ET.requestFocus();
             return;
         }
 
@@ -134,10 +149,13 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
 //                    Users users=new Users(username,email);
                     Toast.makeText(Signup.this, "User Created.", Toast.LENGTH_SHORT).show();
                     userID = Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
+
                     DocumentReference documentReference = mFirestore.collection("users").document(userID);
                     Map<String, Object> user = new HashMap<>();
-                    user.put("username", username);
+                    user.put("fullname", fullname);
                     user.put("email", email);
+                    user.put("Phone", phone);
+
                     documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
@@ -149,8 +167,10 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
                             Toast.makeText(Signup.this, "Error!" + e.toString(), Toast.LENGTH_SHORT).show();
                         }
                     });
+
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     finish();
+
                 } else {
                     Toast.makeText(Signup.this, "Error!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     signup_progressbar.setVisibility(View.GONE);

@@ -55,7 +55,7 @@ public class LostPassport extends AppCompatActivity {
         lostpassnext_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LostPassport.this, LostPassportApplicationForm2.class);
+                Intent intent = new Intent(LostPassport.this, LostPassport_Appointment.class);
                 startActivity(intent);
             }
         });

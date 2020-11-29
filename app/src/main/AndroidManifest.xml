@@ -21,7 +21,26 @@
         android:roundIcon="@mipmap/icms_ic_launcher_3"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ForgetPassword"></activity>
+        <activity
+            android:name=".changeofpassportdata_process.ChangeOfPassportData_Appointment"
+            android:parentActivityName=".changeofpassportdata_process.ChangeOfPassportData"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".lostpassport_process.LostPassport_Appointment"
+            android:parentActivityName=".lostpassport_process.LostPassport"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".damagedpassport_process.DamagedPassport_Appointment"
+            android:parentActivityName=".damagedpassport_process.DamagedPassport"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".pagerunoutpassport_process.PageRunOutPassport_Appointment"
+            android:parentActivityName=".pagerunoutpassport_process.PageRunOutPassport"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".expiredpassport_process.ExpiredPassport_Appointment"
+            android:parentActivityName=".expiredpassport_process.ExpiredPassport"
+            tools:targetApi="jelly_bean" />
         <activity
             android:name=".Splash_Screen"
             android:theme="@style/AppTheme.NoActionBar">
@@ -32,11 +51,18 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ForgetPassword"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".Signup"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Login"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".newpassport_process.NewPassport_Appointment"
+            android:parentActivityName=".newpassport_process.NewPassport"
+            tools:targetApi="jelly_bean" />
         <activity
             android:name=".journalistVisa.JV_visapaywithcbebirr"
             android:parentActivityName=".journalistVisa.JV_AppForm5"
@@ -439,27 +465,27 @@
             tools:targetApi="jelly_bean" />
         <activity
             android:name=".changeofpassportdata_process.ChangeOfPassDataApplicationForm2"
-            android:parentActivityName=".changeofpassportdata_process.ChangeOfPassportData"
+            android:parentActivityName=".changeofpassportdata_process.ChangeOfPassportData_Appointment"
             tools:targetApi="jelly_bean" />
         <activity
             android:name=".lostpassport_process.LostPassportApplicationForm2"
-            android:parentActivityName=".lostpassport_process.LostPassport"
+            android:parentActivityName=".lostpassport_process.LostPassport_Appointment"
             tools:targetApi="jelly_bean" />
         <activity
             android:name=".damagedpassport_process.DamagedPassportApplicationForm2"
-            android:parentActivityName=".damagedpassport_process.DamagedPassport"
+            android:parentActivityName=".damagedpassport_process.DamagedPassport_Appointment"
             tools:targetApi="jelly_bean" />
         <activity
             android:name=".pagerunoutpassport_process.PassPageRunOutApplicationForm2"
-            android:parentActivityName=".pagerunoutpassport_process.PageRunOutPassport"
+            android:parentActivityName=".pagerunoutpassport_process.PageRunOutPassport_Appointment"
             tools:targetApi="jelly_bean" />
         <activity
             android:name=".expiredpassport_process.ExpiredPassportApplicationForm2"
-            android:parentActivityName=".expiredpassport_process.ExpiredPassport"
+            android:parentActivityName=".expiredpassport_process.ExpiredPassport_Appointment"
             tools:targetApi="jelly_bean" />
         <activity
             android:name=".newpassport_process.NewPassportApplicationForm2"
-            android:parentActivityName=".newpassport_process.NewPassport"
+            android:parentActivityName=".newpassport_process.NewPassport_Appointment"
             tools:targetApi="jelly_bean" />
         <activity
             android:name=".lostpassport_process.LostPassport"
@@ -535,7 +561,7 @@
             tools:targetApi="jelly_bean" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="preloaded_fonts"

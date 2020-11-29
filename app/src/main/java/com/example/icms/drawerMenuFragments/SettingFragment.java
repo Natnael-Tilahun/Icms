@@ -32,7 +32,7 @@ public class SettingFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View v = inflater.inflate(R.layout.fragment_setting, container, false);
-        changeusername_tv = v.findViewById(R.id.changeusername_tv);
+        changeusername_tv = v.findViewById(R.id.changefullname_tv);
         changeemail_tv = v.findViewById(R.id.changeemail_tv);
         changepassword_tv = v.findViewById(R.id.chanegpaassword_tv);
         changephone_tv = v.findViewById(R.id.changephone_tv);
