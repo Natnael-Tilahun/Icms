@@ -7,6 +7,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 public class UrgentPassport extends AppCompatActivity {
     Spinner sp_site, sp_city, sp_office, sp_deliverysite;
     Button urgentpassnext_btn;
+    TextView sp_site_error_TV;
     ArrayList<String> arrayList_site, arrayList_city, arrayList_office, arrayList_deliverysite;
 
     ArrayList<String> arrayList_AAdeliverysite, arrayList_bahirdardeliverysite, arrayList_dessiedeliverysite,
@@ -41,8 +43,10 @@ public class UrgentPassport extends AppCompatActivity {
         sp_city = findViewById(R.id.sp_city);
         sp_office = findViewById(R.id.sp_office);
         sp_deliverysite = findViewById(R.id.sp_deliverysite);
+        sp_site_error_TV = findViewById(R.id.sp_invitingcompany_error_TV);
         urgentpassnext_btn = findViewById(R.id.urgentpassnext_btn);
         fillArrayList();
+
         sp_site.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -53,13 +57,25 @@ public class UrgentPassport extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
         });
+
         urgentpassnext_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(UrgentPassport.this, UrgentPassportApplicationForm2.class);
-                startActivity(intent);
+                checkform();
             }
         });
+    }
+
+    private void checkform() {
+        if (!(sp_site.getSelectedItemPosition() >= 1)) {
+            sp_site_error_TV.setVisibility(View.VISIBLE);
+            sp_site_error_TV.setError("please Select a site!");
+            sp_site_error_TV.requestFocus();
+        } else {
+            sp_site_error_TV.setVisibility(View.GONE);
+            Intent intent = new Intent(UrgentPassport.this, UrgentPassportApplicationForm2.class);
+            startActivity(intent);
+        }
     }
 
     private void fillArrayList() {
@@ -198,6 +214,7 @@ public class UrgentPassport extends AppCompatActivity {
             ArrayAdapter<String> arrayAdapter_deliverysite = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_deliverysite);
             sp_deliverysite.setAdapter(arrayAdapter_deliverysite);
         } else if (sp_site.getSelectedItemPosition() == 1) {
+            sp_site_error_TV.setVisibility(View.GONE);
             ArrayAdapter<String> arrayAdapter_city = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_AAcity);
             sp_city.setAdapter(arrayAdapter_city);
             ArrayAdapter<String> arrayAdapter_office = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_AAoffice);
@@ -205,6 +222,7 @@ public class UrgentPassport extends AppCompatActivity {
             ArrayAdapter<String> arrayAdapter_deliverysite = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_AAdeliverysite);
             sp_deliverysite.setAdapter(arrayAdapter_deliverysite);
         } else if (sp_site.getSelectedItemPosition() == 2) {
+            sp_site_error_TV.setVisibility(View.GONE);
             ArrayAdapter<String> arrayAdapter_city = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_diredawacity);
             sp_city.setAdapter(arrayAdapter_city);
             ArrayAdapter<String> arrayAdapter_office = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_diredawaoffice);
@@ -212,6 +230,7 @@ public class UrgentPassport extends AppCompatActivity {
             ArrayAdapter<String> arrayAdapter_deliverysite = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_diredawadeliverysite);
             sp_deliverysite.setAdapter(arrayAdapter_deliverysite);
         } else if (sp_site.getSelectedItemPosition() == 3) {
+            sp_site_error_TV.setVisibility(View.GONE);
             ArrayAdapter<String> arrayAdapter_city = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_sidamacity);
             sp_city.setAdapter(arrayAdapter_city);
             ArrayAdapter<String> arrayAdapter_office = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_hawassaoffice);
@@ -219,6 +238,7 @@ public class UrgentPassport extends AppCompatActivity {
             ArrayAdapter<String> arrayAdapter_deliverysite = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_hawassadeliverysite);
             sp_deliverysite.setAdapter(arrayAdapter_deliverysite);
         } else if (sp_site.getSelectedItemPosition() == 4) {
+            sp_site_error_TV.setVisibility(View.GONE);
             ArrayAdapter<String> arrayAdapter_city = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_tigraycity);
             sp_city.setAdapter(arrayAdapter_city);
             ArrayAdapter<String> arrayAdapter_office = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_mekelleoffice);
@@ -226,6 +246,7 @@ public class UrgentPassport extends AppCompatActivity {
             ArrayAdapter<String> arrayAdapter_deliverysite = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_mekelledeliverysite);
             sp_deliverysite.setAdapter(arrayAdapter_deliverysite);
         } else if (sp_site.getSelectedItemPosition() == 5) {
+            sp_site_error_TV.setVisibility(View.GONE);
             ArrayAdapter<String> arrayAdapter_city = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_benishangulgumuzcity);
             sp_city.setAdapter(arrayAdapter_city);
             ArrayAdapter<String> arrayAdapter_office = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_benishangulgumuzoffice);
@@ -233,6 +254,7 @@ public class UrgentPassport extends AppCompatActivity {
             ArrayAdapter<String> arrayAdapter_deliverysite = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_benishangulgumuzdeliverysite);
             sp_deliverysite.setAdapter(arrayAdapter_deliverysite);
         } else if (sp_site.getSelectedItemPosition() == 6) {
+            sp_site_error_TV.setVisibility(View.GONE);
             ArrayAdapter<String> arrayAdapter_city = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_amharacity);
             sp_city.setAdapter(arrayAdapter_city);
             if (sp_city.getSelectedItemPosition() == 0) {
@@ -247,6 +269,7 @@ public class UrgentPassport extends AppCompatActivity {
                 sp_deliverysite.setAdapter(arrayAdapter_deliverysite);
             }
         } else if (sp_site.getSelectedItemPosition() == 7) {
+            sp_site_error_TV.setVisibility(View.GONE);
             ArrayAdapter<String> arrayAdapter_city = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_oromiacity);
             sp_city.setAdapter(arrayAdapter_city);
             if (sp_city.getSelectedItemPosition() == 0) {
@@ -261,6 +284,7 @@ public class UrgentPassport extends AppCompatActivity {
                 sp_deliverysite.setAdapter(arrayAdapter_deliverysite);
             }
         } else if (sp_site.getSelectedItemPosition() == 8) {
+            sp_site_error_TV.setVisibility(View.GONE);
             ArrayAdapter<String> arrayAdapter_city = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_afarcity);
             sp_city.setAdapter(arrayAdapter_city);
             ArrayAdapter<String> arrayAdapter_office = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_samaraoffice);
@@ -268,6 +292,7 @@ public class UrgentPassport extends AppCompatActivity {
             ArrayAdapter<String> arrayAdapter_deliverysite = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_samaradeliverysite);
             sp_deliverysite.setAdapter(arrayAdapter_deliverysite);
         } else if (sp_site.getSelectedItemPosition() == 9) {
+            sp_site_error_TV.setVisibility(View.GONE);
             ArrayAdapter<String> arrayAdapter_city = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_city);
             sp_city.setAdapter(arrayAdapter_city);
             ArrayAdapter<String> arrayAdapter_office = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_office);
@@ -275,6 +300,7 @@ public class UrgentPassport extends AppCompatActivity {
             ArrayAdapter<String> arrayAdapter_deliverysite = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_deliverysite);
             sp_deliverysite.setAdapter(arrayAdapter_deliverysite);
         } else if (sp_site.getSelectedItemPosition() == 10) {
+            sp_site_error_TV.setVisibility(View.GONE);
             ArrayAdapter<String> arrayAdapter_city = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_city);
             sp_city.setAdapter(arrayAdapter_city);
             ArrayAdapter<String> arrayAdapter_office = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_office);
@@ -282,6 +308,7 @@ public class UrgentPassport extends AppCompatActivity {
             ArrayAdapter<String> arrayAdapter_deliverysite = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_deliverysite);
             sp_deliverysite.setAdapter(arrayAdapter_deliverysite);
         } else if (sp_site.getSelectedItemPosition() == 11) {
+            sp_site_error_TV.setVisibility(View.GONE);
             ArrayAdapter<String> arrayAdapter_city = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_city);
             sp_city.setAdapter(arrayAdapter_city);
             ArrayAdapter<String> arrayAdapter_office = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_office);
@@ -289,6 +316,7 @@ public class UrgentPassport extends AppCompatActivity {
             ArrayAdapter<String> arrayAdapter_deliverysite = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_deliverysite);
             sp_deliverysite.setAdapter(arrayAdapter_deliverysite);
         } else if (sp_site.getSelectedItemPosition() == 12) {
+            sp_site_error_TV.setVisibility(View.GONE);
             ArrayAdapter<String> arrayAdapter_city = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_snnprcity);
             sp_city.setAdapter(arrayAdapter_city);
             ArrayAdapter<String> arrayAdapter_office = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_hawassaoffice);
@@ -296,5 +324,9 @@ public class UrgentPassport extends AppCompatActivity {
             ArrayAdapter<String> arrayAdapter_deliverysite = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_hawassadeliverysite);
             sp_deliverysite.setAdapter(arrayAdapter_deliverysite);
         }
+        String site = sp_site.getSelectedItem().toString();
+        String city = sp_city.getSelectedItem().toString();
+        String office = sp_office.getSelectedItem().toString();
+        String deliverysite = sp_deliverysite.getSelectedItem().toString();
     }
 }

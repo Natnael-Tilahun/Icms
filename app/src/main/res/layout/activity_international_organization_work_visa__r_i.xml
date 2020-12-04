@@ -65,10 +65,12 @@
         android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/RI_citizenship_ET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_regular"
         android:hint="Please Enter your Citizenship"
+        android:textColor="@color/black"
         android:textSize="20sp" />
 </LinearLayout>
             <!--        <com.google.android.material.textfield.TextInputLayout-->

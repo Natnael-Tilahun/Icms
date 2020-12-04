@@ -65,9 +65,11 @@
         android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/JV_citizenship_ET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/black"
         android:hint="Please Enter your Citizenship"
         android:textSize="20sp" />
 </LinearLayout>

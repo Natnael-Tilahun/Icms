@@ -66,12 +66,13 @@
                 android:padding="5dp" />
 
             <TextView
-                android:id="@+id/sp_site_error_TV"
+                android:id="@+id/sp_invitingcompany_error_TV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:textColor="@color/black"
                 android:textSize="20sp"
+                android:background="@color/white"
                 android:visibility="gone" />
 
             <TextView
@@ -118,89 +119,14 @@
                 android:layout_marginTop="5dp"
                 android:outlineAmbientShadowColor="@color/primarytheme1"
                 android:padding="10dp" />
-            <!--        <com.google.android.material.textfield.TextInputLayout-->
-            <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-            <!--            android:layout_width="match_parent"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:layout_gravity="center_horizontal"-->
-            <!--            android:layout_marginVertical="10dp"-->
-            <!--            app:boxStrokeColor="@color/primarytheme1"-->
-            <!--            android:paddingHorizontal="20dp">-->
 
-            <!--            <com.google.android.material.textfield.TextInputEditText-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:cursorVisible="true"-->
-            <!--                android:hint="@string/fullname"-->
-            <!--                android:maxLength="20"-->
-            <!--                android:textColorHint="@color/black"-->
-            <!--                android:drawableLeft="@drawable/ic_person"-->
-            <!--                android:drawablePadding="15dp"-->
-            <!--                android:drawableTint="@color/black"-->
-            <!--                android:inputType="textPersonName"-->
-            <!--                android:keyboardNavigationCluster="true"-->
-            <!--                android:textColor="@color/black"-->
-            <!--                android:textCursorDrawable="@color/black"-->
-            <!--                android:textSize="20sp"-->
-            <!--                android:drawableStart="@drawable/ic_person"-->
-            <!--                tools:targetApi="o" />-->
-            <!--        </com.google.android.material.textfield.TextInputLayout>-->
-
-            <!--        <com.google.android.material.textfield.TextInputLayout-->
-            <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-            <!--            android:layout_width="match_parent"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:layout_gravity="center_horizontal"-->
-            <!--            android:layout_marginVertical="10dp"-->
-            <!--            android:paddingHorizontal="20dp"-->
-            <!--            app:boxStrokeColor="@color/primarytheme1">-->
-
-            <!--            <com.google.android.material.textfield.TextInputEditText-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:cursorVisible="true"-->
-            <!--                android:hint="@string/email"-->
-            <!--                android:textColorHint="@color/black"-->
-            <!--                android:drawableLeft="@drawable/ic_email"-->
-            <!--                android:drawablePadding="15dp"-->
-            <!--                android:drawableTint="@color/black"-->
-            <!--                android:maxLength="30"-->
-            <!--                android:inputType="textEmailAddress"-->
-            <!--                android:keyboardNavigationCluster="true"-->
-            <!--                android:textColor="@color/black"-->
-            <!--                android:textCursorDrawable="@color/black"-->
-            <!--                android:textSize="20sp"-->
-            <!--                android:drawableStart="@drawable/ic_email"-->
-            <!--                tools:targetApi="o" />-->
-            <!--        </com.google.android.material.textfield.TextInputLayout>-->
-
-            <!--        <com.google.android.material.textfield.TextInputLayout-->
-            <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-            <!--            android:layout_width="match_parent"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:layout_gravity="center_horizontal"-->
-            <!--            android:layout_marginVertical="10dp"-->
-            <!--            app:boxStrokeColor="@color/primarytheme1"-->
-            <!--            android:paddingHorizontal="20dp">-->
-
-            <!--            <com.google.android.material.textfield.TextInputEditText-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:cursorVisible="true"-->
-            <!--                android:hint="@string/phone"-->
-            <!--                android:textColorHint="@color/black"-->
-            <!--                android:drawableLeft="@drawable/ic_phone"-->
-            <!--                android:drawablePadding="15dp"-->
-            <!--                android:drawableTint="@color/black"-->
-            <!--                android:inputType="phone"-->
-            <!--                android:maxLength="10"-->
-            <!--                android:keyboardNavigationCluster="true"-->
-            <!--                android:textColor="@color/black"-->
-            <!--                android:textCursorDrawable="@color/black"-->
-            <!--                android:textSize="20sp"-->
-            <!--                android:drawableStart="@drawable/ic_phone"-->
-            <!--                tools:targetApi="o" />-->
-            <!--        </com.google.android.material.textfield.TextInputLayout>-->
+            <TextView
+                android:id="@+id/sample_TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="sample"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/newpassnext_btn"

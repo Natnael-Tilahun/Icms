@@ -1,13 +1,19 @@
 package com.example.icms.drawerMenuFragments;
 
+import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.icms.R;
@@ -19,6 +25,7 @@ public class SettingFragment extends Fragment {
     Button changephonedialogsave_btn, changephonedialogcancel_btn;
     Button changeprofilepicturesave_btn, getChangeprofilepicturecancel_btn;
     Button changepasswordsave_btn, changepasswordcancel_btn;
+    ImageView profile_iv;
     SettingFragment mContext;
     Dialog mDialog;
 
@@ -37,6 +44,8 @@ public class SettingFragment extends Fragment {
         changepassword_tv = v.findViewById(R.id.chanegpaassword_tv);
         changephone_tv = v.findViewById(R.id.changephone_tv);
         changeprofilepic_tv = v.findViewById(R.id.changeprofilepic_tv);
+
+        profile_iv = v.findViewById(R.id.profile_iv);
 
         changeusernamedialogsave_btn = v.findViewById(R.id.changeusernamedialogsave_btn);
         changeusernamedialogcancel_btn = v.findViewById(R.id.changeusernamedialogcancel_btn);
@@ -150,13 +159,24 @@ public class SettingFragment extends Fragment {
         changeprofilepic_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final Dialog dialog = new Dialog(getContext());
-                dialog.setContentView(R.layout.changeprofilepic_dialog);
-                dialog.setCanceledOnTouchOutside(false);
-                dialog.show();
+//                final Dialog dialog = new Dialog(getContext());
+//                dialog.setContentView(R.layout.changeprofilepic_dialog);
+//                dialog.setCanceledOnTouchOutside(false);
+//                dialog.show();
+                Intent OpenIntentGallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(OpenIntentGallery, 1000);
             }
         });
 
         return v;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == Activity.RESULT_OK) {
+            Uri imageUri = data.getData();
+            profile_iv.setImageURI(imageUri);
+        }
     }
 }

@@ -65,8 +65,10 @@
         android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/TVonline_citizenship_ET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:fontFamily="@font/roboto_regular"
         android:hint="Please Enter your Citizenship"
         android:textSize="20sp" />

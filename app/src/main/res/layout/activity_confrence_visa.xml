@@ -68,9 +68,11 @@
                     android:textSize="20sp" />
 
                 <EditText
+                    android:id="@+id/CV_citizenship_ET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/black"
                     android:hint="Please Enter your Citizenship"
                     android:textSize="20sp" />
 
@@ -90,7 +92,19 @@
                     android:layout_marginTop="5dp"
                     android:outlineAmbientShadowColor="@color/primarytheme1"
                     android:padding="5dp" />
+
+                <TextView
+                    android:id="@+id/sp_invitingcompany_error_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
             </LinearLayout>
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/CV_next_btn"
                 android:layout_width="match_parent"
