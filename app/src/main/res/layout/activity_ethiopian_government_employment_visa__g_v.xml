@@ -70,6 +70,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_regular"
         android:textColor="@color/black"
+        android:inputType="text"
         android:hint="Please Enter your Citizenship"
         android:textSize="20sp" />
 </LinearLayout>

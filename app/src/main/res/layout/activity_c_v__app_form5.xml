@@ -53,7 +53,7 @@
                 tools:targetApi="jelly_bean" />
 
             <TextView
-                android:id="@+id/TV_online_photochooser"
+                android:id="@+id/cvisa_invitationletterchooser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
@@ -79,7 +79,7 @@
                 tools:targetApi="jelly_bean" />
 
             <TextView
-                android:id="@+id/newpassfilechooser"
+                android:id="@+id/cvisa_applicationletterchooser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
@@ -105,7 +105,7 @@
                 tools:targetApi="jelly_bean" />
 
             <TextView
-                android:id="@+id/CV_tincertificate_chooser"
+                android:id="@+id/cv_tincertificate_chooser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
@@ -131,7 +131,7 @@
                 tools:targetApi="jelly_bean" />
 
             <TextView
-                android:id="@+id/CV_businesslicense_chooser"
+                android:id="@+id/cv_businesslicense_chooser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"

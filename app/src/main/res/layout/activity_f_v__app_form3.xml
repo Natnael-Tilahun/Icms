@@ -53,7 +53,7 @@
                 tools:targetApi="jelly_bean" />
 
             <TextView
-                android:id="@+id/TV_online_photochooser"
+                android:id="@+id/fv_photochooser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
@@ -79,7 +79,7 @@
                 tools:targetApi="jelly_bean" />
 
             <TextView
-                android:id="@+id/newpassfilechooser"
+                android:id="@+id/fv_passportcopychooser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"

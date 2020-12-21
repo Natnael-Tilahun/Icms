@@ -55,7 +55,7 @@
                 tools:targetApi="jelly_bean" />
 
             <TextView
-                android:id="@+id/newpassfilechooser"
+                android:id="@+id/iv_applicationletterchooser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
@@ -81,7 +81,7 @@
                 tools:targetApi="jelly_bean" />
 
             <TextView
-                android:id="@+id/CV_tincertificate_chooser"
+                android:id="@+id/iv_bussinesslicencechooser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
@@ -107,7 +107,7 @@
                 tools:targetApi="jelly_bean" />
 
             <TextView
-                android:id="@+id/CV_businesslicense_chooser"
+                android:id="@+id/iv_supportletterchooser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"

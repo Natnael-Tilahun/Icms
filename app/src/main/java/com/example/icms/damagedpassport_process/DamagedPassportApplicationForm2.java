@@ -13,25 +13,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.icms.R;
 
 public class DamagedPassportApplicationForm2 extends AppCompatActivity {
-    public Uri fileUri;
-    TextView newpassfilechooser;
-    Button damagedpassappform2next_btn;
+    public Uri damagedpassfileUri;
+    TextView damagedpassfilechooser;
+    Button damagedpassappform2next_btn, damagedpassdownload_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_damaged_passport_application_form2);
-        newpassfilechooser = findViewById(R.id.newpassfilechooser);
+        damagedpassfilechooser = findViewById(R.id.newpassfilechooser);
         damagedpassappform2next_btn = findViewById(R.id.damagedpassappform2next_btn);
+        damagedpassdownload_btn = findViewById(R.id.damagedpassdownload_btn);
 
-        damagedpassappform2next_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(DamagedPassportApplicationForm2.this, DamagedPassportApplicationForm3.class);
-                startActivity(intent);
-            }
-        });
-        newpassfilechooser.setOnClickListener(new View.OnClickListener() {
+        damagedpassfilechooser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 chooseFile();
@@ -41,16 +35,32 @@ public class DamagedPassportApplicationForm2 extends AppCompatActivity {
 
     private void chooseFile() {
         Intent intent = new Intent();
-        intent.setType("pdf/*");
+        intent.setType("*/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(intent, 1);
+        startActivityForResult(Intent.createChooser(intent, "Select PDF file"), 1);
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable final Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1 && resultCode == RESULT_OK && data != null && data.getData() != null) {
-            fileUri = data.getData();
+            String path = data.getData().getPath();
+            damagedpassfilechooser.setText(path);
+            //damagedpassfilechooser.setText(data.getDataString().substring(data.getDataString().lastIndexOf("/")+1));
+            damagedpassfileUri = data.getData();
+            damagedpassappform2next_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Uploadpdftofirestore(data.getData());
+                    Intent intent = new Intent(DamagedPassportApplicationForm2.this, DamagedPassportApplicationForm3.class);
+                    startActivity(intent);
+                }
+            });
+
         }
+    }
+
+    private void Uploadpdftofirestore(Uri data) {
+
     }
 }

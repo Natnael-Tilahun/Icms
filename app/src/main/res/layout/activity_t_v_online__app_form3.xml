@@ -98,7 +98,7 @@
                 tools:targetApi="jelly_bean" />
 
             <TextView
-                android:id="@+id/newpassfilechooser"
+                android:id="@+id/tvonlinepassportcopychooser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"

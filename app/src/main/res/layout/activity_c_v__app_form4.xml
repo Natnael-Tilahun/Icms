@@ -65,9 +65,12 @@
                 tools:targetApi="jelly_bean" />
 
             <EditText
+                android:id="@+id/confrencename_ET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Conference Name"
+                android:inputType="text"
+                android:minEms="6"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -86,7 +89,9 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/confrencestartdate_ET"
                 android:hint="01/01/2020"
+                android:inputType="date"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -106,6 +111,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="01/01/2020"
+                android:id="@+id/confrenceenddate_ET"
+                android:inputType="date"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 

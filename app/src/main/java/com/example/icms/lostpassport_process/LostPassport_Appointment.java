@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.icms.R;
-import com.example.icms.newpassport_process.NewPassportApplicationForm2;
 
 public class LostPassport_Appointment extends AppCompatActivity {
     DatePicker lostpassport_date_picker;
@@ -35,7 +34,7 @@ public class LostPassport_Appointment extends AppCompatActivity {
         lostpassport_appointment_next_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LostPassport_Appointment.this, NewPassportApplicationForm2.class);
+                Intent intent = new Intent(LostPassport_Appointment.this, LostPassportApplicationForm2.class);
                 startActivity(intent);
             }
         });

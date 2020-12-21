@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.icms.R;
-import com.example.icms.newpassport_process.NewPassportApplicationForm2;
 
 public class ChangeOfPassportData_Appointment extends AppCompatActivity {
     Button changeofpassportdata_appointment_next_btn;
@@ -35,7 +34,7 @@ public class ChangeOfPassportData_Appointment extends AppCompatActivity {
         changeofpassportdata_appointment_next_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ChangeOfPassportData_Appointment.this, NewPassportApplicationForm2.class);
+                Intent intent = new Intent(ChangeOfPassportData_Appointment.this, ChangeOfPassDataApplicationForm2.class);
                 startActivity(intent);
             }
         });

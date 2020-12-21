@@ -55,7 +55,7 @@
                 tools:targetApi="jelly_bean" />
 
             <TextView
-                android:id="@+id/newpassfilechooser"
+                android:id="@+id/ri_applicationletterchooser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
@@ -93,7 +93,7 @@
 
 
             <TextView
-                android:id="@+id/CV_tincertificate_chooser"
+                android:id="@+id/ri_noteverbalechooser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"

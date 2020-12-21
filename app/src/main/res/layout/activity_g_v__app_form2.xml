@@ -58,6 +58,7 @@
                 android:src="@drawable/pdfdownloads" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/gv_download_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -88,7 +89,7 @@
                 tools:targetApi="jelly_bean" />
 
             <TextView
-                android:id="@+id/newpassfilechooser"
+                android:id="@+id/gv_filechooser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"

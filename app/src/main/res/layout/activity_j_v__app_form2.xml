@@ -60,6 +60,7 @@
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/jv_download_btn"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginVertical="10dp"
@@ -88,7 +89,7 @@
                 tools:targetApi="jelly_bean" />
 
             <TextView
-                android:id="@+id/newpassfilechooser"
+                android:id="@+id/jv_filechooser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"

@@ -69,6 +69,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_regular"
+        android:inputType="text"
         android:textColor="@color/black"
         android:hint="Please Enter your Citizenship"
         android:textSize="20sp" />
@@ -79,6 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginVertical="10dp"
+                android:inputType="text"
                 android:backgroundTint="@color/primarytheme1"
                 android:drawableRight="@drawable/ic_baseline_navigate_next_24"
                 android:fontFamily="@font/roboto_bold"

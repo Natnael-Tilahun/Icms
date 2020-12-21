@@ -34,7 +34,7 @@ public class PageRunOutPassport_Appointment extends AppCompatActivity {
         pagerunoutpassport_appointment_next_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PageRunOutPassport_Appointment.this, PageRunOutPassportApplicationForm3.class);
+                Intent intent = new Intent(PageRunOutPassport_Appointment.this, PassPageRunOutApplicationForm2.class);
                 startActivity(intent);
             }
         });

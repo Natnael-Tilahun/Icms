@@ -17,8 +17,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.icms.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
-public class SettingFragment extends Fragment {
+public class SettingFragment<StorageReference> extends Fragment {
     TextView changeusername_tv, changeemail_tv, changepassword_tv, changephone_tv, changeprofilepic_tv;
     Button changeusernamedialogsave_btn, changeusernamedialogcancel_btn;
     Button changeemaildialogsave_btn, changeemaildialogcancel_btn;
@@ -26,8 +28,14 @@ public class SettingFragment extends Fragment {
     Button changeprofilepicturesave_btn, getChangeprofilepicturecancel_btn;
     Button changepasswordsave_btn, changepasswordcancel_btn;
     ImageView profile_iv;
+    public Uri imageUri;
     SettingFragment mContext;
     Dialog mDialog;
+    String user_id;
+    private StorageReference mStorageReference;
+    private FirebaseAuth mFirebaseAuth;
+    private FirebaseFirestore mFirebaseFirestore;
+
 
     public SettingFragment() {
         // Required empty public constructor
@@ -55,6 +63,12 @@ public class SettingFragment extends Fragment {
 
         changephonedialogsave_btn = v.findViewById(R.id.changephonedialogsave_btn);
         changephonedialogcancel_btn = v.findViewById(R.id.changephonedialogcancel_btn);
+
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        user_id = mFirebaseAuth.getCurrentUser().getUid();
+
+//        mFirebaseFirestore=FirebaseFirestore.getInstance();
+//        mStorageReference=FirebaseS
 
         //username setting dialog
         changeusername_tv.setOnClickListener(new View.OnClickListener() {
@@ -163,6 +177,7 @@ public class SettingFragment extends Fragment {
 //                dialog.setContentView(R.layout.changeprofilepic_dialog);
 //                dialog.setCanceledOnTouchOutside(false);
 //                dialog.show();
+//                if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.KITKAT)
                 Intent OpenIntentGallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 startActivityForResult(OpenIntentGallery, 1000);
             }

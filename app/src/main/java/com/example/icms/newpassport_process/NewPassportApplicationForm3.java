@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.icms.R;
 
 public class NewPassportApplicationForm3 extends AppCompatActivity {
-    public Uri idfileuri;
+    public Uri idfileuri, bdcertificatefileuri;
     TextView newpassidfilechooser, newpassbirthcertificatefilechooser;
     Button newpassportappform4upload_btn;
 
@@ -24,19 +24,12 @@ public class NewPassportApplicationForm3 extends AppCompatActivity {
         newpassbirthcertificatefilechooser = findViewById(R.id.newpassportbirthcertificatefilechooser);
         newpassidfilechooser = findViewById(R.id.newpassidfilechooser);
         newpassportappform4upload_btn = findViewById(R.id.newpassappform4upload_btn);
-        newpassportappform4upload_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(NewPassportApplicationForm3.this, NewPassportApplicationForm4.class);
-                startActivity(intent);
-            }
-        });
 
         //new passport id file chooser
         newpassidfilechooser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                chooseFile();
+                chooseidFile();
             }
         });
 
@@ -44,23 +37,52 @@ public class NewPassportApplicationForm3 extends AppCompatActivity {
         newpassbirthcertificatefilechooser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                chooseFile();
+                choosebirthcertificateFile();
             }
         });
     }
 
-    private void chooseFile() {
+    private void chooseidFile() {
         Intent intent = new Intent();
-        intent.setType("pdf/*");
+        intent.setType("*/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(intent, 1);
+        startActivityForResult(Intent.createChooser(intent, "Select PDF file"), 1);
+    }
+
+    private void choosebirthcertificateFile() {
+        Intent intent = new Intent();
+        intent.setType("*/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select PDF file"), 2);
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable final Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1 && resultCode == RESULT_OK && data != null && data.getData() != null) {
+            String path = data.getData().getPath();
+            newpassidfilechooser.setText(path);
             idfileuri = data.getData();
+            //newpassidfilechooser.setText(data.getDataString().substring(data.getDataString().lastIndexOf("/") + 1));
+            // newpassbirthcertificatefilechooser.setText(data.getDataString().substring(data.getDataString().lastIndexOf("/") + 1));
         }
+        if (requestCode == 2 && resultCode == RESULT_OK && data != null && data.getData() != null) {
+            String path1 = data.getData().getPath();
+            newpassbirthcertificatefilechooser.setText(path1);
+            bdcertificatefileuri = data.getData();
+            //newpassidfilechooser.setText(data.getDataString().substring(data.getDataString().lastIndexOf("/") + 1));
+            //newpassbirthcertificatefilechooser.setText(data.getDataString().substring(data.getDataString().lastIndexOf("/") + 1));
+        }
+        newpassportappform4upload_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uploadpdftofirestore(data.getData());
+                Intent intent = new Intent(NewPassportApplicationForm3.this, NewPassportApplicationForm4.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void Uploadpdftofirestore(Uri data) {
     }
 }

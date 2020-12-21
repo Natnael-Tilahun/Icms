@@ -1,8 +1,10 @@
 package com.example.icms;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -27,6 +29,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     DrawerLayout drawer;
     ActionBarDrawerToggle toogle;
     CardView passcard, visacard, loccard, infocard;
+    ImageView profile_iv2;
+    Uri imageUri2;
+
+    SettingFragment mSettingFragment = new SettingFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +57,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         visacard = findViewById(R.id.visacard);
         loccard = findViewById(R.id.locationcard);
         infocard = findViewById(R.id.informationcard);
+        profile_iv2 = findViewById(R.id.profile_iv);
+
+
 //        passcard.setOnClickListener(this);
 //        visacard.setOnClickListener(this);
 //        loccard.setOnClickListener(this);
@@ -160,6 +169,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         else {
             super.onBackPressed();
         }
+        imageUri2 = mSettingFragment.imageUri;
+        profile_iv2.setImageURI(imageUri2);
     }
 
 //    @Override

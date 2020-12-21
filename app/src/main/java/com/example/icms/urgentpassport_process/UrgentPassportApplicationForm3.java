@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.icms.R;
 
 public class UrgentPassportApplicationForm3 extends AppCompatActivity {
-    public Uri idfileuri;
+    public Uri urgentpassidfileuri, urgentpassbdcertificateuri;
     TextView urgentpassidfilechooser, urgentpassbirthcertificatefilechooser;
     Button urgentpassportappform4upload_btn;
 
@@ -24,37 +24,62 @@ public class UrgentPassportApplicationForm3 extends AppCompatActivity {
         urgentpassidfilechooser = findViewById(R.id.newpassidfilechooser);
         urgentpassbirthcertificatefilechooser = findViewById(R.id.newpassportbirthcertificatefilechooser);
         urgentpassportappform4upload_btn = findViewById(R.id.urgentpassappform4upload_btn);
-        urgentpassportappform4upload_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(UrgentPassportApplicationForm3.this, UrgentPassportAppliacationForm4.class);
-                startActivity(intent);
-            }
-        });
 
         urgentpassidfilechooser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                choosefile();
+                chooseidfile();
             }
         });
+
         urgentpassbirthcertificatefilechooser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                choosefile();
+                choosebdcertificatefile();
             }
         });
     }
 
-    private void choosefile() {
+    private void chooseidfile() {
+        Intent intents = new Intent();
+        intents.setType("*/*");
+        intents.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intents, "Select PDF file"), 1);
+    }
+
+    private void choosebdcertificatefile() {
         Intent intent = new Intent();
-        intent.setType("pdf/*");
-        intent.setAction(intent.ACTION_GET_CONTENT);
-        startActivityForResult(intent, 1);
+        intent.setType("*/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select PDF file"), 2);
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable final Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1 && resultCode == RESULT_OK && data != null && data.getData() != null) {
+            String path = data.getData().getPath();
+            urgentpassidfilechooser.setText(path);
+            //urgentpassidfilechooser.setText(data.getDataString().substring(data.getDataString().lastIndexOf("/")+1));
+            urgentpassidfileuri = data.getData();
+        }
+        if (requestCode == 2 && resultCode == RESULT_OK && data != null && data.getData() != null) {
+            String path1 = data.getData().getPath();
+            urgentpassbirthcertificatefilechooser.setText(path1);
+            //urgentpassbirthcertificatefilechooser.setText(data.getDataString().substring(data.getDataString().lastIndexOf("/")+1));
+            urgentpassbdcertificateuri = data.getData();
+        }
+        urgentpassportappform4upload_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uploadpdftofirestore(data.getData());
+                Intent intent = new Intent(UrgentPassportApplicationForm3.this, UrgentPassportAppliacationForm4.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void Uploadpdftofirestore(Uri data) {
+
     }
 }

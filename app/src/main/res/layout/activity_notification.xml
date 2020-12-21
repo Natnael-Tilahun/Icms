@@ -1,39 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
     android:background="@color/primarytheme1"
     android:orientation="vertical"
-    android:weightSum="10"
-    tools:context=".Notification">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:gravity="center">
-
-        <TextView
-            android:id="@+id/newpassport_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="0dp"
-            android:text="Your Notifications:"
-            android:textColor="@android:color/white"
-            android:textSize="35sp"
-            app:fontFamily="@font/baloo" />
-    </RelativeLayout>
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="8"
-        android:background="@drawable/bg"
-        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
-    </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:padding="20dp">
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/passportservices_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="0dp"
+                android:text="Your Notifications:"
+                android:textColor="@android:color/white"
+                android:textSize="35sp"
+                app:fontFamily="@font/baloo"
+                tools:targetApi="jelly_bean" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:background="@drawable/bg"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <TextView
+                android:id="@+id/notification_TV1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/border_rectangle"
+                android:fontFamily="@font/roboto_black"
+                android:padding="15dp"
+                android:text="new notification"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:targetApi="jelly_bean" />
+
+            <TextView
+                android:id="@+id/notification_TV2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/border_rectangle"
+                android:fontFamily="@font/roboto_black"
+                android:padding="15dp"
+                android:text="new notification"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:targetApi="jelly_bean" />
+
+            <TextView
+                android:id="@+id/notification_TV3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/border_rectangle"
+                android:fontFamily="@font/roboto_black"
+                android:padding="15dp"
+                android:text="new notification"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:targetApi="jelly_bean" />
+
+            <TextView
+                android:id="@+id/notification_TV4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/border_rectangle"
+                android:fontFamily="@font/roboto_black"
+                android:padding="15dp"
+                android:text="new notification"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:targetApi="jelly_bean" />
+
+            <TextView
+                android:id="@+id/notification_TV5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/border_rectangle"
+                android:fontFamily="@font/roboto_black"
+                android:padding="15dp"
+                android:text="new notification"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:targetApi="jelly_bean" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
