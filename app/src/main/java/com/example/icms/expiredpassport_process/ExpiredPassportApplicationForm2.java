@@ -1,21 +1,37 @@
 package com.example.icms.expiredpassport_process;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.icms.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.SetOptions;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class ExpiredPassportApplicationForm2 extends AppCompatActivity {
     public Uri expiredpassfileUri;
     TextView expiredpassfilechooser;
     Button expiredpassportappform2next_btn, expiredpassdownload_btn;
+    ProgressDialog mProgressDialog;
+    FirebaseFirestore mFirestore;
+    FirebaseAuth mFirebaseAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +40,9 @@ public class ExpiredPassportApplicationForm2 extends AppCompatActivity {
         expiredpassfilechooser = findViewById(R.id.newpassfilechooser);
         expiredpassportappform2next_btn = findViewById(R.id.expiredpassportappform2next_btn);
         expiredpassdownload_btn = findViewById(R.id.expiredpassdownload_btn);
+        mProgressDialog = new ProgressDialog(ExpiredPassportApplicationForm2.this);
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        mFirestore = FirebaseFirestore.getInstance();
 
         expiredpassfilechooser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,17 +73,43 @@ public class ExpiredPassportApplicationForm2 extends AppCompatActivity {
             expiredpassportappform2next_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Uploadpdftofirestore(data.getData());
-                    Intent intent = new Intent(ExpiredPassportApplicationForm2.this, ExpiredPassportApplicationForm3.class);
-                    startActivity(intent);
+                    //Uploadpdftofirestore(data.getData());
+                    addingDatasToFirestore();
                 }
             });
 
         }
     }
 
-    private void Uploadpdftofirestore(Uri data) {
+    private void addingDatasToFirestore() {
+        mProgressDialog.show();
+        // mProgressBar.setVisibility(View.VISIBLE);
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        mFirestore = FirebaseFirestore.getInstance();
+        String userID = (mFirebaseAuth.getCurrentUser()).getUid();
+        String expiredpassidfileuri1 = expiredpassfileUri.toString();
+        final DocumentReference documentReference = mFirestore.collection("users").document(userID);
 
+        Map<String, String> userdata = new HashMap<>();
+        //userdata.put("UserID", userID);
+        userdata.put("Completed Form", expiredpassidfileuri1);
+        mFirestore.collection("Service").document("PassportService").collection("Expired Passport").document(userID).set(userdata, SetOptions.merge()).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(ExpiredPassportApplicationForm2.this, "Document Successfully submitted", Toast.LENGTH_LONG).show();
+                    //mProgressBar.setVisibility(View.GONE);
+                    Intent intent = new Intent(ExpiredPassportApplicationForm2.this, ExpiredPassportApplicationForm3.class);
+                    startActivity(intent);
+                    mProgressDialog.dismiss();
+
+                } else {
+                    Toast.makeText(ExpiredPassportApplicationForm2.this, "Error:" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+//    private void Uploadpdftofirestore(Uri data) {
+//    }
     }
 }
 

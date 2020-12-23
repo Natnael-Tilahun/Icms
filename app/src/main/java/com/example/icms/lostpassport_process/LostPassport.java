@@ -1,5 +1,6 @@
 package com.example.icms.lostpassport_process;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,18 +9,30 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.icms.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class LostPassport extends AppCompatActivity {
     Spinner sp_site, sp_city, sp_office, sp_deliverysite;
     Button lostpassnext_btn;
     TextView sp_site_error_TV;
     ArrayList<String> arrayList_site, arrayList_city, arrayList_office, arrayList_deliverysite;
+    ProgressDialog mProgressDialog;
+    FirebaseAuth mFirebaseAuth;
+    FirebaseFirestore mFirestore;
 
     ArrayList<String> arrayList_AAdeliverysite, arrayList_bahirdardeliverysite, arrayList_dessiedeliverysite,
             arrayList_samaradeliverysite, arrayList_benishangulgumuzdeliverysite, arrayList_diredawadeliverysite,
@@ -44,6 +57,7 @@ public class LostPassport extends AppCompatActivity {
         sp_site_error_TV = findViewById(R.id.sp_invitingcompany_error_TV);
         sp_deliverysite = findViewById(R.id.sp_deliverysite);
         lostpassnext_btn = findViewById(R.id.lostpassportnext_btn);
+        mProgressDialog = new ProgressDialog(LostPassport.this);
         fillArrayList();
 
         sp_site.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -72,9 +86,44 @@ public class LostPassport extends AppCompatActivity {
             sp_site_error_TV.requestFocus();
         } else {
             sp_site_error_TV.setVisibility(View.GONE);
-            Intent intent = new Intent(LostPassport.this, LostPassport_Appointment.class);
-            startActivity(intent);
+            addingDatasToFirestore();
         }
+    }
+
+    private void addingDatasToFirestore() {
+        String site = sp_site.getSelectedItem().toString();
+        String city = sp_city.getSelectedItem().toString();
+        String office = sp_office.getSelectedItem().toString();
+        String deliverysite = sp_deliverysite.getSelectedItem().toString();
+        mProgressDialog.show();
+
+        // mProgressBar.setVisibility(View.VISIBLE);
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        mFirestore = FirebaseFirestore.getInstance();
+        String userID = (mFirebaseAuth.getCurrentUser()).getUid();
+        final DocumentReference documentReference = mFirestore.collection("users").document(userID);
+        Map<String, String> userdata = new HashMap<>();
+        userdata.put("UserID", userID);
+        userdata.put("Select Site", site);
+        userdata.put("Select City", city);
+        userdata.put("Select Office", office);
+        userdata.put("Delivery Site", deliverysite);
+
+        mFirestore.collection("Service").document("PassportService").collection("Lost Passport").document(userID).set(userdata).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(LostPassport.this, "Document Successfully submitted", Toast.LENGTH_LONG).show();
+                    //mProgressBar.setVisibility(View.GONE);
+                    Intent intent = new Intent(LostPassport.this, LostPassport_Appointment.class);
+                    startActivity(intent);
+                    mProgressDialog.dismiss();
+
+                } else {
+                    Toast.makeText(LostPassport.this, "Error:" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     private void fillArrayList() {

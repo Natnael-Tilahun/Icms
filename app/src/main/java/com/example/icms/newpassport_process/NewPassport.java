@@ -87,6 +87,18 @@ public class NewPassport extends AppCompatActivity {
         });
     }
 
+    private void checkform() {
+        if (!(sp_site.getSelectedItemPosition() >= 1)) {
+            sp_site_error_TV.setVisibility(View.VISIBLE);
+            sp_site_error_TV.setError("please Select a site!");
+            sp_site_error_TV.requestFocus();
+            Toast.makeText(NewPassport.this, "please Select a site!", Toast.LENGTH_LONG).show();
+        } else {
+            sp_site_error_TV.setVisibility(View.GONE);
+            addingDatasToFirestore();
+        }
+    }
+
     private void addingDatasToFirestore() {
         String site = sp_site.getSelectedItem().toString();
         String city = sp_city.getSelectedItem().toString();
@@ -110,7 +122,7 @@ public class NewPassport extends AppCompatActivity {
 //        userdata.put("Legal ID", "id.jpg");
 //        userdata.put("Birth Certificate", "bdcertificate.pdf");
         sample_TV.setText(city);
-        mFirestore.collection("Service").document("PassportService").collection("New Passport").document().set(userdata).addOnCompleteListener(new OnCompleteListener<Void>() {
+        mFirestore.collection("Service").document("PassportService").collection("New Passport").document(userID).set(userdata).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
@@ -125,18 +137,6 @@ public class NewPassport extends AppCompatActivity {
                 }
             }
         });
-    }
-
-    private void checkform() {
-        if (!(sp_site.getSelectedItemPosition() >= 1)) {
-            sp_site_error_TV.setVisibility(View.VISIBLE);
-            sp_site_error_TV.setError("please Select a site!");
-            sp_site_error_TV.requestFocus();
-            Toast.makeText(NewPassport.this, "please Select a site!", Toast.LENGTH_LONG).show();
-        } else {
-            sp_site_error_TV.setVisibility(View.GONE);
-            addingDatasToFirestore();
-        }
     }
 
     private void fillArrayList() {
