@@ -1,5 +1,6 @@
 package com.example.icms.newpassport_process;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,14 +9,21 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.icms.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class NewPassport extends AppCompatActivity {
 
@@ -25,6 +33,7 @@ public class NewPassport extends AppCompatActivity {
     FirebaseFirestore mFirestore;
     TextView sp_site_error_TV, sample_TV;
     ArrayList<String> arrayList_site, arrayList_city, arrayList_office, arrayList_deliverysite;
+    ProgressDialog mProgressDialog;
 
     ArrayList<String> arrayList_AAdeliverysite, arrayList_bahirdardeliverysite, arrayList_dessiedeliverysite,
             arrayList_samaradeliverysite, arrayList_benishangulgumuzdeliverysite, arrayList_diredawadeliverysite,
@@ -44,6 +53,8 @@ public class NewPassport extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_passport);
 
+        mProgressDialog = new ProgressDialog(NewPassport.this);
+        // mProgressBar.setVisibility(View.GONE);
         sp_site = findViewById(R.id.sp_site);
         sp_city = findViewById(R.id.sp_city);
         sp_office = findViewById(R.id.sp_office);
@@ -51,9 +62,11 @@ public class NewPassport extends AppCompatActivity {
         sp_site_error_TV = findViewById(R.id.sp_invitingcompany_error_TV);
         sample_TV = findViewById(R.id.sample_TV);
         nextbtn = findViewById(R.id.newpassnext_btn);
+
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirestore = FirebaseFirestore.getInstance();
         fillArrayList();
+//        addingDatasToFirestore();
 
         sp_site.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -74,19 +87,55 @@ public class NewPassport extends AppCompatActivity {
         });
     }
 
+    private void addingDatasToFirestore() {
+        String site = sp_site.getSelectedItem().toString();
+        String city = sp_city.getSelectedItem().toString();
+        String office = sp_office.getSelectedItem().toString();
+        String deliverysite = sp_deliverysite.getSelectedItem().toString();
+        mProgressDialog.show();
+
+        // mProgressBar.setVisibility(View.VISIBLE);
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        mFirestore = FirebaseFirestore.getInstance();
+        String userID = (mFirebaseAuth.getCurrentUser()).getUid();
+        final DocumentReference documentReference = mFirestore.collection("users").document(userID);
+        Map<String, String> userdata = new HashMap<>();
+        userdata.put("UserID", userID);
+        userdata.put("Select Site", site);
+        userdata.put("Select City", city);
+        userdata.put("Select Office", office);
+        userdata.put("Delivery Site", deliverysite);
+//        userdata.put("Appointment Date", "+deliverysite");
+//        userdata.put("Completed Form", "form.pdf");
+//        userdata.put("Legal ID", "id.jpg");
+//        userdata.put("Birth Certificate", "bdcertificate.pdf");
+        sample_TV.setText(city);
+        mFirestore.collection("Service").document("PassportService").collection("New Passport").document().set(userdata).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(NewPassport.this, "Document Successfully submitted", Toast.LENGTH_LONG).show();
+                    //mProgressBar.setVisibility(View.GONE);
+                    Intent intent = new Intent(NewPassport.this, NewPassport_Appointment.class);
+                    startActivity(intent);
+                    mProgressDialog.dismiss();
+
+                } else {
+                    Toast.makeText(NewPassport.this, "Error:" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
     private void checkform() {
-//         String site=sp_site.getSelectedItem().toString();
-//        String site = arrayList_site.toString();
-//        if (site.length() == 0) {
-//        }
         if (!(sp_site.getSelectedItemPosition() >= 1)) {
             sp_site_error_TV.setVisibility(View.VISIBLE);
             sp_site_error_TV.setError("please Select a site!");
             sp_site_error_TV.requestFocus();
+            Toast.makeText(NewPassport.this, "please Select a site!", Toast.LENGTH_LONG).show();
         } else {
             sp_site_error_TV.setVisibility(View.GONE);
-            Intent intent = new Intent(NewPassport.this, NewPassport_Appointment.class);
-            startActivity(intent);
+            addingDatasToFirestore();
         }
     }
 
@@ -338,11 +387,6 @@ public class NewPassport extends AppCompatActivity {
             ArrayAdapter<String> arrayAdapter_deliverysite = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_textview, arrayList_hawassadeliverysite);
             sp_deliverysite.setAdapter(arrayAdapter_deliverysite);
         }
-        String site = sp_site.getSelectedItem().toString();
-        String city = sp_city.getSelectedItem().toString();
-        String office = sp_office.getSelectedItem().toString();
-        String deliverysite = sp_deliverysite.getSelectedItem().toString();
-        sample_TV.setText(site);
 
     }
 }

@@ -20,10 +20,12 @@
         android:textSize="25dp" />
 
     <EditText
+        android:id="@+id/changeemaildialog_ET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="70dp"
+        android:inputType="textEmailAddress"
         android:fontFamily="@font/roboto_medium"
         android:hint="Enter new Email"
         android:padding="10dp"

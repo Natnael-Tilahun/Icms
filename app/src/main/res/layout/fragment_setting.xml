@@ -157,6 +157,14 @@
                 android:text="@string/change_profile_picture"
                 android:textColor="@color/black"
                 android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/testname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="fname"
+                android:textColor="@color/primarytheme1"
+                android:textSize="30sp" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

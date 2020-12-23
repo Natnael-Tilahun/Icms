@@ -60,11 +60,12 @@
                 app:boxStrokeColor="@color/primarytheme1">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/checkvisastatuspasseno_ET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:cursorVisible="true"
                     android:hint="@string/passport_number"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:keyboardNavigationCluster="true"
                     android:maxLength="20"
                     android:textColor="@color/black"
@@ -84,6 +85,7 @@
                 app:boxStrokeColor="@color/primarytheme1">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/checkvisastatusreferenceno_ET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:cursorVisible="true"
@@ -99,6 +101,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/checkevisasubmit_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
@@ -135,6 +138,7 @@
                 app:boxStrokeColor="@color/primarytheme1">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/checkpassportstatusreferenceno_ET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:cursorVisible="true"
@@ -150,6 +154,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/checkpassportsubmit_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"

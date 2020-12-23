@@ -39,7 +39,7 @@ public class CV_AppForm4 extends AppCompatActivity {
         if (confrencename.isEmpty()) {
             confrencename_ET.setError("Please insert your conference name!");
             confrencename_ET.requestFocus();
-        } else if (confrencestartdate.isEmpty()) {
+        } else if ((confrencestartdate.isEmpty()) && (confrencestartdate.length() < 8)) {
             confrencestartdate_ET.setError("Please insert your conference start date!");
             confrencestartdate_ET.requestFocus();
         } else if (confrenceenddate.isEmpty()) {

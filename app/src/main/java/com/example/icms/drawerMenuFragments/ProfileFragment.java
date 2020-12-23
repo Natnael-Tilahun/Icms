@@ -22,6 +22,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.Objects;
 
@@ -32,6 +34,7 @@ import java.util.Objects;
 public class ProfileFragment extends Fragment {
     FirebaseAuth mAuth;
     FirebaseFirestore mFirestore;
+    private StorageReference mFirebaseStorage;
     TextView profile_fullname_TV, profile_email_TV, profile_phone_TV, profile_userid_TV, profile_username_TV;
     public Uri imageUri1;
     ImageView profile_iv1;
@@ -57,12 +60,10 @@ public class ProfileFragment extends Fragment {
         profile_username_TV = v.findViewById(R.id.profile_username_TV);
         profile_iv1 = v.findViewById(R.id.profile_iv);
 
-
         mAuth = FirebaseAuth.getInstance();
         mFirestore = FirebaseFirestore.getInstance();
+        mFirebaseStorage = FirebaseStorage.getInstance().getReference();
         userID = Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
-        //userID= Objects.requireNonNull(mAuth.getUid());
-
         final DocumentReference documentReference = mFirestore.collection("users").document(userID);
         documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
@@ -80,12 +81,6 @@ public class ProfileFragment extends Fragment {
                 } else {
                     Toast.makeText(getContext(), "Document doesnot exist", Toast.LENGTH_LONG).show();
                 }
-                //  Users users = documentSnapshot.toObject(Users.class);
-//                profile_fullname_TV.setText(Objects.requireNonNull(documentSnapshot.getString("fullname")).trim());
-                //profile_username_TV.setText(documentSnapshot.getString("fullname").trim());
-//                profile_email_TV.setText(Objects.requireNonNull(documentSnapshot.getString("email")).trim());
-//                profile_phone_TV.setText(Objects.requireNonNull(documentSnapshot.getString("Phone")).trim());
-//                profile_userid_TV.setText(Objects.requireNonNull(documentSnapshot.getString(userID)).trim());
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -94,10 +89,9 @@ public class ProfileFragment extends Fragment {
             }
 
         });
-
+        //UploadTask image_path=mFirebaseStorage.child("Users");
         imageUri1 = mSettingFragment.imageUri;
         profile_iv1.setImageURI(imageUri1);
         return v;
-
     }
 }

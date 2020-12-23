@@ -14,16 +14,18 @@
         android:fontFamily="@font/roboto_bold"
         android:gravity="center_horizontal"
         android:padding="15dp"
-        android:text="Change Username"
+        android:text="Change Fullname"
         android:textAlignment="center"
         android:textColor="@color/primarytheme1"
         android:textSize="25dp" />
 
     <EditText
+        android:id="@+id/changeusernamedialog_ET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="70dp"
+        android:inputType="text"
         android:fontFamily="@font/roboto_medium"
         android:hint="Enter new username"
         android:padding="10dp"

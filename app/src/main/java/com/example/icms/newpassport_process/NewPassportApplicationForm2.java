@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.icms.R;
+import com.google.firebase.storage.FirebaseStorage;
 
 public class NewPassportApplicationForm2 extends AppCompatActivity {
     public Uri fileUri;
@@ -62,6 +63,7 @@ public class NewPassportApplicationForm2 extends AppCompatActivity {
     }
 
     private void Uploadpdftofirestore(Uri data) {
-
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        //StorageReference storageReference=storage.getReferenceFromUrl();
     }
 }

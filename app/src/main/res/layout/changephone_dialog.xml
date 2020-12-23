@@ -20,10 +20,12 @@
         android:textSize="25dp" />
 
     <EditText
+        android:id="@+id/changephonedialog_ET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="70dp"
+        android:inputType="phone"
         android:fontFamily="@font/roboto_medium"
         android:hint="Enter new phone"
         android:padding="15dp"
@@ -55,6 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
+            android:inputType="number"
             android:backgroundTint="@color/primarytheme1"
             android:fontFamily="@font/roboto_medium"
             android:gravity="end"
