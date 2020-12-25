@@ -31,7 +31,7 @@ public class NewPassport extends AppCompatActivity {
     Button nextbtn;
     FirebaseAuth mFirebaseAuth;
     FirebaseFirestore mFirestore;
-    TextView sp_site_error_TV, sample_TV;
+    TextView sp_site_error_TV;
     ArrayList<String> arrayList_site, arrayList_city, arrayList_office, arrayList_deliverysite;
     ProgressDialog mProgressDialog;
 
@@ -60,7 +60,7 @@ public class NewPassport extends AppCompatActivity {
         sp_office = findViewById(R.id.sp_office);
         sp_deliverysite = findViewById(R.id.sp_deliverysite);
         sp_site_error_TV = findViewById(R.id.sp_invitingcompany_error_TV);
-        sample_TV = findViewById(R.id.sample_TV);
+        //sample_TV = findViewById(R.id.sample_TV);
         nextbtn = findViewById(R.id.newpassnext_btn);
 
         mFirebaseAuth = FirebaseAuth.getInstance();
@@ -121,7 +121,7 @@ public class NewPassport extends AppCompatActivity {
 //        userdata.put("Completed Form", "form.pdf");
 //        userdata.put("Legal ID", "id.jpg");
 //        userdata.put("Birth Certificate", "bdcertificate.pdf");
-        sample_TV.setText(city);
+        //sample_TV.setText(city);
         mFirestore.collection("Service").document("PassportService").collection("New Passport").document(userID).set(userdata).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {

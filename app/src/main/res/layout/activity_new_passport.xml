@@ -67,6 +67,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:background="@drawable/border_rectangle"
                 android:outlineAmbientShadowColor="@color/primarytheme1"
                 android:padding="5dp" />
 
@@ -92,6 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:background="@drawable/border_rectangle"
                 android:outlineAmbientShadowColor="@color/primarytheme1"
                 android:padding="10dp" />
 
@@ -107,6 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:background="@drawable/border_rectangle"
                 android:outlineAmbientShadowColor="@color/primarytheme1"
                 android:padding="10dp" />
 
@@ -122,16 +125,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:background="@drawable/border_rectangle"
                 android:outlineAmbientShadowColor="@color/primarytheme1"
                 android:padding="10dp" />
 
-            <TextView
-                android:id="@+id/sample_TV"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="sample"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+            <!--            <TextView-->
+            <!--                android:id="@+id/sample_TV"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="sample"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:textSize="18sp" />-->
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/newpassnext_btn"

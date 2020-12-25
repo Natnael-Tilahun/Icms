@@ -1,6 +1,8 @@
 package com.example.icms.expiredpassport_process;
 
+import android.app.DownloadManager;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,23 +17,33 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.icms.R;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.SetOptions;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import static android.os.Environment.DIRECTORY_DOWNLOADS;
 
 public class ExpiredPassportApplicationForm2 extends AppCompatActivity {
     public Uri expiredpassfileUri;
     TextView expiredpassfilechooser;
     Button expiredpassportappform2next_btn, expiredpassdownload_btn;
+
     ProgressDialog mProgressDialog;
     FirebaseFirestore mFirestore;
     FirebaseAuth mFirebaseAuth;
 
+    FirebaseStorage mFirebaseStorage;
+    StorageReference mStorageReference;
+    StorageReference ref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +53,6 @@ public class ExpiredPassportApplicationForm2 extends AppCompatActivity {
         expiredpassportappform2next_btn = findViewById(R.id.expiredpassportappform2next_btn);
         expiredpassdownload_btn = findViewById(R.id.expiredpassdownload_btn);
         mProgressDialog = new ProgressDialog(ExpiredPassportApplicationForm2.this);
-        mFirebaseAuth = FirebaseAuth.getInstance();
         mFirestore = FirebaseFirestore.getInstance();
 
         expiredpassfilechooser.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +62,40 @@ public class ExpiredPassportApplicationForm2 extends AppCompatActivity {
             }
 
         });
+        expiredpassdownload_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                download();
+            }
+        });
+    }
+
+    private void download() {
+        mStorageReference = FirebaseStorage.getInstance().getReference();
+        ref = mStorageReference.child("/Application Forms/Passport Application Forms/New Passport Application Form/PassportApplicationForm.pdf");
+        ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                String url = uri.toString();
+                downloadFiles(getApplicationContext(), "ExpiredPassportApplicationForm", ".pdf", DIRECTORY_DOWNLOADS, url);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(ExpiredPassportApplicationForm2.this, "Error:" + e.toString(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
+    }
+
+    private void downloadFiles(Context context, String fileName, String fileExtension, String destinationDirectory, String url) {
+        DownloadManager downloadManager = (DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
+        Uri uri = Uri.parse(url);
+        DownloadManager.Request request = new DownloadManager.Request(uri);
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+        request.setDestinationInExternalFilesDir(context, destinationDirectory, fileName + fileExtension);
+
+        downloadManager.enqueue(request);
     }
 
     private void chooseFile() {

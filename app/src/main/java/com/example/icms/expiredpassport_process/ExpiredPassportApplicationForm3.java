@@ -122,13 +122,16 @@ public class ExpiredPassportApplicationForm3 extends AppCompatActivity {
         mFirestore = FirebaseFirestore.getInstance();
         String userID = (mFirebaseAuth.getCurrentUser()).getUid();
         String expiredpassidfileuri1 = expiredpassidfileuri.toString();
+        String expiredpassbdcertificatefileuri1 = expiredpassbdcertificatefileuri.toString();
+        String expiredpassport_oldpassportno_ET1 = expiredpassport_oldpassportno_ET.getText().toString().trim();
+
         final DocumentReference documentReference = mFirestore.collection("users").document(userID);
 
         Map<String, String> userdata = new HashMap<>();
         //userdata.put("UserID", userID);
         userdata.put("Legal ID", expiredpassidfileuri1);
-        userdata.put("Birth Certificate", expiredpassidfileuri1);
-        userdata.put("Old Passport Number", oldpassportno);
+        userdata.put("Birth Certificate", expiredpassbdcertificatefileuri1);
+        userdata.put("Old Passport Number", expiredpassport_oldpassportno_ET1);
 
         mFirestore.collection("Service").document("PassportService").collection("Expired Passport").document(userID).set(userdata, SetOptions.merge()).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override

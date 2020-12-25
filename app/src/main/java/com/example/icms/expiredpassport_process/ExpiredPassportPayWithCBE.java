@@ -59,20 +59,21 @@ public class ExpiredPassportPayWithCBE extends AppCompatActivity {
             expiredpasscbeamount_ET.setError("Enetr Amount!");
             expiredpasscbeamount_ET.requestFocus();
         } else {
-            final DocumentReference documentReference = mFirebaseFirestore.collection("Bank System").document();
+            //final String id=mFirebaseFirestore.collection("Bank System").document().getId();
+            final DocumentReference documentReference = mFirebaseFirestore.collection("Bank System").document("");
             documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                 @Override
                 public void onSuccess(DocumentSnapshot documentSnapshot) {
                     if (documentSnapshot.exists()) {
-                        String Balance = documentSnapshot.getString("Balance");
-//                    String Email = documentSnapshot.getString("email");
+                        String Balanc = documentSnapshot.getString("Balance");
+                        //  String Amoun = documentSnapshot.getString(Amount);
 //                    String Phone = documentSnapshot.getString("Phone");
                         //String Userid=documentSnapshot.getString("userID");
 //                    profile_fullname_TV.setText(Fullname);
 //                    profile_email_TV.setText(Email);
 //                    profile_phone_TV.setText(Phone);
 //                    profile_userid_TV.setText(userID);
-                        paymentinstruction.setText(Balance);
+                        paymentinstruction.setText(Balanc);
 
                     } else {
                         Toast.makeText(getApplicationContext(), "Document doesnot exist", Toast.LENGTH_LONG).show();
