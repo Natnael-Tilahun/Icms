@@ -1,26 +1,32 @@
 package com.example.icms.newpassport_process;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.icms.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class NewPassport_Appointment extends AppCompatActivity {
+public class NewPassport_Appointment extends AppCompatActivity implements View.OnClickListener {
     DatePicker newpassport_date_picker;
     TextView mornning_two_three_TV, afternoon_eight_nine_TV, mornning_three_four_TV, afternoon_ten_eleven_TV,
-            morning_four_five_TV, afternoon_eleven_twelve_TV, mornning_five_six_TV, afternoon_nine_ten_TV, date_TV;
+            morning_four_five_TV, afternoon_eleven_twelve_TV, mornning_five_six_TV, afternoon_nine_ten_TV, date_TV, time_TV;
     Button newpassport_appointment_next_btn;
+    String site, city, office, delivery;
+    String appointment_date, appintment_time;
+    int time;
     FirebaseAuth mFirebaseAuth;
     FirebaseFirestore mFirestore;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,32 +41,101 @@ public class NewPassport_Appointment extends AppCompatActivity {
         afternoon_ten_eleven_TV = findViewById(R.id.afternoon_ten_eleven_TV);
         afternoon_eleven_twelve_TV = findViewById(R.id.afternoon_eleven_twelve_TV);
         afternoon_nine_ten_TV = findViewById(R.id.afternoon_nine_ten_TV);
+        date_TV = findViewById(R.id.date_TV);
+        time_TV = findViewById(R.id.time_TV);
 
+
+        mornning_two_three_TV.setOnClickListener(this);
+        mornning_three_four_TV.setOnClickListener(this);
+        morning_four_five_TV.setOnClickListener(this);
+        mornning_five_six_TV.setOnClickListener(this);
+        afternoon_eight_nine_TV.setOnClickListener(this);
+        afternoon_nine_ten_TV.setOnClickListener(this);
+        afternoon_ten_eleven_TV.setOnClickListener(this);
+        afternoon_eleven_twelve_TV.setOnClickListener(this);
+
+        if (savedInstanceState == null) {
+            Bundle extras = getIntent().getExtras();
+            site = extras.getString("site");
+            city = extras.getString("city");
+            office = extras.getString("office");
+            delivery = extras.getString("delivery");
+        }
+
+        // final String date=newpassport_date_picker.getDayOfMonth()+"-"+newpassport_date_picker.getMonth()+"-"+newpassport_date_picker.getYear();
+        //date_TV.setText(date);
+
+        newpassport_date_picker.setOnDateChangedListener(new DatePicker.OnDateChangedListener() {
+            @Override
+            public void onDateChanged(DatePicker datePicker, int i, int i1, int i2) {
+                date_TV.setText("Your Date : " + i2 + "/" + i1 + "/" + i);
+                appointment_date = date_TV.getText().toString();
+            }
+        });
         newpassport_appointment_next_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // String appointment_time=String.valueOf(time);
                 Intent intent = new Intent(NewPassport_Appointment.this, NewPassportApplicationForm2.class);
+                intent.putExtra("site", site);
+                intent.putExtra("city", city);
+                intent.putExtra("office", office);
+                intent.putExtra("delivery", delivery);
+                intent.putExtra("appointment_date", appointment_date);
+                intent.putExtra("appintment_time", appintment_time);
                 startActivity(intent);
             }
         });
 
-        //showpicker();
-        date_TV = findViewById(R.id.date_TV);
-        //newpassport_date_picker.setMaxDate(12);
-//        int day=newpassport_date_picker.getDayOfMonth();
-//        int month=newpassport_date_picker.getMonth();
-//        int year=newpassport_date_picker.getYear();
-//       date_TV.setText("date: "+day+"/"+ month+"/"+year);
-
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.mornning_two_three_TV) {
+            time = 2;
+            //mornning_two_three_TV.setBackgroundColor(getColor(R.color.black));
+            time_TV.setText("Your Time : " + time + " O'clock");
+            appintment_time = String.valueOf(time);
+        } else if (view.getId() == R.id.mornning_three_four_TV) {
+            time = 3;
+            //mornning_three_four_TV.setBackgroundColor(getColor(R.color.black));
+            time_TV.setText("Your Time : " + time + " O'clock");
+            appintment_time = String.valueOf(time);
+        } else if (view.getId() == R.id.morning_four_five_TV) {
+            time = 4;
+            //morning_four_five_TV.setBackgroundColor(getColor(R.color.secondarytheme2));
+            time_TV.setText("Your Time : " + time + " O'clock");
+            appintment_time = String.valueOf(time);
+        } else if (view.getId() == R.id.mornning_five_six_TV) {
+            time = 5;
+            //mornning_five_six_TV.setBackgroundColor(getColor(R.color.secondarytheme2));
+            time_TV.setText("Your Time : " + time + " O'clock");
+            appintment_time = String.valueOf(time);
+        } else if (view.getId() == R.id.afternoon_eight_nine_TV) {
+            time = 8;
+            //afternoon_eight_nine_TV.setBackgroundColor(getColor(R.color.secondarytheme2));
+            time_TV.setText("Your Time : " + time + " O'clock");
+            appintment_time = String.valueOf(time);
+        } else if (view.getId() == R.id.afternoon_nine_ten_TV) {
+            time = 9;
+            //afternoon_nine_ten_TV.setBackgroundColor(getColor(R.color.secondarytheme2));
+            time_TV.setText("Your Time : " + time + " O'clock");
+            appintment_time = String.valueOf(time);
+        } else if (view.getId() == R.id.afternoon_ten_eleven_TV) {
+            time = 10;
+            //afternoon_ten_eleven_TV.setBackgroundColor(getColor(R.color.secondarytheme2));
+            time_TV.setText("Your Time : " + time + " O'clock");
+            appintment_time = String.valueOf(time);
+        } else if (view.getId() == R.id.afternoon_eleven_twelve_TV) {
+            time = 11;
+            //afternoon_eleven_twelve_TV.setBackgroundColor(getColor(R.color.secondarytheme2));
+            time_TV.setText("Your Time : " + time + " O'clock");
+            appintment_time = String.valueOf(time);
+        }
+    }
+}
 
-//    private void showpicker() {
-//        newpassport_date_picker=new DatePickerDialog(this,this,
-//            Calendar.getInstance().get(Calendar.YEAR),
-//            Calendar.getInstance().get(Calendar.MONTH),
-//            Calendar.getInstance().get(Calendar.DAY_OF_MONTH));
-//    }
 
 //    private void addingDatasToFirestore() {
 ////        String site = sp_site.getSelectedItem().toString();
@@ -94,4 +169,3 @@ public class NewPassport_Appointment extends AppCompatActivity {
 //            }
 //        });
 //    }
-}

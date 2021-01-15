@@ -9,20 +9,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.icms.R;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.SetOptions;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class NewPassportApplicationForm3 extends AppCompatActivity {
     public Uri idfileuri, bdcertificatefileuri;
@@ -94,42 +86,45 @@ public class NewPassportApplicationForm3 extends AppCompatActivity {
         newpassportappform4upload_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(NewPassportApplicationForm3.this, "Thank You!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(NewPassportApplicationForm3.this, NewPassportApplicationForm4.class);
+                startActivity(intent);
                 //Uploadpdftofirestore(data.getData());
-                addingDatasToFirestore();
+                //addingDatasToFirestore();
             }
         });
     }
 
-    private void addingDatasToFirestore() {
-        mProgressDialog.show();
-        mFirebaseAuth = FirebaseAuth.getInstance();
-        mFirestore = FirebaseFirestore.getInstance();
-        String userID = (mFirebaseAuth.getCurrentUser()).getUid();
-        String idfileuri1 = idfileuri.toString();
-        String bdcertificatefileuri1 = bdcertificatefileuri.toString();
-        final DocumentReference documentReference = mFirestore.collection("users").document(userID);
-
-        Map<String, String> userdata = new HashMap<>();
-        //userdata.put("UserID", userID);
-        userdata.put("Legal ID", idfileuri1);
-        userdata.put("Birth Certificate", bdcertificatefileuri1);
-
-        mFirestore.collection("Service").document("PassportService").collection("New Passport").document(userID).set(userdata, SetOptions.merge()).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if (task.isSuccessful()) {
-                    Toast.makeText(NewPassportApplicationForm3.this, "Document Successfully submitted", Toast.LENGTH_LONG).show();
-                    //mProgressBar.setVisibility(View.GONE);
-                    Intent intent = new Intent(NewPassportApplicationForm3.this, NewPassportApplicationForm4.class);
-                    startActivity(intent);
-                    mProgressDialog.dismiss();
-
-                } else {
-                    Toast.makeText(NewPassportApplicationForm3.this, "Error:" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-    }
+//    private void addingDatasToFirestore() {
+//        mProgressDialog.show();
+//        mFirebaseAuth = FirebaseAuth.getInstance();
+//        mFirestore = FirebaseFirestore.getInstance();
+//        String userID = (mFirebaseAuth.getCurrentUser()).getUid();
+//        String idfileuri1 = idfileuri.toString();
+//        String bdcertificatefileuri1 = bdcertificatefileuri.toString();
+//        final DocumentReference documentReference = mFirestore.collection("users").document(userID);
+//
+//        Map<String, String> userdata = new HashMap<>();
+//        //userdata.put("UserID", userID);
+//        userdata.put("Legal ID", idfileuri1);
+//        userdata.put("Birth Certificate", bdcertificatefileuri1);
+//
+//        mFirestore.collection("Service").document("PassportService").collection("New Passport").document(userID).set(userdata, SetOptions.merge()).addOnCompleteListener(new OnCompleteListener<Void>() {
+//            @Override
+//            public void onComplete(@NonNull Task<Void> task) {
+//                if (task.isSuccessful()) {
+//                    Toast.makeText(NewPassportApplicationForm3.this, "Document Successfully submitted", Toast.LENGTH_LONG).show();
+//                    //mProgressBar.setVisibility(View.GONE);
+//                    Intent intent = new Intent(NewPassportApplicationForm3.this, NewPassportApplicationForm4.class);
+//                    startActivity(intent);
+//                    mProgressDialog.dismiss();
+//
+//                } else {
+//                    Toast.makeText(NewPassportApplicationForm3.this, "Error:" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//        });
+//    }
 
 //    private void Uploadpdftofirestore(Uri data) {
 //    }

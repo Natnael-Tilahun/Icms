@@ -66,6 +66,20 @@
                 android:textStyle="bold"
                 tools:targetApi="jelly_bean" />
 
+            <TextView
+                android:id="@+id/time_TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="15dp"
+                android:text=" Yout appintment Time:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:targetApi="jelly_bean" />
+
+
             <DatePicker
                 android:id="@+id/newpassport_date_picker"
                 android:layout_width="match_parent"

@@ -21,7 +21,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/icms_ic_launcher_3"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".MainActivity2"></activity>
         <activity
             android:name=".changeofpassportdata_process.ChangeOfPassportData_Appointment"
             android:parentActivityName=".changeofpassportdata_process.ChangeOfPassportData"
@@ -519,7 +521,7 @@
         <activity
             android:name=".Notification"
             android:parentActivityName=".MainActivity"
-            tools:targetApi="jelly_bean"></activity>
+            tools:targetApi="jelly_bean" />
         <activity
             android:name=".servicefees_recyclerview.ServiceFees"
             android:parentActivityName=".GetInformation"
@@ -531,7 +533,7 @@
         <activity
             android:name=".newpassport_process.NewPassport"
             android:parentActivityName=".PassportServices"
-            tools:targetApi="jelly_bean" />
+            tools:targetApi="jelly_bean"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -562,6 +564,15 @@
             tools:targetApi="jelly_bean" />
         <activity
             android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".cr.Add_Data_Activity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".cr.inMainActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".cr.Edit_Activity"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data

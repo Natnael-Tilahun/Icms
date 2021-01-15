@@ -11,19 +11,13 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.icms.R;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class NewPassport extends AppCompatActivity {
 
@@ -94,50 +88,100 @@ public class NewPassport extends AppCompatActivity {
             sp_site_error_TV.requestFocus();
             Toast.makeText(NewPassport.this, "please Select a site!", Toast.LENGTH_LONG).show();
         } else {
-            sp_site_error_TV.setVisibility(View.GONE);
-            addingDatasToFirestore();
+            final String site = sp_site.getSelectedItem().toString().trim();
+            final String city = sp_city.getSelectedItem().toString().trim();
+            final String office = sp_office.getSelectedItem().toString().trim();
+            final String delivery = sp_deliverysite.getSelectedItem().toString().trim();
+            mProgressDialog.show();
+            Intent intent = new Intent(NewPassport.this, NewPassport_Appointment.class);
+            intent.putExtra("site", site);
+            intent.putExtra("city", city);
+            intent.putExtra("office", office);
+            intent.putExtra("delivery", delivery);
+            startActivity(intent);
+//            StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.43.164/project/insert.php",
+//                    new Response.Listener<String>() {
+//                        @Override
+//                        public void onResponse(String response) {
+//
+//                            if(response.equalsIgnoreCase("Data Inserted")){
+//                                Toast.makeText(NewPassport.this, "Data Inserted", Toast.LENGTH_SHORT).show();
+//                                mProgressDialog.dismiss();
+//                            }
+//                            else{
+//                                Toast.makeText(NewPassport.this, response, Toast.LENGTH_SHORT).show();
+//                                mProgressDialog.dismiss();
+//                            }
+//
+//                        }
+//                    }, new Response.ErrorListener() {
+//                @Override
+//                public void onErrorResponse(VolleyError error) {
+//                    Toast.makeText(NewPassport.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+//                    mProgressDialog.dismiss();
+//                }
+//            }
+//
+//            ){
+//                @Override
+//                protected Map<String, String> getParams() throws AuthFailureError {
+//
+//                    Map<String,String> params = new HashMap<String,String>();
+//
+//                    params.put("site",site);
+//                    params.put("city",city);
+//                    params.put("office",office);
+//                    params.put("delivery",delivery);
+//
+//                    return params;
+//                }
+//            };
+//
+//            RequestQueue requestQueue = Volley.newRequestQueue(NewPassport.this);
+//            requestQueue.add(request);
+//
+//        }
         }
     }
-
-    private void addingDatasToFirestore() {
-        String site = sp_site.getSelectedItem().toString();
-        String city = sp_city.getSelectedItem().toString();
-        String office = sp_office.getSelectedItem().toString();
-        String deliverysite = sp_deliverysite.getSelectedItem().toString();
-        mProgressDialog.show();
-
-        // mProgressBar.setVisibility(View.VISIBLE);
-        mFirebaseAuth = FirebaseAuth.getInstance();
-        mFirestore = FirebaseFirestore.getInstance();
-        String userID = (mFirebaseAuth.getCurrentUser()).getUid();
-        final DocumentReference documentReference = mFirestore.collection("users").document(userID);
-        Map<String, String> userdata = new HashMap<>();
-        userdata.put("UserID", userID);
-        userdata.put("Select Site", site);
-        userdata.put("Select City", city);
-        userdata.put("Select Office", office);
-        userdata.put("Delivery Site", deliverysite);
-//        userdata.put("Appointment Date", "+deliverysite");
-//        userdata.put("Completed Form", "form.pdf");
-//        userdata.put("Legal ID", "id.jpg");
-//        userdata.put("Birth Certificate", "bdcertificate.pdf");
-        //sample_TV.setText(city);
-        mFirestore.collection("Service").document("PassportService").collection("New Passport").document(userID).set(userdata).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if (task.isSuccessful()) {
-                    Toast.makeText(NewPassport.this, "Document Successfully submitted", Toast.LENGTH_LONG).show();
-                    //mProgressBar.setVisibility(View.GONE);
-                    Intent intent = new Intent(NewPassport.this, NewPassport_Appointment.class);
-                    startActivity(intent);
-                    mProgressDialog.dismiss();
-
-                } else {
-                    Toast.makeText(NewPassport.this, "Error:" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-    }
+//    private void addingDatasToFirestore() {
+//        String site = sp_site.getSelectedItem().toString();
+//        String city = sp_city.getSelectedItem().toString();
+//        String office = sp_office.getSelectedItem().toString();
+//        String deliverysite = sp_deliverysite.getSelectedItem().toString();
+//        mProgressDialog.show();
+//
+//        // mProgressBar.setVisibility(View.VISIBLE);
+//        mFirebaseAuth = FirebaseAuth.getInstance();
+//        mFirestore = FirebaseFirestore.getInstance();
+//        String userID = (mFirebaseAuth.getCurrentUser()).getUid();
+//        final DocumentReference documentReference = mFirestore.collection("users").document(userID);
+//        Map<String, String> userdata = new HashMap<>();
+//        userdata.put("UserID", userID);
+//        userdata.put("Select Site", site);
+//        userdata.put("Select City", city);
+//        userdata.put("Select Office", office);
+//        userdata.put("Delivery Site", deliverysite);
+////        userdata.put("Appointment Date", "+deliverysite");
+////        userdata.put("Completed Form", "form.pdf");
+////        userdata.put("Legal ID", "id.jpg");
+////        userdata.put("Birth Certificate", "bdcertificate.pdf");
+//        //sample_TV.setText(city);
+//        mFirestore.collection("Service").document("PassportService").collection("New Passport").document(userID).set(userdata).addOnCompleteListener(new OnCompleteListener<Void>() {
+//            @Override
+//            public void onComplete(@NonNull Task<Void> task) {
+//                if (task.isSuccessful()) {
+//                    Toast.makeText(NewPassport.this, "Document Successfully submitted", Toast.LENGTH_LONG).show();
+//                    //mProgressBar.setVisibility(View.GONE);
+//                    Intent intent = new Intent(NewPassport.this, NewPassport_Appointment.class);
+//                    startActivity(intent);
+//                    mProgressDialog.dismiss();
+//
+//                } else {
+//                    Toast.makeText(NewPassport.this, "Error:" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//        });
+//    }
 
     private void fillArrayList() {
         ArrayAdapter<String> arrayAdapter_site;
